@@ -17,7 +17,7 @@ public class JDBCAccountDao implements AccountDAO {
     @Override
     public Account getAccount(int accountId) {
         Account user = null;
-        String sql = "SELECT account_id, user_id, username, email_address" + "FROM new_user" + "WHERE user_id = ?;";
+        String sql = "SELECT account_id, user_id, username, email_address" + "FROM account" + "WHERE account_id = ?;";
         SqlRowSet results = jdbcTemplate.queryForRowSet(sql, accountId);
         if(results.next()){
             user = mapRowToUser(results);
