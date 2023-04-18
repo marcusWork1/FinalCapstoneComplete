@@ -28,7 +28,7 @@ public class AccountController {
      * @param id the id of the account
      * @return all info for a given account
      */
-    @ResponseStatus(HttpStatus.OK) //200
+     @ResponseStatus(HttpStatus.OK) //200
      @RequestMapping(path="/account/{id}", method = RequestMethod.GET)
      public Account account(@PathVariable int id) {
         // return accountDAO.getAccount(id);

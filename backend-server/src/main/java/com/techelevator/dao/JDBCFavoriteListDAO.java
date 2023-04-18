@@ -3,9 +3,11 @@ package com.techelevator.dao;
 import com.techelevator.model.FavoriteList;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
+import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
 
+@Component
 public class JDBCFavoriteListDAO implements FavoriteListDAO{
 
     private final JdbcTemplate jdbcTemplate;
@@ -13,9 +15,6 @@ public class JDBCFavoriteListDAO implements FavoriteListDAO{
     public JDBCFavoriteListDAO(DataSource dataSource) {
         this.jdbcTemplate = new JdbcTemplate(dataSource);}
 
-    public JDBCFavoriteListDAO(JdbcTemplate jdbcTemplate) {
-        this.jdbcTemplate = jdbcTemplate;
-    }
 
     @Override
     public FavoriteList getList(int favoriteId) {
