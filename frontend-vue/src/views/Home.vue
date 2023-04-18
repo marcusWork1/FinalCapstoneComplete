@@ -22,8 +22,9 @@
     </p>
    </div>
     <h2><router-link to =/login> Login or Sign Up Here! </router-link></h2>
+    <movie-form/>
     </body>
-     <movie-form/>
+     
   </div>
   
 </template>

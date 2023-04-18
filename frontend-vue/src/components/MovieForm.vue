@@ -45,7 +45,7 @@
       />
     </div>
     <button >Submit</button>
-    <button v-on:click="cancel">Cancel</button>
+   <!-- <button v-on:click="cancel">Cancel</button>-->
   </form>
   </div>
 </template>
@@ -66,6 +66,14 @@ export default {
         adult_only: false,
         popularity: "",
       },
+      newMovie: {
+        title: "",
+        release_date: null,
+        overview: "",
+        genre: "",
+        adult_only: false,
+        popularity: "",
+      }
     };
   }, //end of data
 
