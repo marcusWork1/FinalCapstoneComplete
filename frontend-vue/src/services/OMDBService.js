@@ -6,9 +6,8 @@ const APIServer = axios.create({
 });
 
 export default {
-  getMovies() {//right now it's just get Godfather the movie
-    //need to figure out how to do random movies or all movies??
-    return APIServer.get("/?s=movie&page=1&apikey=ea9877be").then((response) => {
+  getMovies() {//right now it's just searching movie titles and showing the first page.
+    return APIServer.get("/?s=knucklehead&page=1&apikey=ea9877be").then((response) => {
       return response.data.cards;
     });
   },
