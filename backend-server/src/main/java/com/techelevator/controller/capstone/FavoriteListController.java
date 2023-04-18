@@ -1,0 +1,18 @@
+package com.techelevator.controller.capstone;
+
+import com.techelevator.dao.FavoriteListDAO;
+import com.techelevator.model.FavoriteList;
+import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+import java.util.List;
+
+@PreAuthorize("isAuthenticated()") // All users must be authenticated to access (comment out for testing)
+@RestController
+public class FavoriteListController {
+
+    // Need a post to handle the path from Vue database service with status created
+    // use the create method that laura creates 
+}
