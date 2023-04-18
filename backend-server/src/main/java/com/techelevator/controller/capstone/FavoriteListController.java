@@ -24,7 +24,7 @@ public class FavoriteListController {
     // Need a post to handle the path from Vue database service with status created
     // use the create method that laura creates
     @ResponseStatus(HttpStatus.CREATED)
-    @RequestMapping(path="/favorite" , method = RequestMethod.POST)
+    @RequestMapping(path="/favmovies" , method = RequestMethod.POST)
     public FavoriteList favorite(@Valid @RequestBody FavoriteList favMovie) {
         return favoriteListDAO.addFavorite(favMovie);
     }
