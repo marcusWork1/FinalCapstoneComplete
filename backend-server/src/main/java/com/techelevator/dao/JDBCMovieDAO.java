@@ -58,8 +58,8 @@ public class JDBCMovieDAO implements MovieDAO {
 
             String sql = "INSERT into movie (title, release_date, overview, genre, adult_only, popularity) " +
                           "VALUES (?,?,?,?,?,?) RETURNING movie_id;";
-            Integer id = jdbcTemplate.queryForObject(sql, Integer.class, aMovie.getTitle(), aMovie.getReleaseDate(),
-                 aMovie.getOverview(), aMovie.getGenre(), aMovie.getAdultOnly(), aMovie.getPopularity());
+            Integer id = jdbcTemplate.queryForObject(sql, Integer.class, aMovie.getTitle(), aMovie.getRelease_date(),
+                 aMovie.getOverview(), aMovie.getGenre(), aMovie.getAdult_only(), aMovie.getPopularity());
 
             return getMovie(id);
     }
@@ -69,10 +69,10 @@ public class JDBCMovieDAO implements MovieDAO {
         Movie movie = new Movie();
         movie.setMovieId(rowSet.getInt("movie_id"));
         movie.setTitle(rowSet.getString("title"));
-        movie.setReleaseDate(rowSet.getDate("release_date"));
+        movie.setRelease_date(rowSet.getDate("release_date"));
         movie.setOverview(rowSet.getString("overview"));
         movie.setGenre(rowSet.getString("genre"));
-        movie.setAdultOnly(rowSet.getBoolean("adult_only"));
+        movie.setAdult_only(rowSet.getBoolean("adult_only"));
         movie.setPopularity(rowSet.getInt("popularity"));
         return movie;
     }

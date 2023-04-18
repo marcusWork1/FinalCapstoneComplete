@@ -9,19 +9,19 @@ public class Movie {
     private int movieId;
     private String title;
     @JsonFormat(pattern = "yyyy-MM-dd")
-    private Date releaseDate;
+    private Date release_date;
     private String overview;
     private String genre;
-    private Boolean adultOnly;
+    private Boolean adult_only;
     private Integer popularity;
 
     public Movie(int movieId, String title, Date releaseDate, String overview, String genre, Boolean adultOnly, int popularity) {
         this.movieId = movieId;
         this.title = title;
-        this.releaseDate = releaseDate;
+        this.release_date = releaseDate;
         this.overview = overview;
         this.genre = genre;
-        this.adultOnly = adultOnly;
+        this.adult_only = adultOnly;
         this.popularity = popularity;
     }
 
@@ -45,12 +45,12 @@ public class Movie {
         this.title = title;
     }
 
-    public Date getReleaseDate() {
-        return releaseDate;
+    public Date getRelease_date() {
+        return release_date;
     }
 
-    public void setReleaseDate(Date releaseDate) {
-        this.releaseDate = releaseDate;
+    public void setRelease_date(Date release_date) {
+        this.release_date = release_date;
     }
 
     public String getOverview() {
@@ -69,12 +69,12 @@ public class Movie {
         this.genre = genre;
     }
 
-    public Boolean getAdultOnly() {
-        return adultOnly;
+    public Boolean getAdult_only() {
+        return adult_only;
     }
 
-    public void setAdultOnly(Boolean adultOnly) {
-        this.adultOnly = adultOnly;
+    public void setAdult_only(Boolean adult_only) {
+        this.adult_only = adult_only;
     }
 
     public int getPopularity() {
@@ -90,10 +90,10 @@ public class Movie {
         return "Movie{" +
                 "movieId=" + movieId +
                 ", title='" + title + '\'' +
-                ", releaseDate=" + releaseDate +
+                ", releaseDate=" + release_date +
                 ", overview='" + overview + '\'' +
                 ", genre='" + genre + '\'' +
-                ", adultOnly=" + adultOnly +
+                ", adultOnly=" + adult_only +
                 ", popularity='" + popularity + '\'' +
                 '}';
     }

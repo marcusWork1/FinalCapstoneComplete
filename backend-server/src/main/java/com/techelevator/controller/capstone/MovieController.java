@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
-@PreAuthorize("isAuthenticated()") // All users must be authenticated to access (comment out for testing)
+//@PreAuthorize("isAuthenticated()") // All users must be authenticated to access (comment out for testing)
 @RestController
 public class MovieController {
 
@@ -36,11 +36,12 @@ public class MovieController {
      *
      * @param newMovie
      */
-        @PreAuthorize("hasRole('ADMIN')") // Only role of ADMIN can access this path
+       // @PreAuthorize("hasRole('ADMIN')") // Only role of ADMIN can access this path
         @ResponseStatus(HttpStatus.CREATED)
         @RequestMapping(path="/movie" , method = RequestMethod.POST)
              public Movie createMovie(@Valid @RequestBody Movie newMovie) {
-                 return movieDAO.addMovie(newMovie);
+
+            return movieDAO.addMovie(newMovie);
         }
 
 
