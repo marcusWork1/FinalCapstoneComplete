@@ -1,20 +1,22 @@
 <template>
-  <form v-on:submit.prevent="submitMovie" class="WHATDISBUTTONLOOKLIKE">
+<div>
+<p> please work </p>
+  <form v-on:submit.prevent="submitMovie">
     <div>
       <label for="title">Title:</label>
-      <input id="" type="text" v-model="MOVIE.MODEL.TITLE" />
+      <input id="title" type="text" v-model="newMovie.title" />
     </div>
     <div>
       <label for="release_date">Release Date:</label>
-      <input id="" type="date" v-model="MOVIE.MODEL.RDATE" />
+      <input id="release_date" type="date" v-model="newMovie.release_date" />
     </div>
     <div>
       <label for="overview">Overview:</label>
-      <input id="" type="text" v-model="MOVIE.MODEL.OVERVIEW" />
+      <input id="overview" type="text" v-model="newMovie.overview" />
     </div>
     <div>
       <label for="genre">Genre:</label>
-      <input id="" type="text" v-model="MOVIE.MODEL.GENRE" />
+      <input id="genre" type="text" v-model="newMovie.genre" />
     </div>
     <div>
       Pr0n?
@@ -22,7 +24,7 @@
         id="yes plz"
         type="radio"
         value="true"
-        v-model="MOVIE.MODEL.PR0N"
+        v-model="newMovie.adult_only"
       />
       <label for="yes plz">yes plz</label>
 
@@ -30,7 +32,7 @@
         id="no thnx"
         type="radio"
         value="false"
-        v-model="MOVIE.MODEL.PR0N"
+        v-model="newMovie.adult_only"
       />
       <label for="no thnx">no thnx</label>
     </div>
@@ -39,18 +41,21 @@
       <input
         id="popularity"
         type="number"
-        v-model.number="MOVIE.MODEL.POPULARITY"
+        v-model.number="newMovie.popularity"
       />
     </div>
-    <button class="BUTTONDESIGN">Submit</button>
-    <button class="BUTTONDESIGN" v-on:click="cancel">Cancel</button>
+    <button >Submit</button>
+    <button v-on:click="cancel">Cancel</button>
   </form>
+  </div>
 </template>
 
 <script>
 import DatabaseService from "../services/DatabaseService";
+import moment from "moment";
 
 export default {
+  name: "movie-form",
   data() {
     return {
       movie: {
@@ -74,9 +79,9 @@ export default {
         genre: this.movie.genre,
         adult_only: this.movie.genre,
         popularity: this.movie.popularity,
-      },
-      if(there is no movie id) {
-          DatabaseService.postToLocalHost9000(newMovie).then(response => {if (response.status === 201) {this.$router.push(`/movie/${newMovie.movieId`)}})
+      };
+      if(this.movieId === 0) {
+          DatabaseService.postToLocalHost9000(newMovie).then(response => {if (response.status === 201) {this.$router.push(`/movie/${newMovie.movieId}`)}})
       }
     },
 

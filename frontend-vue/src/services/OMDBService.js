@@ -12,7 +12,7 @@ export default {
     });
   },
 
-  getMovieByMovieId(movieId) {
-    return APIServer.get("/?i=${movieId}&apikey=ea9877be");
-  },
+  // getMovieByMovieId(movieId) {
+  //   return APIServer.get("/?i=${movieId}&apikey=ea9877be");
+  // },
 }; //end of export

@@ -7,6 +7,6 @@
   export default {
   postToLocalHost9000 (movieObject) {
     //http://localhost:9000/favmovies
-      return httpLocalHost.post('/favmovies', this.movieObject);
+      return httpLocalHost.post('/favmovies', movieObject);
   },
 }
