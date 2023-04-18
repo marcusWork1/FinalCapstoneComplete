@@ -1,7 +1,11 @@
 <template>
   <div class="home">
+    <body id = "body">
             <header>
-            <img class = "imgicon" src="https://i.imgur.com/8wIaQDQ.png" alt="webicon">
+            <a href="http://localhost:8080/"><img class = "imgicon" src="https://i.imgur.com/8wIaQDQ.png" alt="webicon"/> </a>
+            <a href="#"><img class = "descicon" src="https://i.imgur.com/ZfFZoTz.jpg" alt="descicon"/> </a> 
+            <a href="#"><img class = "contacticon" src="https://i.imgur.com/WtWooFI.jpg" alt="contacticon"/> </a> 
+            <a href="http://localhost:8080/login"><img class = "logicon" src="https://i.imgur.com/kSKskRm.png" alt="logicon"> </a>
         </header>
     <navigate />
  
@@ -18,6 +22,7 @@
     </p>
    </div>
     <h2><router-link to =/login> Login or Sign Up Here! </router-link></h2>
+    </body>
   </div>
 </template>
 
@@ -34,8 +39,11 @@ export default {
 </script>
 
 <style scoped>
+* { margin:0; padding:0; }
 .home {
   background-color: #140180;
+  margin: 0px;
+  padding: 0px;
 }
 
 .h1 {
@@ -48,9 +56,58 @@ export default {
 .imgicon {
   width: auto;
   height: 100px;
-  border: 16px solid;
-  border-color:#140180;
-  padding-top: 3px;
-  border-bottom-width: 10px;
+  /* border: 16px solid;
+  border-color:#140180; */
+/*   padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 8px; */
+ /* border-bottom-width: 10px; */
+  border-radius: 25px;
+  box-shadow: 0px 7px 8px black;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.logicon {
+  width: auto;
+  height: 100px;
+  border-radius: 25px;
+  box-shadow: 0px 7px 8px black;
+  margin-bottom: 10px;
+  float: right;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.descicon {
+  width: auto;
+  height: 100px;
+  border-radius: 25px;
+  box-shadow: 0px 7px 8px black;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.contacticon {
+  width: auto;
+  height: 100px;
+  border-radius: 25px;
+  box-shadow: 0px 7px 8px black;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+li {
+  display: inline-block;
+}
+
+.navbar {
+  list-style-type: none;
+  padding-bottom: 0;
+  margin: 0;
+  display: inline-block;
 }
 </style>
