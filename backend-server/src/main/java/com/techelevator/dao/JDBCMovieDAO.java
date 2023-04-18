@@ -51,6 +51,18 @@ public class JDBCMovieDAO implements MovieDAO {
         return movies;
     }
 
+    @Override
+    public Movie addMovie(Movie aMovie){
+
+            String sql = "INSERT into movie (title, release_date, overview, genre, adult_only, popularity) " +
+                          "VALUES (?,?,?,?,?,?) RETURNING movie_id;";
+            Integer id = jdbcTemplate.queryForObject(sql, Integer.class, aMovie.getTitle(), aMovie.getReleaseDate(),
+                 aMovie.getOverview(), aMovie.getOverview(), aMovie.getGenre(), aMovie.getAdultOnly(), aMovie.getPopularity());
+
+            return getMovie(id);
+    }
+
+
     private Movie mapRowToMovie(SqlRowSet rowSet){
         Movie movie = new Movie();
         movie.setMovieId(rowSet.getInt("movie_id"));

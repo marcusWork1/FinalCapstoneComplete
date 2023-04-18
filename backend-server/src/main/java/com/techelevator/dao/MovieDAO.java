@@ -11,4 +11,6 @@ public interface MovieDAO {
     Movie getMovieByTitle(String title);
 
     List<Movie> getMovies();
+
+    Movie addMovie(Movie aMovie);
 }

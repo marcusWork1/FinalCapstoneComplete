@@ -6,6 +6,6 @@ public interface AccountDAO {
 
     Account getAccount(int accountId);
 
-    Account createUser(Account account);
+    Account createAccount(Account account);
 
 } // End of AccountDAO
