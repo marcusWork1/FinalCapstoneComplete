@@ -44,5 +44,13 @@ public class MovieController {
         }
 
 
+        /*
+        *     @ResponseStatus(HttpStatus.CREATED)
+              @RequestMapping(path="/favmovies" , method = RequestMethod.POST)
+              public FavoriteList favorite(@Valid @RequestBody FavoriteList favMovie) {
+              return favoriteListDAO.addFavorite(favMovie);
+                }
+        *
+        * */
 
 } // End of Movie Controller

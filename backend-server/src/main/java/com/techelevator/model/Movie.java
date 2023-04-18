@@ -1,11 +1,14 @@
 package com.techelevator.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 
 public class Movie {
 
     private int movieId;
     private String title;
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date releaseDate;
     private String overview;
     private String genre;

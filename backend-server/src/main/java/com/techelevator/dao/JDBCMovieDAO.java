@@ -4,11 +4,13 @@ package com.techelevator.dao;
 import com.techelevator.model.Movie;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
+import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class JDBCMovieDAO implements MovieDAO {
 
     private final JdbcTemplate jdbcTemplate;
@@ -20,8 +22,8 @@ public class JDBCMovieDAO implements MovieDAO {
     @Override
     public Movie getMovie(int movieId) {
         Movie movie = null;
-        String sql = "SELECT movie_id, title, release_date, overview, genre, adult_only, popularity" +
-                "FROM movie" + "WHERE movie_id = ?;";
+        String sql = "SELECT movie_id, title, release_date, overview, genre, adult_only, popularity " +
+                "FROM movie " + "WHERE movie_id = ?;";
         SqlRowSet results = jdbcTemplate.queryForRowSet(sql, movieId);
         if (results.next()){
             movie = mapRowToMovie(results);
@@ -57,7 +59,7 @@ public class JDBCMovieDAO implements MovieDAO {
             String sql = "INSERT into movie (title, release_date, overview, genre, adult_only, popularity) " +
                           "VALUES (?,?,?,?,?,?) RETURNING movie_id;";
             Integer id = jdbcTemplate.queryForObject(sql, Integer.class, aMovie.getTitle(), aMovie.getReleaseDate(),
-                 aMovie.getOverview(), aMovie.getOverview(), aMovie.getGenre(), aMovie.getAdultOnly(), aMovie.getPopularity());
+                 aMovie.getOverview(), aMovie.getGenre(), aMovie.getAdultOnly(), aMovie.getPopularity());
 
             return getMovie(id);
     }
