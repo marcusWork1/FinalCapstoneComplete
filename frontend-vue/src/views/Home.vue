@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <body id = "body">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chewy">
             <header>
             <a href="http://localhost:8080/"><img class = "imgicon" src="../assets/webicon.png" alt="webicon"/> </a>
             <a href="http://localhost:8080/description"><img class = "descicon" src="https://i.imgur.com/ZfFZoTz.jpg" alt="descicon"/> </a>
@@ -17,7 +18,7 @@
                 <a><img class = "cantdecide" src="https://i.imgur.com/Ej2G4i1.png" alt="cantdecide"> </a><br>
                 <a href="http://localhost:8080/register"><h2 class = "signup" ><span> Sign Up Here</span> </h2></a> 
           </div><br>
-          <a><img class = "bordercine" src="https://i.imgur.com/UJTVYgd.jpg" alt="bordercine"> </a><br>
+
  
     <div id="description">
 
@@ -81,20 +82,20 @@ a:visited {
 #description{
   color: rgb(17, 17, 17);
   background-color: #AC8AD3;
-  width: 500px;
   border: 15px solid rgb(231, 223, 240);
-  padding: 50px;
-  margin: 20px;
+  padding: 15px;
+  margin: 10px;
   font-family: "Chewy";
   border-radius: 10px;
   text-align: center;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 135px;
+  margin-right: 135px;
+  font-size: 15px;
 }
 .bordercine {
   height: 25px;
-  width: 1600px;
+  width: 2000px;
   max-width: 100%;
   display: block;
   margin-right: auto;
