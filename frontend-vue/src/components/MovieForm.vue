@@ -58,14 +58,6 @@ export default {
   name: "movie-form",
   data() {
     return {
-      movie: {
-        title: "",
-        release_date: null,
-        overview: "",
-        genre: "",
-        adult_only: false,
-        popularity: "",
-      },
       newMovie: {
         title: "",
         release_date: null,
@@ -81,12 +73,12 @@ export default {
     submitMovie() {
       const newMovie = {
         movieId: Number(this.$route.params.movieId),
-        title: this.movie.title,
+        title: this.newMovie.title,
         release_date: moment().format("YYYY-MM-Do"),
-        overview: this.movie.overview,
-        genre: this.movie.genre,
-        adult_only: this.movie.genre,
-        popularity: this.movie.popularity,
+        overview: this.newMovie.overview,
+        genre: this.newMovie.genre,
+        adult_only: this.newMovie.genre,
+        popularity: this.newMovie.popularity,
       };
       if(this.movieId === 0) {
           DatabaseService.postToLocalHost9000(newMovie).then(response => {if (response.status === 201) {this.$router.push(`/movie/${newMovie.movieId}`)}})
