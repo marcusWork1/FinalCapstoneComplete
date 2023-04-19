@@ -45,13 +45,8 @@
         v-model.number="newMovie.popularity"
       />
     </div>
-<<<<<<< HEAD
     <button class = "button" v-on:click="submitMovie">Submit</button>
    <button class = "cancel" v-on:click="cancelForm">Cancel</button>
-=======
-    <button>Submit</button>
-   <button v-on:click="cancelForm">Cancel</button>
->>>>>>> 683c2099cc7c490f15fdaef329de7dce72096993
   </form>
   </div>
 </template>
