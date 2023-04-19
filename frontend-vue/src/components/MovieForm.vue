@@ -1,7 +1,10 @@
 <template>
 <div>
-<p> please work </p>
-  <form v-on:submit.prevent="submitMovie">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chewy">
+<p>  </p>
+  <form class = "movieform" v-on:submit.prevent="submitMovie">
+    <br>
+    <p> Add Movie :) </p>
     <div>
       <label for="title">Title:</label>
       <input id="title" type="text" v-model="newMovie.title" />
@@ -44,7 +47,9 @@
         v-model.number="newMovie.popularity"
       />
     </div>
-    <button >Submit</button>
+    <br>
+    <button class = "button" >Submit</button>
+    <br>
    <!-- <button v-on:click="cancel">Cancel</button>-->
   </form>
   </div>
@@ -98,4 +103,35 @@ export default {
 }; //end of export data
 </script>
 
-<style></style>
+<style>
+.movieform {
+  background-color: #BB9CDF;
+  font-family: 'Chewy',typeface;
+  padding-left: 25px;
+}
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+  font-family: "Chewy";
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #a049a3;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 7px rgb(59, 59, 59);
+}
+
+.button:hover {background-color: #5b1b6e}
+
+.button:active {
+  background-color: #8e3e8a;
+  box-shadow: 0 5px rgb(61, 61, 61);
+  transform: translateY(4px);
+}
+
+</style>

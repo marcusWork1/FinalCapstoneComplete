@@ -6,10 +6,20 @@
             <a href="http://localhost:8080/description"><img class = "descicon" src="https://i.imgur.com/ZfFZoTz.jpg" alt="descicon"/> </a> 
             <a href="#"><img class = "contacticon" src="https://i.imgur.com/WtWooFI.jpg" alt="contacticon"/> </a> 
             <a href="http://localhost:8080/login"><img class = "logicon" src="https://i.imgur.com/kSKskRm.png" alt="logicon"> </a>
+
         </header>
     <navigate />
-    <h2><router-link to =/login> Login or Sign Up Here! </router-link></h2>
+    <div class = "hover">
+                <a><img class = "cantdecide" src="https://i.imgur.com/Ej2G4i1.png" alt="cantdecide"> </a>
+                <br>
+                <a href="http://localhost:8080/register"><h2 class = "signup" ><span> Sign Up Here</span> </h2></a>
+               
+
+    </div><br>
+                    <a><img class = "bordercine" src="https://i.imgur.com/UJTVYgd.jpg" alt="bordercine"> </a>
+    
     <movie-form/>
+    <br>
     </body>
      
   </div>
@@ -17,7 +27,6 @@
 </template>
 
 <script>
-//import { component } from 'vue/types/umd';
 import Navigate from '../components/Navigate.vue';
 import MovieForm from '../components/MovieForm.vue';
 
@@ -37,33 +46,73 @@ export default {
   margin: 0px;
   padding: 0px;
 }
-
+.cantdecide {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height:25px;
+  padding-top: 10px;
+}
 .h1 {
   font-family: 'Brush Script MT', cursive;
 }
+.bordercine {
+  height: 25px;
+  width: 1400px;
+  max-width: 100%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  box-shadow: 0px 7px 8px black;
+}
 
+.hover {
+  padding-top: 10pt;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: 'Chewy',typeface;
+  text-shadow: 4px 3px #19181a;
+  width: 200px;
+}
+.signup {
+  color:#c0aed4;
+}
+.signup:hover {
+  color:darkmagenta;
+}
+span {
+  position:relative;
+    display:inline-block;
+    border:1px solid #CCC;
+    padding-inline: 10px;
+    padding-bottom: 5px;
+    padding-top: 3px;
+}
+h1 {
+  color:#c0aed4;
+}
 .image {
   height: 100%;
 }
 .imgicon {
   width: auto;
-  height: 100px;
-  /* border: 16px solid;
-  border-color:#140180; */
-/*   padding-left: 10px;
-  padding-top: 10px;
-  padding-bottom: 8px; */
- /* border-bottom-width: 10px; */
+  height: 85px;
   border-radius: 25px;
   box-shadow: 0px 7px 8px black;
   margin-left: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
+.imgicon:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
 
 .logicon {
   width: auto;
-  height: 100px;
+  height: 85px;
   border-radius: 25px;
   box-shadow: 0px 7px 8px black;
   margin-bottom: 10px;
@@ -71,25 +120,37 @@ export default {
   margin-right: 10px;
   margin-top: 10px;
 }
+.logicon:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
 
 .descicon {
   width: auto;
-  height: 100px;
+  height: 85px;
   border-radius: 25px;
   box-shadow: 0px 7px 8px black;
   margin-bottom: 10px;
   margin-left: 20px;
   margin-top: 10px;
 }
+.descicon:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
 
 .contacticon {
   width: auto;
-  height: 100px;
+  height: 85px;
   border-radius: 25px;
   box-shadow: 0px 7px 8px black;
   margin-bottom: 10px;
   margin-left: 20px;
   margin-top: 10px;
+}
+.contacticon:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 li {

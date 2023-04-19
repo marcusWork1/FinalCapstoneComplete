@@ -11,13 +11,11 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  height: 70%;
+  height: 80%;
   max-width: 100%;
 }
 
 .navigate {
   background-color: #140180 ;
-    margin: 0px;
-  padding: 0px;
 }
 </style>

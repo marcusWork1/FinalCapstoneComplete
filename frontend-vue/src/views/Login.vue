@@ -2,9 +2,9 @@
 
  <div id="login">
     <form @submit.prevent="login">
-                  <header>
+                             <header>
             <a href="http://localhost:8080/"><img class = "imgicon" src="https://i.imgur.com/8wIaQDQ.png" alt="webicon"/> </a>
-            <a href="#"><img class = "descicon" src="https://i.imgur.com/ZfFZoTz.jpg" alt="descicon"/> </a> 
+            <a href="http://localhost:8080/description"><img class = "descicon" src="https://i.imgur.com/ZfFZoTz.jpg" alt="descicon"/> </a> 
             <a href="#"><img class = "contacticon" src="https://i.imgur.com/WtWooFI.jpg" alt="contacticon"/> </a> 
             <a href="http://localhost:8080/login"><img class = "logicon" src="https://i.imgur.com/kSKskRm.png" alt="logicon"> </a>
         </header>
@@ -95,13 +95,7 @@ label {
 }
 .imgicon {
   width: auto;
-  height: 100px;
-  /* border: 16px solid;
-  border-color:#140180; */
-/*   padding-left: 10px;
-  padding-top: 10px;
-  padding-bottom: 8px; */
- /* border-bottom-width: 10px; */
+  height: 85px;
   border-radius: 25px;
   box-shadow: 0px 7px 8px black;
   margin-left: 10px;
@@ -111,7 +105,7 @@ label {
 
 .logicon {
   width: auto;
-  height: 100px;
+  height: 85px;
   border-radius: 25px;
   box-shadow: 0px 7px 8px black;
   margin-bottom: 10px;
@@ -122,7 +116,7 @@ label {
 
 .descicon {
   width: auto;
-  height: 100px;
+  height: 85px;
   border-radius: 25px;
   box-shadow: 0px 7px 8px black;
   margin-bottom: 10px;
@@ -132,7 +126,7 @@ label {
 
 .contacticon {
   width: auto;
-  height: 100px;
+  height: 85px;
   border-radius: 25px;
   box-shadow: 0px 7px 8px black;
   margin-bottom: 10px;
