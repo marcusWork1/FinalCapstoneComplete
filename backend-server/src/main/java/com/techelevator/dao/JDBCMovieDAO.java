@@ -1,6 +1,7 @@
 package com.techelevator.dao;
 
 
+import com.techelevator.model.FavoriteList;
 import com.techelevator.model.Movie;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
@@ -63,6 +64,35 @@ public class JDBCMovieDAO implements MovieDAO {
 
             return getMovie(id);
     }
+//    @Override
+//    public FavoriteList getList(int favoriteId) {
+//        FavoriteList list = null;
+//        String sql = "SELECT favorite_id, account_id, movie_id" + "FROM favorite_list" + "WHERE favorite_id = ?;";
+//        SqlRowSet results = jdbcTemplate.queryForRowSet(sql, favoriteId);
+//        if (results.next()){
+//            list = mapRowToFavorites(results);
+//        }
+//        return list;
+//    }
+//@Override
+//public FavoriteList getListByAccountId(int accountId) {
+//    FavoriteList list = null;
+//    String sql = "SELECT favorite_id, account_id, movie_id" + "FROM favorite_list" + "WHERE account_id = ?;";
+//    SqlRowSet results = jdbcTemplate.queryForRowSet(sql, accountId);
+//    if (results.next()){
+//        list = mapRowToFavorites(results);
+//    }
+//    return list;
+//}
+//@Override
+    // need inner joins
+//public Movie addFavorite(Movie aMovie) {
+//    String sql = "INSERT into favorite_list (account_id, movie_id) " +
+//            "VALUES (?,?) RETURNING account_id;";
+//    Integer id = jdbcTemplate.queryForObject(sql, Integer.class, aMovie.getAccountId, aMovie.getMovieId());
+//
+//    return addFavorite();
+//}
 
 
     private Movie mapRowToMovie(SqlRowSet rowSet){

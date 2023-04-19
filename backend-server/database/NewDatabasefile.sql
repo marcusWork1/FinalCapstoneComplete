@@ -1,6 +1,6 @@
 BEGIN TRANSACTION;
 
-DROP TABLE IF EXISTS new_user, user_account, movie, favorite_list;
+DROP TABLE IF EXISTS account, favorite_list, movie;
 DROP SEQUENCE IF EXISTS  seq_movie_id;
 
 
@@ -31,13 +31,14 @@ CREATE SEQUENCE seq_movie_id
 
 
 CREATE TABLE favorite_list (
-	favorite_id serial NOT NULL,
 	account_id int NOT NULL,
 	movie_id int NOT NULL DEFAULT nextval('seq_movie_id'),
-	CONSTRAINT PK_favorite_list PRIMARY KEY (favorite_id),
+	CONSTRAINT PK_favorite_list_account_id PRIMARY KEY (account_id),
 	CONSTRAINT FK_favorite_list_account_id FOREIGN KEY (account_id) REFERENCES account (account_id),
 	CONSTRAINT FK_favorite_list_movie_id FOREIGN KEY (movie_id) REFERENCES movie (movie_id)
 );
 
 
 COMMIT;
+
+
