@@ -44,7 +44,7 @@
         v-model.number="newMovie.popularity"
       />
     </div>
-    <button v-on:click="submitMovie">Submit</button>
+    <button>Submit</button>
    <button v-on:click="cancelForm">Cancel</button>
   </form>
   </div>
@@ -56,6 +56,12 @@ import moment from "moment";
 
 export default {
   name: "movie-form",
+  props: {
+    movieId: {
+      type: Number,
+    default: 0
+    }
+  },
   data() {
     return {
       newMovie: {
@@ -72,12 +78,12 @@ export default {
   methods: {
     submitMovie() {
       const newMovie = {
-        movieId: Number(this.$route.params.movieId),
+        //movieId: Number(this.$route.params.movieId),
         title: this.newMovie.title,
         release_date: moment().format("YYYY-MM-Do"),
         overview: this.newMovie.overview,
         genre: this.newMovie.genre,
-        adult_only: this.newMovie.genre,
+        adult_only: this.newMovie.adult_only,
         popularity: this.newMovie.popularity,
       };
       if(this.movieId === 0) {
