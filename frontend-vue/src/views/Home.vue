@@ -2,26 +2,6 @@
   <div class="home">
     <body id = "body">
             <header>
-<<<<<<< HEAD
-            <a href="http://localhost:8080/"><img class = "imgicon" src="https://i.imgur.com/8wIaQDQ.png" alt="webicon"/> </a>
-            <a href="http://localhost:8080/description"><img class = "descicon" src="https://i.imgur.com/ZfFZoTz.jpg" alt="descicon"/> </a> 
-            <a href="#"><img class = "contacticon" src="https://i.imgur.com/WtWooFI.jpg" alt="contacticon"/> </a> 
-            <a href="http://localhost:8080/login"><img class = "logicon" src="https://i.imgur.com/kSKskRm.png" alt="logicon"> </a>
-
-        </header>
-    <navigate />
-    <div class = "hover">
-                <a><img class = "cantdecide" src="https://i.imgur.com/Ej2G4i1.png" alt="cantdecide"> </a>
-                <br>
-                <a href="http://localhost:8080/register"><h2 class = "signup" ><span> Sign Up Here</span> </h2></a>
-               
-
-    </div><br>
-                    <a><img class = "bordercine" src="https://i.imgur.com/UJTVYgd.jpg" alt="bordercine"> </a>
-    
-    <movie-form/>
-    <br>
-=======
             <a href="http://localhost:8080/"><img class = "imgicon" src="../assets/webicon.png" alt="webicon"/> </a>
             <a href="#"><img class = "descicon" src="../assets/descicon.jpg" alt="descicon"/> </a> 
             <a href="#"><img class = "contacticon" src="../assets/contacticon.jpg" alt="contacticon"/> </a>
@@ -45,7 +25,6 @@
     <h2><router-link to =/login> Login or Sign Up Here! </router-link></h2>
     <h2><router-link to =/addmovie> Add a Movie Here! </router-link></h2>
     <!-- <movie-form/> -->
->>>>>>> 82f5ea25a1b1dccbe0cc3323d3fdf648f1d24c89
     </body>
      
   </div>
@@ -72,22 +51,19 @@ export default {
   margin: 0px;
   padding: 0px;
 }
-<<<<<<< HEAD
 .cantdecide {
   display: block;
   margin-left: auto;
   margin-right: auto;
   height:25px;
   padding-top: 10px;
-=======
-
+}
 a:visited {
   color:thistle;
 }
 
 #description{
   color: #ABD3FF;
->>>>>>> 82f5ea25a1b1dccbe0cc3323d3fdf648f1d24c89
 }
 .h1 {
   font-family: 'Brush Script MT', cursive;

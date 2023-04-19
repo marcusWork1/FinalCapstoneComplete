@@ -1,19 +1,9 @@
 <template>
 <div>
-<<<<<<< HEAD
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chewy">
-<p>  </p>
-  <form class = "movieform" v-on:submit.prevent="submitMovie">
-    <br>
-    <p> Add Movie :) </p>
-    <div>
-      <label for="title">Title:</label>
-=======
 <p>This works now!</p>
   <form v-on:submit.prevent="submitMovie">
     <div class="form-group">
       <label for="title">Title: </label>
->>>>>>> 82f5ea25a1b1dccbe0cc3323d3fdf648f1d24c89
       <input id="title" type="text" v-model="newMovie.title" />
     </div>
     <div class="form-group">
@@ -54,15 +44,8 @@
         v-model.number="newMovie.popularity"
       />
     </div>
-<<<<<<< HEAD
-    <br>
-    <button class = "button" >Submit</button>
-    <br>
-   <!-- <button v-on:click="cancel">Cancel</button>-->
-=======
     <button v-on:click="submitMovie">Submit</button>
    <button v-on:click="cancelForm">Cancel</button>
->>>>>>> 82f5ea25a1b1dccbe0cc3323d3fdf648f1d24c89
   </form>
   </div>
 </template>
@@ -119,7 +102,6 @@ export default {
 }; //end of export data
 </script>
 
-<<<<<<< HEAD
 <style>
 .movieform {
   background-color: #BB9CDF;
@@ -151,17 +133,4 @@ export default {
   transform: translateY(4px);
 }
 
-=======
-<style scoped>
-.form-group {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-div {
-  background-color: rgb(114, 48, 190);
-  color: white;
-
-}
->>>>>>> 82f5ea25a1b1dccbe0cc3323d3fdf648f1d24c89
 </style>

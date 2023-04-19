@@ -1,0 +1,23 @@
+</header>
+    <navigate />
+    <div class = "hover">
+                <a><img class = "cantdecide" src="https://i.imgur.com/Ej2G4i1.png" alt="cantdecide"> </a>
+                <br>
+                <a href="http://localhost:8080/register"><h2 class = "signup" ><span> Sign Up Here</span> </h2></a>
+               
+
+    </div><br>
+                    <a><img class = "bordercine" src="https://i.imgur.com/UJTVYgd.jpg" alt="bordercine"> </a>
+    
+    <movie-form/>
+    <br>
+
+
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chewy">
+<p>  </p>
+  <form class = "movieform" v-on:submit.prevent="submitMovie">
+    <br>
+    <p> Add Movie :) </p>
+    <div>
+      <label for="title">Title:</label>
