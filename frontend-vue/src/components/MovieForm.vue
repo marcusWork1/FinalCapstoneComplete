@@ -1,6 +1,6 @@
 <template>
 <div>
-  <form class = "movieform" v-on:submit.prevent="submitMovie">
+  <form class = "movieform" ref="addmovieform" v-on:submit.prevent="submitMovie">
     <h1> Add a Movie </h1>
     <p>This works now!</p>
     <div class="form-group">
@@ -20,7 +20,7 @@
       <input id="genre" type="text" placeholder="make dropdown" v-model="newMovie.genre" />
     </div>
     <div class="form-group">
-      Pr0n?
+      Adult Movie?
       <input
         id="yes plz"
         type="radio"
@@ -88,14 +88,41 @@ export default {
         popularity: this.newMovie.popularity,
       };
       if(this.movieId === 0) {
-          DatabaseService.postToLocalHost9000(newMovie).then(response => {if (response.status === 201) {this.$router.push(`/movie/${newMovie.movieId}`)}})
-      }
-      this.$router.push({ name: 'Home' });
+          DatabaseService.postToLocalHost9000(newMovie).then(response => {if (response.status === 201) {this.resetForm();}
+          })
+          .catch(error => {
+            this.handleErrorResponse(error, "adding");
+          })
+          
+      } 
+     // this.$router.push({ name: 'Home' });
+
+     
     },
     cancelForm () {
       this.newMovie = {}; //sets the newMovie array to empty
       this.$router.push('/'); //sends user back to the homepage
     },
+    resetForm() {
+      this.newMovie = {};
+      //this.$refs.addmovieform.reset();
+      //this.$router.push('/addmovie');
+    
+    },
+    handleErrorResponse(error, verb) {
+      if (error.response) {
+        this.errorMsg =
+          "Error " + verb + " movie. Response received was '" +
+          error.response.statusText +
+          "'.";
+      } else if (error.request) {
+        this.errorMsg =
+          "Error " + verb + " movie. Server could not be reached.";
+      } else {
+        this.errorMsg =
+          "Error " + verb + " movie. Request could not be created.";
+      }
+    }
 
 
   }, //end of methods
