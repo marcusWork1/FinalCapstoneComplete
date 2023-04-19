@@ -5,10 +5,18 @@
             <a href="http://localhost:8080/"><img class = "imgicon" src="../assets/webicon.png" alt="webicon"/> </a>
             <a href="#"><img class = "descicon" src="../assets/descicon.jpg" alt="descicon"/> </a> 
             <a href="#"><img class = "contacticon" src="../assets/contacticon.jpg" alt="contacticon"/> </a>
-            <router-link to =/addmovie> Add a Movie! </router-link> 
+            <a href="http://localhost:8080/addmovie"><img class = "movieicon" src="https://i.imgur.com/6tEu04Z.jpg" alt="movieicon"/> </a>
+            <!-- <router-link to =/addmovie> Add a Movie! </router-link>  -->
             <a href="http://localhost:8080/login"><img class = "logicon" src="../assets/loginicon.png" alt="logicon"> </a>
         </header>
     <navigate />
+        <div class = "hover">
+                <a><img class = "cantdecide" src="https://i.imgur.com/Ej2G4i1.png" alt="cantdecide"> </a>
+                <br>
+                <a href="http://localhost:8080/register"><h2 class = "signup" ><span> Sign Up Here</span> </h2></a> 
+    </div><br>
+     <a><img class = "bordercine" src="https://i.imgur.com/UJTVYgd.jpg" alt="bordercine"> </a>
+    <br>
  
     <div id="description">
     <p>Welcome to DateFlix and Chill ;)</p>
@@ -22,8 +30,6 @@
       it the app would suggest movies based off of your swipes. 
     </p>
    </div>
-    <h2><router-link to =/login> Login or Sign Up Here! </router-link></h2>
-    <h2><router-link to =/addmovie> Add a Movie Here! </router-link></h2>
     <!-- <movie-form/> -->
     </body>
      
@@ -47,7 +53,7 @@ export default {
 <style scoped>
 * { margin:0; padding:0; }
 .home {
-  background-color: #140180;
+  background-color: #231b52;
   margin: 0px;
   padding: 0px;
 }
@@ -70,7 +76,7 @@ a:visited {
 }
 .bordercine {
   height: 25px;
-  width: 1400px;
+  width: 1600px;
   max-width: 100%;
   display: block;
   margin-right: auto;
@@ -161,6 +167,20 @@ h1 {
   margin-top: 10px;
 }
 .contacticon:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.movieicon {
+  width: auto;
+  height: 85px;
+  border-radius: 25px;
+  box-shadow: 0px 7px 8px black;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.movieicon:active {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }

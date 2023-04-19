@@ -16,6 +16,6 @@
 }
 
 .navigate {
-  background-color: #140180 ;
+  background-color: #231b52 ;
 }
 </style>

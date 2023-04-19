@@ -1,7 +1,8 @@
 <template>
 <div>
-<p>This works now!</p>
-  <form v-on:submit.prevent="submitMovie">
+  <form class = "movieform" v-on:submit.prevent="submitMovie">
+    <h1> Add a Movie </h1>
+    <p>This works now!</p>
     <div class="form-group">
       <label for="title">Title: </label>
       <input id="title" type="text" v-model="newMovie.title" />
@@ -44,8 +45,8 @@
         v-model.number="newMovie.popularity"
       />
     </div>
-    <button v-on:click="submitMovie">Submit</button>
-   <button v-on:click="cancelForm">Cancel</button>
+    <button class = "button" v-on:click="submitMovie">Submit</button>
+   <button class = "cancel" v-on:click="cancelForm">Cancel</button>
   </form>
   </div>
 </template>
@@ -132,5 +133,30 @@ export default {
   box-shadow: 0 5px rgb(61, 61, 61);
   transform: translateY(4px);
 }
+.cancel {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+  font-family: "Chewy";
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #a398a3;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 7px rgb(59, 59, 59);
+  margin-left: 15px;
+  margin-top: 10px;
+}
 
+.cancel:hover {background-color: #362f38}
+
+.cancel:active {
+  background-color: #8e3e8a;
+  box-shadow: 0 5px rgb(61, 61, 61);
+  transform: translateY(4px);
+}
 </style>
