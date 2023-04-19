@@ -1,5 +1,6 @@
 <template>
 <div>
+<<<<<<< HEAD
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chewy">
 <p>  </p>
   <form class = "movieform" v-on:submit.prevent="submitMovie">
@@ -7,21 +8,27 @@
     <p> Add Movie :) </p>
     <div>
       <label for="title">Title:</label>
+=======
+<p>This works now!</p>
+  <form v-on:submit.prevent="submitMovie">
+    <div class="form-group">
+      <label for="title">Title: </label>
+>>>>>>> 82f5ea25a1b1dccbe0cc3323d3fdf648f1d24c89
       <input id="title" type="text" v-model="newMovie.title" />
     </div>
-    <div>
-      <label for="release_date">Release Date:</label>
+    <div class="form-group">
+      <label for="release_date">Release Date: </label>
       <input id="release_date" type="date" v-model="newMovie.release_date" />
     </div>
-    <div>
-      <label for="overview">Overview:</label>
+    <div class="form-group">
+      <label for="overview">Overview: </label>
       <input id="overview" type="text" v-model="newMovie.overview" />
     </div>
-    <div>
-      <label for="genre">Genre:</label>
+    <div class="form-group">
+      <label for="genre">Genre: </label>
       <input id="genre" type="text" v-model="newMovie.genre" />
     </div>
-    <div>
+    <div class="form-group">
       Pr0n?
       <input
         id="yes plz"
@@ -29,7 +36,7 @@
         value="true"
         v-model="newMovie.adult_only"
       />
-      <label for="yes plz">yes plz</label>
+      <label for="yes plz">Yes Plz</label>
 
       <input
         id="no thnx"
@@ -37,20 +44,25 @@
         value="false"
         v-model="newMovie.adult_only"
       />
-      <label for="no thnx">no thnx</label>
+      <label for="no thnx">No Thnx</label>
     </div>
-    <div>
-      <label for="popularity">Popularity:</label>
+    <div class="form-group">
+      <label for="popularity">Popularity: </label>
       <input
         id="popularity"
         type="number"
         v-model.number="newMovie.popularity"
       />
     </div>
+<<<<<<< HEAD
     <br>
     <button class = "button" >Submit</button>
     <br>
    <!-- <button v-on:click="cancel">Cancel</button>-->
+=======
+    <button v-on:click="submitMovie">Submit</button>
+   <button v-on:click="cancelForm">Cancel</button>
+>>>>>>> 82f5ea25a1b1dccbe0cc3323d3fdf648f1d24c89
   </form>
   </div>
 </template>
@@ -97,12 +109,17 @@ export default {
           DatabaseService.postToLocalHost9000(newMovie).then(response => {if (response.status === 201) {this.$router.push(`/movie/${newMovie.movieId}`)}})
       }
     },
+    cancelForm () {
+      this.newMovie = {}; //sets the newMovie array to empty
+      this.$router.push('/'); //sends user back to the homepage
+    },
 
 
   }, //end of methods
 }; //end of export data
 </script>
 
+<<<<<<< HEAD
 <style>
 .movieform {
   background-color: #BB9CDF;
@@ -134,4 +151,17 @@ export default {
   transform: translateY(4px);
 }
 
+=======
+<style scoped>
+.form-group {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+div {
+  background-color: rgb(114, 48, 190);
+  color: white;
+
+}
+>>>>>>> 82f5ea25a1b1dccbe0cc3323d3fdf648f1d24c89
 </style>

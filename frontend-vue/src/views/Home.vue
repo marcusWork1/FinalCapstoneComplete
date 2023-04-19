@@ -2,6 +2,7 @@
   <div class="home">
     <body id = "body">
             <header>
+<<<<<<< HEAD
             <a href="http://localhost:8080/"><img class = "imgicon" src="https://i.imgur.com/8wIaQDQ.png" alt="webicon"/> </a>
             <a href="http://localhost:8080/description"><img class = "descicon" src="https://i.imgur.com/ZfFZoTz.jpg" alt="descicon"/> </a> 
             <a href="#"><img class = "contacticon" src="https://i.imgur.com/WtWooFI.jpg" alt="contacticon"/> </a> 
@@ -20,6 +21,31 @@
     
     <movie-form/>
     <br>
+=======
+            <a href="http://localhost:8080/"><img class = "imgicon" src="../assets/webicon.png" alt="webicon"/> </a>
+            <a href="#"><img class = "descicon" src="../assets/descicon.jpg" alt="descicon"/> </a> 
+            <a href="#"><img class = "contacticon" src="../assets/contacticon.jpg" alt="contacticon"/> </a>
+            <router-link to =/addmovie> Add a Movie! </router-link> 
+            <a href="http://localhost:8080/login"><img class = "logicon" src="../assets/loginicon.png" alt="logicon"> </a>
+        </header>
+    <navigate />
+ 
+    <div id="description">
+    <p>Welcome to DateFlix and Chill ;)</p>
+    <h2>About Dateflix and Chill</h2>
+    <p>In April 2023, six Tech Elevator Programmers were tired of 
+      bad movie recommendations that did not align with their interest.
+      Together they brainstromed and created an app that comes up with the best
+      movie to watch based on your personal preference and mood when trying to find
+      the perfect title to watch for date night. Our app follows a tinder-style 
+      format of clicking right or left on a movie if you’ve seen it, and you rate how you felt about 
+      it the app would suggest movies based off of your swipes. 
+    </p>
+   </div>
+    <h2><router-link to =/login> Login or Sign Up Here! </router-link></h2>
+    <h2><router-link to =/addmovie> Add a Movie Here! </router-link></h2>
+    <!-- <movie-form/> -->
+>>>>>>> 82f5ea25a1b1dccbe0cc3323d3fdf648f1d24c89
     </body>
      
   </div>
@@ -28,13 +54,13 @@
 
 <script>
 import Navigate from '../components/Navigate.vue';
-import MovieForm from '../components/MovieForm.vue';
+//import MovieForm from '../components/MovieForm.vue';
 
 export default {
   name: "home",
   components: {
     Navigate,
-    MovieForm
+   // MovieForm
   }
 };
 </script>
@@ -46,12 +72,22 @@ export default {
   margin: 0px;
   padding: 0px;
 }
+<<<<<<< HEAD
 .cantdecide {
   display: block;
   margin-left: auto;
   margin-right: auto;
   height:25px;
   padding-top: 10px;
+=======
+
+a:visited {
+  color:thistle;
+}
+
+#description{
+  color: #ABD3FF;
+>>>>>>> 82f5ea25a1b1dccbe0cc3323d3fdf648f1d24c89
 }
 .h1 {
   font-family: 'Brush Script MT', cursive;
