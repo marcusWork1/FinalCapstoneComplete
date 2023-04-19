@@ -11,8 +11,8 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  height: 80%;
-  max-width: 100%;
+  height: 70%;
+  width: 60%;
 }
 
 .navigate {
