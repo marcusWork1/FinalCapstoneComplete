@@ -3,11 +3,12 @@
     <body id = "body">
             <header>
             <a href="http://localhost:8080/"><img class = "imgicon" src="../assets/webicon.png" alt="webicon"/> </a>
-            <a href="#"><img class = "descicon" src="../assets/descicon.jpg" alt="descicon"/> </a> 
+            <a href="http://localhost:8080/description"><img class = "descicon" src="https://i.imgur.com/ZfFZoTz.jpg" alt="descicon"/> </a>
             <a href="#"><img class = "contacticon" src="../assets/contacticon.jpg" alt="contacticon"/> </a>
             <a href="http://localhost:8080/addmovie"><img class = "movieicon" src="https://i.imgur.com/6tEu04Z.jpg" alt="movieicon"/> </a>
             <!-- <router-link to =/addmovie> Add a Movie! </router-link>  -->
             <a href="http://localhost:8080/login"><img class = "logicon" src="../assets/loginicon.png" alt="logicon"> </a>
+            
         </header>
     <navigate />
         <div class = "hover">

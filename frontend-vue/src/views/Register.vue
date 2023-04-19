@@ -1,5 +1,11 @@
 <template>
   <div id="register" class="text-center">
+     <header>
+            <a href="http://localhost:8080/"><img class = "imgicon" src="https://i.imgur.com/8wIaQDQ.png" alt="webicon"/> </a>
+            <a href="#"><img class = "contacticon" src="https://i.imgur.com/WtWooFI.jpg" alt="contacticon"/> </a> 
+           <a href="http://localhost:8080/description"><img class = "descicon" src="https://i.imgur.com/ZfFZoTz.jpg" alt="descicon"/> </a>
+            <a href="http://localhost:8080/login"><img class = "logicon" src="https://i.imgur.com/kSKskRm.png" alt="logicon"> </a>
+        </header>
     <form @submit.prevent="register">
       <h1>Create Account</h1>
       <div role="alert" v-if="registrationErrors">
@@ -80,4 +86,45 @@ export default {
 label {
   margin-right: 0.5rem;
 }
+
+.imgicon {
+  width: auto;
+  height: 85px;
+  border-radius: 25px;
+  box-shadow: 0px 7px 8px black;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.logicon {
+  width: auto;
+  height: 85px;
+  border-radius: 25px;
+  box-shadow: 0px 7px 8px black;
+  margin-bottom: 10px;
+  float: right;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.contacticon {
+  width: auto;
+  height: 85px;
+  border-radius: 25px;
+  box-shadow: 0px 7px 8px black;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.descicon {
+  width: auto;
+  height: 85px;
+  border-radius: 25px;
+  box-shadow: 0px 7px 8px black;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
 </style>
