@@ -17,7 +17,7 @@
     </div>
     <div class="form-group">
       <label for="genre">Genre: </label>
-      <input id="genre" type="text" v-model="newMovie.genre" />
+      <input id="genre" type="text" placeholder="make dropdown" v-model="newMovie.genre" />
     </div>
     <div class="form-group">
       Pr0n?

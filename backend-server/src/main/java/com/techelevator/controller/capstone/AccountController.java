@@ -12,7 +12,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @CrossOrigin
-@PreAuthorize("isAuthenticated()") // All users must be authenticated to access (comment out for testing)
+//@PreAuthorize("isAuthenticated()") // All users must be authenticated to access (comment out for testing)
 @RestController
 public class AccountController {
 
@@ -46,7 +46,7 @@ public class AccountController {
      *
      * @param newAccount
      */
-    @PermitAll // Anyone can create an account
+  //  @PermitAll // Anyone can create an account
     @ResponseStatus(HttpStatus.CREATED)
     @RequestMapping(path="/account",method = RequestMethod.POST)
     public Account createAccount(@Valid @RequestBody Account newAccount){

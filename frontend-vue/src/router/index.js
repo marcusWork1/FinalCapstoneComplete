@@ -60,7 +60,7 @@ const router = new Router({
       name: "addmovie",
       component: AddMovie,
       meta: {
-        requiresAuth: false
+        requiresAuth: true
       }
     },
     {
