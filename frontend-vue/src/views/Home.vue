@@ -2,14 +2,15 @@
   <div class="home">
     <body id = "body">
             <header>
-            <a href="http://localhost:8080/"><img class = "imgicon" src="https://i.imgur.com/8wIaQDQ.png" alt="webicon"/> </a>
-            <a href="#"><img class = "descicon" src="https://i.imgur.com/ZfFZoTz.jpg" alt="descicon"/> </a> 
-            <a href="#"><img class = "contacticon" src="https://i.imgur.com/WtWooFI.jpg" alt="contacticon"/> </a> 
-            <a href="http://localhost:8080/login"><img class = "logicon" src="https://i.imgur.com/kSKskRm.png" alt="logicon"> </a>
+            <a href="http://localhost:8080/"><img class = "imgicon" src="../assets/webicon.png" alt="webicon"/> </a>
+            <a href="#"><img class = "descicon" src="../assets/descicon.jpg" alt="descicon"/> </a> 
+            <a href="#"><img class = "contacticon" src="../assets/contacticon.jpg" alt="contacticon"/> </a>
+            <router-link to =/addmovie> Add a Movie! </router-link> 
+            <a href="http://localhost:8080/login"><img class = "logicon" src="../assets/loginicon.png" alt="logicon"> </a>
         </header>
     <navigate />
  
-    <div>
+    <div id="description">
     <p>Welcome to DateFlix and Chill ;)</p>
     <h2>About Dateflix and Chill</h2>
     <p>In April 2023, six Tech Elevator Programmers were tired of 
@@ -22,7 +23,8 @@
     </p>
    </div>
     <h2><router-link to =/login> Login or Sign Up Here! </router-link></h2>
-    <movie-form/>
+    <h2><router-link to =/addmovie> Add a Movie Here! </router-link></h2>
+    <!-- <movie-form/> -->
     </body>
      
   </div>
@@ -32,13 +34,13 @@
 <script>
 //import { component } from 'vue/types/umd';
 import Navigate from '../components/Navigate.vue';
-import MovieForm from '../components/MovieForm.vue';
+//import MovieForm from '../components/MovieForm.vue';
 
 export default {
   name: "home",
   components: {
     Navigate,
-    MovieForm
+   // MovieForm
   }
 };
 </script>
@@ -51,6 +53,13 @@ export default {
   padding: 0px;
 }
 
+a:visited {
+  color:thistle;
+}
+
+#description{
+  color: #ABD3FF;
+}
 .h1 {
   font-family: 'Brush Script MT', cursive;
 }
