@@ -5,6 +5,7 @@ import Login from '../views/Login.vue'
 import Logout from '../views/Logout.vue'
 import Register from '../views/Register.vue'
 import AddMovie from '../views/AddMovie'
+import Description from '../views/Description.vue'
 import store from '../store/index'
 
 Vue.use(Router)
@@ -58,6 +59,14 @@ const router = new Router({
       path: "/addmovie",
       name: "addmovie",
       component: AddMovie,
+      meta: {
+        requiresAuth: false
+      }
+    },
+    {
+      path: "/description",
+      name: "description",
+      component: Description,
       meta: {
         requiresAuth: false
       }
