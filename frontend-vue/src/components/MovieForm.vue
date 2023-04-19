@@ -90,6 +90,7 @@ export default {
       if(this.movieId === 0) {
           DatabaseService.postToLocalHost9000(newMovie).then(response => {if (response.status === 201) {this.$router.push(`/movie/${newMovie.movieId}`)}})
       }
+      this.$router.push({ name: 'Home' });
     },
     cancelForm () {
       this.newMovie = {}; //sets the newMovie array to empty
