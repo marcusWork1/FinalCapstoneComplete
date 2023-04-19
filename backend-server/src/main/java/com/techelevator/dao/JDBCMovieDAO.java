@@ -1,7 +1,6 @@
 package com.techelevator.dao;
 
 
-import com.techelevator.model.FavoriteList;
 import com.techelevator.model.Movie;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
@@ -32,17 +31,17 @@ public class JDBCMovieDAO implements MovieDAO {
         return movie;
     }
 
-    @Override
-    public Movie getMovieByTitle(String title) {
-        Movie movieBytitle = null;
-        String sql = "SELECT movie_id, title, release_date, overview, genre, adult_only, popularity" +
-                "FROM movie" + "WHERE title = ?;";
-        SqlRowSet results = jdbcTemplate.queryForRowSet(sql, title);
-        if (results.next()){
-            movieBytitle = mapRowToMovie(results);
-        }
-        return movieBytitle;
-    }
+//    @Override
+//    public Movie getMovieByTitle(String title) {
+//        Movie movieBytitle = null;
+//        String sql = "SELECT movie_id, title, release_date, overview, genre, adult_only, popularity" +
+//                "FROM movie" + "WHERE title = ?;";
+//        SqlRowSet results = jdbcTemplate.queryForRowSet(sql, title);
+//        if (results.next()){
+//            movieBytitle = mapRowToMovie(results);
+//        }
+//        return movieBytitle;
+//    }
 
     @Override
     public List<Movie> getMovies() {
@@ -86,13 +85,11 @@ public class JDBCMovieDAO implements MovieDAO {
 //}
 //@Override
     // need inner joins
-//public Movie addFavorite(Movie aMovie) {
-//    String sql = "INSERT into favorite_list (account_id, movie_id) " +
-//            "VALUES (?,?) RETURNING account_id;";
-//    Integer id = jdbcTemplate.queryForObject(sql, Integer.class, aMovie.getAccountId, aMovie.getMovieId());
-//
-//    return addFavorite();
-//}
+public void addFavorite(int account_id, int movie_id) {
+    String sql = "INSERT into favorite_list (account_id, movie_id) " +
+                 "VALUES (?,?);";
+    jdbcTemplate.update(sql, account_id, movie_id);
+}
 
 
     private Movie mapRowToMovie(SqlRowSet rowSet){
