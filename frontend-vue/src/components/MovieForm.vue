@@ -45,8 +45,13 @@
         v-model.number="newMovie.popularity"
       />
     </div>
+<<<<<<< HEAD
     <button class = "button" v-on:click="submitMovie">Submit</button>
    <button class = "cancel" v-on:click="cancelForm">Cancel</button>
+=======
+    <button>Submit</button>
+   <button v-on:click="cancelForm">Cancel</button>
+>>>>>>> 683c2099cc7c490f15fdaef329de7dce72096993
   </form>
   </div>
 </template>
@@ -57,16 +62,14 @@ import moment from "moment";
 
 export default {
   name: "movie-form",
+  props: {
+    movieId: {
+      type: Number,
+    default: 0
+    }
+  },
   data() {
     return {
-      movie: {
-        title: "",
-        release_date: null,
-        overview: "",
-        genre: "",
-        adult_only: false,
-        popularity: "",
-      },
       newMovie: {
         title: "",
         release_date: null,
@@ -81,13 +84,13 @@ export default {
   methods: {
     submitMovie() {
       const newMovie = {
-        movieId: Number(this.$route.params.movieId),
-        title: this.movie.title,
+        //movieId: Number(this.$route.params.movieId),
+        title: this.newMovie.title,
         release_date: moment().format("YYYY-MM-Do"),
-        overview: this.movie.overview,
-        genre: this.movie.genre,
-        adult_only: this.movie.genre,
-        popularity: this.movie.popularity,
+        overview: this.newMovie.overview,
+        genre: this.newMovie.genre,
+        adult_only: this.newMovie.adult_only,
+        popularity: this.newMovie.popularity,
       };
       if(this.movieId === 0) {
           DatabaseService.postToLocalHost9000(newMovie).then(response => {if (response.status === 201) {this.$router.push(`/movie/${newMovie.movieId}`)}})
