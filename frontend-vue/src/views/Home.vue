@@ -9,18 +9,23 @@
         </header>
     <navigate />
     <h2><router-link to =/login> Login or Sign Up Here! </router-link></h2>
+    <movie-form/>
     </body>
+     
   </div>
+  
 </template>
 
 <script>
 //import { component } from 'vue/types/umd';
 import Navigate from '../components/Navigate.vue';
+import MovieForm from '../components/MovieForm.vue';
 
 export default {
   name: "home",
   components: {
-    Navigate
+    Navigate,
+    MovieForm
   }
 };
 </script>
