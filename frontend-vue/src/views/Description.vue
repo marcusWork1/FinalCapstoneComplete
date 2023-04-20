@@ -1,17 +1,19 @@
 <template>
-    <div>
-           <header>
-            <a href="http://localhost:8080/"><img class = "imgicon" src="https://i.imgur.com/8wIaQDQ.png" alt="webicon"/> </a>
-            <a href="#"><img class = "contacticon" src="https://i.imgur.com/WtWooFI.jpg" alt="contacticon"/> </a> 
+    <div class = "desc">
+        <header>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chewy">
+            <a href="http://localhost:8080/"><img class = "imgicon" src="../assets/webicon.png" alt="webicon"/> </a>
+            <a href="http://localhost:8080/description"><img class = "descicon" src="https://i.imgur.com/ZfFZoTz.jpg" alt="descicon"/> </a>
+            <a href="#"><img class = "contacticon" src="../assets/contacticon.jpg" alt="contacticon"/> </a>
             <a href="http://localhost:8080/addmovie"><img class = "movieicon" src="https://i.imgur.com/6tEu04Z.jpg" alt="movieicon"/> </a>
-            <a href="http://localhost:8080/login"><img class = "logicon" src="https://i.imgur.com/kSKskRm.png" alt="logicon"> </a>
-        </header> 
+            <a href="http://localhost:8080/login"><img class = "logicon" src="../assets/loginicon.png" alt="logicon"> </a>
+        </header>
     
-    
+            <h1>Dateflix and Chill App Description</h1><br>
+        <img class = "walle" src = "https://i.imgur.com/fPA6ZJC.jpg">
     <div class= "description">
 
-        <h1>Dateflix and Chill App Description</h1><br>
-        <img class = "walle" src = "https://i.imgur.com/fPA6ZJC.jpg">
+
         <div class = "info">
                     <h2>About Dateflix and Chill</h2>
                         <p>Welcome to DateFlix, the app that helps you find the perfect movie match! With DateFlix, you can swipe 
@@ -41,21 +43,42 @@ export default {
 </script>
 
 <style scoped>
+.desc {
+  background-color: #231b52;
+}
 .walle {
   height: 90px;
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }
 .info {
-  display: block;
+  margin: 10px;
+  padding: 30px;
+}
+h1 {
+  color: white;
+  font-family: "Chewy";
+  text-align: center;
 }
 .description {
   background-color: #231b52;
   color: white;
   font-family: "Chewy";
-  padding: 0px;
   text-align: center;
-  float: left;
+  margin: 0px;
+  padding: 0;
+  height: 70%;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+.image {
+  height: 100%;
+}
 .imgicon {
   width: auto;
   height: 85px;
@@ -64,6 +87,10 @@ export default {
   margin-left: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+.imgicon:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 .logicon {
@@ -76,6 +103,24 @@ export default {
   margin-right: 10px;
   margin-top: 10px;
 }
+.logicon:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.descicon {
+  width: auto;
+  height: 85px;
+  border-radius: 25px;
+  box-shadow: 0px 7px 8px black;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.descicon:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
 
 .contacticon {
   width: auto;
@@ -86,6 +131,11 @@ export default {
   margin-left: 20px;
   margin-top: 10px;
 }
+.contacticon:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
 .movieicon {
   width: auto;
   height: 85px;
@@ -94,5 +144,12 @@ export default {
   margin-bottom: 10px;
   margin-left: 20px;
   margin-top: 10px;
+}
+.movieicon:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+header {
+  background-color: #231b52;
 }
 </style>

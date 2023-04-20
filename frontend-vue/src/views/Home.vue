@@ -1,16 +1,16 @@
 <template>
   <div class="home">
     <body id = "body">
+
+        <header>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chewy">
-            <header>
             <a href="http://localhost:8080/"><img class = "imgicon" src="../assets/webicon.png" alt="webicon"/> </a>
             <a href="http://localhost:8080/description"><img class = "descicon" src="https://i.imgur.com/ZfFZoTz.jpg" alt="descicon"/> </a>
             <a href="#"><img class = "contacticon" src="../assets/contacticon.jpg" alt="contacticon"/> </a>
             <a href="http://localhost:8080/addmovie"><img class = "movieicon" src="https://i.imgur.com/6tEu04Z.jpg" alt="movieicon"/> </a>
-            <!-- <router-link to =/addmovie> Add a Movie! </router-link>  -->
             <a href="http://localhost:8080/login"><img class = "logicon" src="../assets/loginicon.png" alt="logicon"> </a>
-            
         </header>
+        
         <meta charset="UTF-8">
             <p class = "title" >Welcome to DateFlix and Chill &#128521;</p>
         <navigate />
@@ -35,7 +35,7 @@
    </div>
     <!-- <movie-form/> -->
     </body>
-   <br>
+   <br><br><br><br><br><br><br><br><br>
   </div>
   
 </template>

@@ -1,12 +1,18 @@
 <template>
     <div>
-         <header>
-            <a href="http://localhost:8080/"><img class = "imgicon" src="https://i.imgur.com/8wIaQDQ.png" alt="webicon"/> </a>
-            <a href="http://localhost:8080/description"><img class = "descicon" src="https://i.imgur.com/ZfFZoTz.jpg" alt="descicon"/> </a> 
-            <a href="#"><img class = "contacticon" src="https://i.imgur.com/WtWooFI.jpg" alt="contacticon"/> </a> 
-            <a href="http://localhost:8080/login"><img class = "logicon" src="https://i.imgur.com/kSKskRm.png" alt="logicon"> </a>
+        <header>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chewy">
+            <a href="http://localhost:8080/"><img class = "imgicon" src="../assets/webicon.png" alt="webicon"/> </a>
+            <a href="http://localhost:8080/description"><img class = "descicon" src="https://i.imgur.com/ZfFZoTz.jpg" alt="descicon"/> </a>
+            <a href="#"><img class = "contacticon" src="../assets/contacticon.jpg" alt="contacticon"/> </a>
+            <a href="http://localhost:8080/addmovie"><img class = "movieicon" src="https://i.imgur.com/6tEu04Z.jpg" alt="movieicon"/> </a>
+            <a href="http://localhost:8080/login"><img class = "logicon" src="../assets/loginicon.png" alt="logicon"> </a>
         </header>
+        <div>
+                <img class = "walle" src = "https://i.imgur.com/fPA6ZJC.jpg">
+      
         <movie-form />
+          </div>
     </div>
 </template>
 
@@ -21,6 +27,12 @@ export default {
 </script>
 
 <style scoped>
+.walle {
+  height: 90px;
+}
+.image {
+  height: 100%;
+}
 .imgicon {
   width: auto;
   height: 85px;
@@ -91,5 +103,4 @@ export default {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-
 </style>
