@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form class="profileQuestions" ref = "answerQuestions" v-on:submit.prevent="submitAnswers">
+    <form class="profileQuestions" ref = "answerQuestions" v-on:submit.prevent="submitForm">
     <h1>Create your profile!</h1>
     <p> This helps personalize your DateFlix and Chill experience </p>
       <div class="form-group">
@@ -12,15 +12,30 @@
       <input id="genre" type="dropdown" v-model="newForm.genre" />
     </div>
     <div class="form-group">
-      <label for="adult_only">Adult Only?: </label>
-      <input id="adult_only" type="radio" value= true v-model="newForm.adult_only" />
+      Adult Movie?
+      <input
+        id="yes plz"
+        type="radio"
+        value="true"
+        v-model="newForm.adult_only"
+      />
+      <label for="yes plz">Yes Plz</label>
+
+      <input
+        id="no thnx"
+        type="radio"
+        value="false"
+        v-model="newForm.adult_only"
+      />
+      <label for="no thnx">No Thnx</label>
     </div>
     <div class="form-group">
       <label for="popularity"> Minimum rating preference?: </label>
       <input id="popularity" type="number" v-model="newForm.popularity" />
     </div>
-      <button class ="submit" v-on:click="submitAnswers">Submit</button>
+      <button class ="button" v-on:click="submitForm">Submit</button>
       <button class ="button" v-on:click="cancelForm"> Cancel </button>
+
   </form>
   </div>
 </template>
@@ -34,9 +49,9 @@ export default {
     name: 'account-form',
   data() {
     return {
-      profile: {
-        user_id: this.user.user_id,
-        username: this.user.username,
+      newForm: {
+        user_id: '',
+        username: '',
         email_address: '',
         genre: '',
         adult_only: false,
@@ -47,6 +62,8 @@ export default {
   methods: {
     submitForm() {
         const newForm = {
+          user_id: this.user.user_id,
+          username: this.user.username,
             email_address: this.newForm.email_address,
             genre: this.newForm.genre,
             adult_only: this.newForm.adult_only,

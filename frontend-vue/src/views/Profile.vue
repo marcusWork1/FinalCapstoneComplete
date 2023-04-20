@@ -1,7 +1,7 @@
 <template>
   <div>
       <navigate/>
-      <profile-questions/>
+      <profile-questions />
   </div>
 </template>
 
