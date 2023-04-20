@@ -7,20 +7,24 @@ DROP SEQUENCE IF EXISTS  seq_movie_id;
 CREATE TABLE account (
 	account_id serial NOT NULL,
 	user_id int NOT NULL,
-	username varchar(50) UNIQUE NOT NULL,
-	email_address varchar(50) UNIQUE NOT NULL,
+	username varchar(50) UNIQUE,
+	email_address varchar(50) UNIQUE,
+	genre varchar(50),
+	adult_only boolean,
+	popularity int,
 	CONSTRAINT PK_account PRIMARY KEY (account_id),
-	CONSTRAINT FK_account_user_id FOREIGN KEY (user_id) REFERENCES users (user_id)
+	CONSTRAINT FK_account_user_id FOREIGN KEY (user_id) REFERENCES users (user_id),
+	CONSTRAINT FK_account_username FOREIGN KEY (username) REFERENCES users (username)
 );
 
 CREATE TABLE movie (
 	movie_id serial NOT NULL,
-	title varchar(200) NOT NULL,
-	release_date date NOT NULL,
-	overview varchar(1000) NOT NULL,
-	genre varchar(50) NOT NULL,
-	adult_only boolean NOT NULL,
-	popularity int NOT NULL,
+	title varchar(200),
+	release_date date,
+	overview varchar(1000),
+	genre varchar(50),
+	adult_only boolean ,
+	popularity int,
 
 	CONSTRAINT PK_movie PRIMARY KEY (movie_id)
 );
@@ -40,5 +44,3 @@ CREATE TABLE favorite_list (
 
 
 COMMIT;
-
-
