@@ -21,7 +21,6 @@ public class Account {
     }
 
     public Account() {
-
     }
 
     public int getAccount_id() {
