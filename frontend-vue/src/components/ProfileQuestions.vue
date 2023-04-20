@@ -62,14 +62,14 @@ export default {
   methods: {
     submitForm() {
         const newForm = {
-          user_id: this.user.user_id,
-          username: this.user.username,
+          user_id: this.$store.state.user.id,
+          username: this.$store.state.user.username,
             email_address: this.newForm.email_address,
             genre: this.newForm.genre,
             adult_only: this.newForm.adult_only,
-            popularity: this.newForm.popularity
+            popularity: parseInt(this.newForm.popularity)
         };
-        if (this.email_address === null) {
+        if (this.email_address != null) {
             //add
             DatabaseService
             .addProfile(newForm)
@@ -81,10 +81,12 @@ export default {
              });
         } else {
             // update
+            newForm.user_id = this.$store.state.user.id;
+            newForm.username = this.$store.state.user.username;
         newForm.email_address = this.newForm.email_address;
         newForm.genre = this.newForm.genre;
         newForm.adult_only = this.newForm.adult_only;
-        newForm.popularity = this.newForm.popularity;
+        newForm.popularity = parseInt(this.newForm.popularity);
         DatabaseService
         .updateProfile(newForm)
         .then(response => {

@@ -13,6 +13,6 @@
     return httpLocalHost.post('/account', profileObject);
   },
   updateProfile(profileObject2) {
-    return httpLocalHost.put(`/account/${profileObject2.id}`, profileObject2)
+    return httpLocalHost.put(`/account/${profileObject2.user_id}`, profileObject2)
   },
 }
