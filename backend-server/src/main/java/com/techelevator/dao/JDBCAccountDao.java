@@ -6,15 +6,24 @@ import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
+import java.util.ArrayList;
+import java.util.List;
 
 @Component
 public class JDBCAccountDao implements AccountDAO {
+
+    private List<Account> listOfAccounts = new ArrayList<>();
 
     private final JdbcTemplate jdbcTemplate;
 
     public JDBCAccountDao(DataSource dataSource) {
         this.jdbcTemplate = new JdbcTemplate(dataSource);}
 
+
+    @Override
+    public List<Account> allAccounts() {
+        return null;
+    }
 
     @Override
     public Account getAccount(int account_id) {
@@ -30,11 +39,20 @@ public class JDBCAccountDao implements AccountDAO {
 
     @Override
     public Account createAccount(Account account) {
-        String sql = "INSERT INTO account (email_address, genre, adult_only, popularity )" + "VALUES (?, ?, ?, ?) RETURNING account_id;";
-        Integer newAccountId = jdbcTemplate.queryForObject(sql, Integer.class, account.getEmail_address(), account.getGenre(), account.isAdult_only(), account.getPopularity());
+        String sql = "INSERT INTO account (user_id, username, email_address, genre, adult_only, popularity )" + "VALUES (?, ?, ?, ?, ?, ?) RETURNING account_id;";
+        Integer newAccountId = jdbcTemplate.queryForObject(sql, Integer.class, account.getAccount_id(), account.getUsername(), account.getEmail_address(), account.getGenre(), account.isAdult_only(), account.getPopularity());
 
         return getAccount(newAccountId);
     }
+
+    @Override
+    public void updateAccount(Account account) {
+        String sql = "UPDATE account " + "SET  username = ?, email_address = ?, genre = ?, adult_only = ?, popularity = ? " +
+                "WHERE account_id = ?;";
+        jdbcTemplate.update(sql, account.getUsername(),account.getEmail_address(), account.getGenre(), account.isAdult_only(), account.getPopularity(), account.getAccount_id());
+        }
+
+
 
     private Account mapRowToUser(SqlRowSet rowSet){
         Account account = new Account();

@@ -53,6 +53,14 @@ public class AccountController {
         return accountDAO.createAccount(newAccount);
     }
 
+    //@PreAuthorize("hasRole('USER')") -- Do we even need to preauthorize user, Does annotation up top already control that
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    @RequestMapping(path = "/account/{id}", method = RequestMethod.PUT)
+    public void updateAccount (@Valid @RequestBody Account updateAccount,
+                                  @PathVariable int id) {
+         accountDAO.updateAccount(updateAccount);
+    }
+
 } // End of Account Controller
 
 

@@ -2,7 +2,7 @@ import axios from "axios";
 
 const APIServer = axios.create({
   baseURL: "https://api.themoviedb.org/3",
-  //apiKEY: "5ca2c64fc6ec1bf4c74259e634823759",
+  //api_key: "5ca2c64fc6ec1bf4c74259e634823759",
 });
 
 export default {
