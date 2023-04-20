@@ -53,6 +53,12 @@ public class AccountController {
         return accountDAO.createAccount(newAccount);
     }
 
+    @RequestMapping(path = "/account/{id}", method = RequestMethod.PUT)
+    public void updateAccount (@Valid @RequestBody Account updateAccount,
+                                  @PathVariable int id) {
+         accountDAO.updateAccount(updateAccount);
+    }
+
 } // End of Account Controller
 
 
