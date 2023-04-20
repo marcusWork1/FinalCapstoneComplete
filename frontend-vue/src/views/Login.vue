@@ -1,7 +1,7 @@
 <template>
 
  <div id="login">
-    <form @submit.prevent="login">
+    <form class = "signinform" @submit.prevent="login">
                              <header>
             <a href="http://localhost:8080/"><img class = "imgicon" src="https://i.imgur.com/8wIaQDQ.png" alt="webicon"/> </a>
             <a href="http://localhost:8080/description"><img class = "descicon" src="https://i.imgur.com/ZfFZoTz.jpg" alt="descicon"/> </a> 
@@ -72,6 +72,10 @@ export default {
 
 <style scoped>
 
+.signinform {
+  font-family: "Chewy";
+  background-color: #a474c4;
+}
 .body {
   background-color: #140180;
 }

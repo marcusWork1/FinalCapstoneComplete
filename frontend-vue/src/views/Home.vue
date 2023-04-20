@@ -82,15 +82,15 @@ a:visited {
 #description{
   color: rgb(17, 17, 17);
   background-color: #AC8AD3;
-  border: 15px solid rgb(231, 223, 240);
-  padding: 15px;
+  border: 9px solid rgb(231, 223, 240);
+  padding: 12px;
   margin: 10px;
   font-family: "Chewy";
   border-radius: 10px;
   text-align: center;
   display: block;
-  margin-left: 135px;
-  margin-right: 135px;
+  margin-left: 80px;
+  margin-right: 80px;
   font-size: 15px;
 }
 .bordercine {

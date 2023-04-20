@@ -185,4 +185,19 @@ export default {
   box-shadow: 0 5px rgb(61, 61, 61);
   transform: translateY(4px);
 }
+
+.info {
+  color: rgb(17, 17, 17);
+  background-color: #AC8AD3;
+  border: 9px solid rgb(231, 223, 240);
+  padding: 80px;
+  margin: 20px;
+  font-family: "Chewy";
+  border-radius: 10px;
+  text-align: center;
+  display: block;
+  margin-left: 220px;
+  margin-right: 220px;
+  font-size: 20px;
+}
 </style>
