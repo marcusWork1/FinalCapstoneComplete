@@ -46,24 +46,13 @@ public class JDBCAccountDao implements AccountDAO {
     }
 
     @Override
-    public Account updateAccount(Account account, int account_id) {
-        Account updatedAccount = account;
-        boolean isUpdated = false;
-        for (int i= 0; i < listOfAccounts.size(); i++){
-            if (listOfAccounts.get(i).getAccount_id() == account_id){
-                if (updatedAccount.getAccount_id() == 0){
-                    updatedAccount.setAccount_id(account_id);
-                }
-                listOfAccounts.set(i, updatedAccount);
-                isUpdated = true;
-                break;
-            }
+    public void updateAccount(Account account) {
+        String sql = "UPDATE account " + "SET email = ?, username = ?, genre = ?, popularity = ? " +
+                "WHERE account_id = ?;";
+        jdbcTemplate.update(sql, account.getEmail_address(), account.getUsername(), account.getGenre(), account.getPopularity(), account.getAccount_id());
         }
-        if (!isUpdated){
-            return null;
-        }
-        return updatedAccount;
-    }
+
+
 
     private Account mapRowToUser(SqlRowSet rowSet){
         Account account = new Account();

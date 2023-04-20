@@ -12,6 +12,6 @@ public interface AccountDAO {
 
     Account createAccount(Account account);
 
-    Account updateAccount(Account account, int account_id);
+    void updateAccount(Account account);
 
 } // End of AccountDAO
