@@ -4,7 +4,7 @@ import com.techelevator.model.Account;
 
 public interface AccountDAO {
 
-    Account getAccount(int accountId);
+    Account getAccount(int account_id);
 
     Account createAccount(Account account);
 

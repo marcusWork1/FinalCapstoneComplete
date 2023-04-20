@@ -17,10 +17,10 @@ public class JDBCAccountDao implements AccountDAO {
 
 
     @Override
-    public Account getAccount(int accountId) {
+    public Account getAccount(int account_id) {
         Account user = null;
-        String sql = "SELECT account_id, user_id, username, email_address" + "FROM account" + "WHERE account_id = ?;";
-        SqlRowSet results = jdbcTemplate.queryForRowSet(sql, accountId);
+        String sql = "SELECT account_id, user_id, username, email_address, genre, adult_only, popularity " + "FROM account " + "WHERE account_id = ?;";
+        SqlRowSet results = jdbcTemplate.queryForRowSet(sql, account_id);
         if(results.next()){
             user = mapRowToUser(results);
         }
@@ -30,18 +30,21 @@ public class JDBCAccountDao implements AccountDAO {
 
     @Override
     public Account createAccount(Account account) {
-        String sql = "INSERT INTO account (username, email_address)" + "VALUES (?, ?) RETURNING account_id;";
-        Integer newId = jdbcTemplate.queryForObject(sql, Integer.class, account.getUserName(), account.getEmailAddress());
+        String sql = "INSERT INTO account (email_address, genre, adult_only, popularity )" + "VALUES (?, ?, ?, ?) RETURNING account_id;";
+        Integer newAccountId = jdbcTemplate.queryForObject(sql, Integer.class, account.getEmail_address(), account.getGenre(), account.isAdult_only(), account.getPopularity());
 
-        return getAccount(newId);
+        return getAccount(newAccountId);
     }
 
     private Account mapRowToUser(SqlRowSet rowSet){
         Account account = new Account();
-        account.setAccountId(rowSet.getInt("account_id"));
-        account.setUserId(rowSet.getInt("user_id"));
-        account.setUserName(rowSet.getString("username"));
-        account.setEmailAddress(rowSet.getString("email_address"));
+        account.setAccount_id(rowSet.getInt("account_id"));
+        account.setUser_id(rowSet.getInt("user_id"));
+        account.setUsername(rowSet.getString("username"));
+        account.setEmail_address(rowSet.getString("email_address"));
+        account.setGenre(rowSet.getString("genre"));
+        account.setAdult_only(rowSet.getBoolean("adult_only"));
+        account.setPopularity(rowSet.getInt("popularity"));
         return account;
     }
 }// End of JDBCAccountDao class
