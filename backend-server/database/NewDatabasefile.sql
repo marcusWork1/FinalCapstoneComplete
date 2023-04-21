@@ -7,8 +7,8 @@ DROP SEQUENCE IF EXISTS  seq_movie_id;
 CREATE TABLE account (
 	account_id serial NOT NULL,
 	user_id int NOT NULL,
-	username varchar(50) UNIQUE,
-	email_address varchar(50) UNIQUE,
+	username varchar(50) ,
+	email_address varchar(50) ,
 	genre varchar(50),
 	adult_only boolean,
 	popularity int,

@@ -47,7 +47,7 @@ export default {
   data() {
     return {
       newForm: {
-        account_id: 0,
+        account_id: "",
         user_id: this.$store.state.user.id,
         username: this.$store.state.user.username,
         email_address: "",
@@ -68,7 +68,7 @@ export default {
         popularity: this.newForm.popularity,
       };
     
-      if (this.newForm.account_id === 0) {
+      if (this.$store.state.account === "") {
         //add
         DatabaseService.addProfile(newForm)
           .then((response) => {
@@ -82,23 +82,17 @@ export default {
           .catch((error) => {
             this.handleErrorResponse(error, "adding");
           });
-      } //else { //<<<<<might have to comment this out to check .addprofile
+      } else { //<<<<<might have to comment this out to check .addprofile
       //     // update
-      //     newForm.user_id = this.$store.state.user.id;
-      //     newForm.username = this.$store.state.user.username;
-      // newForm.email_address = this.newForm.email_address;
-      // newForm.genre = this.newForm.genre;
-      // newForm.adult_only = this.newForm.adult_only;
-      // newForm.popularity = parseInt(this.newForm.popularity);
-      // DatabaseService
-      // .updateProfile(newForm)
-      // .then(response => {
-      //     if(response.status === 200) {this.resetForm()}
-      //  })
-      //  .catch(error => {
-      //          this.handleErrorResponse(error, "adding");
-      //      });
-      // }
+       DatabaseService
+       .updateProfile(newForm)
+       .then(response => {
+           if(response.status === 200 || response.status === 201 || response.status === 202) {this.resetForm()}
+        })
+        .catch(error => {
+                this.handleErrorResponse(error, "adding");
+            });
+       }
     },
     resetForm() {
       this.newForm = {
@@ -115,6 +109,21 @@ export default {
       this.newForm = {}; //sets the newProfile array to empty
       this.$router.push("/"); //sends user back to the homepage
     },
+     handleErrorResponse(error, verb) {
+      if (error.response) {
+        this.errorMsg =
+          "Error " + verb + " profile. Response received was '" +
+          error.response.statusText +
+          "'.";
+      } else if (error.request) {
+        this.errorMsg =
+          "Error " + verb + " profile. Server could not be reached.";
+      } else {
+        this.errorMsg =
+          "Error " + verb + " profile. Request could not be created.";
+      }
+    }
+
   },
 };
 </script>
