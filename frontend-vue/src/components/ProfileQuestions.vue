@@ -69,12 +69,10 @@ export default {
       };
     
       if (this.newForm.account_id === 0) {
-        //<<<<will have to revise this logic
         //add
         DatabaseService.addProfile(newForm)
           .then((response) => {
             if (response.status === 201) {
-
               //grab account id in datastore
               //call mutation
               this.resetForm();
@@ -102,7 +100,15 @@ export default {
       // }
     },
     resetForm() {
-      this.newForm = {};
+      this.newForm = {
+        account_id: 0,
+        user_id: this.$store.state.user.id,
+        username: this.$store.state.user.username,
+        email_address: "",
+        genre: "",
+        adult_only: false,
+        popularity: "",
+      };
     },
     cancelForm() {
       this.newForm = {}; //sets the newProfile array to empty
