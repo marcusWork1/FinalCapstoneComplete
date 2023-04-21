@@ -94,7 +94,7 @@ export default {
           })
           
       } 
-     // this.$router.push({ name: 'Home' });
+   
 
      
     },
@@ -104,8 +104,6 @@ export default {
     },
     resetForm() {
       this.newMovie = {};
-      //this.$refs.addmovieform.reset();
-      //this.$router.push('/addmovie');
     
     },
     handleErrorResponse(error, verb) {

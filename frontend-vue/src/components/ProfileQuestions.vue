@@ -1,111 +1,114 @@
 <template>
   <div>
     <form class="profileQuestions" v-on:submit.prevent="submitForm">
-    <h1>Create your profile!</h1>
-    <p> This helps personalize your DateFlix and Chill experience </p>
+      <h1>Create your profile!</h1>
+      <p>This helps personalize your DateFlix and Chill experience</p>
       <div class="form-group">
-      <label for="email_address">Please input your email address: </label>
-      <input id="email_address" type="text" v-model="newForm.email_address" />
-    </div>
-    <div class="form-group">
-      <label for="genre">What is your favorite movie genre?: </label>
-      <input id="genre" type="text" v-model="newForm.genre" />
-    </div>
-    <div class="form-group">
-      Adult Movie?
-      <input
-        id="yes plz"
-        type="radio"
-        value="true"
-        v-model="newForm.adult_only"
-      />
-      <label for="yes plz">Yes Plz</label>
+        <label for="email_address">Please input your email address: </label>
+        <input id="email_address" type="text" v-model="newForm.email_address" />
+      </div>
+      <div class="form-group">
+        <label for="genre">What is your favorite movie genre?: </label>
+        <input id="genre" type="text" v-model="newForm.genre" />
+      </div>
+      <div class="form-group">
+        Adult Movie?
+        <input
+          id="yes plz"
+          type="radio"
+          value="true"
+          v-model="newForm.adult_only"
+        />
+        <label for="yes plz">Yes Plz</label>
 
-      <input
-        id="no thnx"
-        type="radio"
-        value="false"
-        v-model="newForm.adult_only"
-      />
-      <label for="no thnx">No Thnx</label>
-    </div>
-    <div class="form-group">
-      <label for="popularity"> Minimum rating preference?: </label>
-      <input id="popularity" type="number" v-model="newForm.popularity" />
-    </div>
-      <button class ="button" v-on:click="submitForm">Submit</button>
-      <button class ="button" v-on:click="cancelForm"> Cancel </button>
-
-  </form>
+        <input
+          id="no thnx"
+          type="radio"
+          value="false"
+          v-model="newForm.adult_only"
+        />
+        <label for="no thnx">No Thnx</label>
+      </div>
+      <div class="form-group">
+        <label for="popularity"> Minimum rating preference?: </label>
+        <input id="popularity" type="number" v-model="newForm.popularity" />
+      </div>
+      <button class="button" v-on:click="submitForm">Submit</button>
+      <button class="button" v-on:click="cancelForm">Cancel</button>
+    </form>
   </div>
 </template>
-
 
 <script>
 import DatabaseService from "../services/DatabaseService";
 
-
 export default {
-    name: 'profile-questions', //account-form
+  name: "profile-questions", //account-form
   data() {
     return {
       newForm: {
-        user_id: '',
-        username: '',
-        email_address: '',
-        genre: '',
+        account_id: 0,
+        user_id: this.$store.state.user.id,
+        username: this.$store.state.user.username,
+        email_address: "",
+        genre: "",
         adult_only: false,
-        popularity: '',
+        popularity: "",
       },
     };
   },
   methods: {
     submitForm() {
-        const newForm = {
-          user_id: this.$store.state.user.id,
-          username: this.$store.state.user.username,
-            email_address: this.newForm.email_address,
-            genre: this.newForm.genre,
-            adult_only: this.newForm.adult_only,
-            popularity: parseInt(this.newForm.popularity)
-        };
-        if (this.email_address != null) { //<<<<will have to revise this logic
-            //add
-            DatabaseService
-            .addProfile(newForm)
-            .then(response => {
-                if (response.status === 201) {this.resetForm()}
-             } )
-             .catch(error => {
-                 this.handleErrorResponse(error, "adding");
-             });
-        } //else { //<<<<<might have to comment this out to check .addprofile
-        //     // update
-        //     newForm.user_id = this.$store.state.user.id;
-        //     newForm.username = this.$store.state.user.username;
-        // newForm.email_address = this.newForm.email_address;
-        // newForm.genre = this.newForm.genre;
-        // newForm.adult_only = this.newForm.adult_only;
-        // newForm.popularity = parseInt(this.newForm.popularity);
-        // DatabaseService
-        // .updateProfile(newForm)
-        // .then(response => {
-        //     if(response.status === 200) {this.resetForm()}
-        //  })
-        //  .catch(error => {
-        //          this.handleErrorResponse(error, "adding");
-        //      });
-        // }
+      const newForm = {
+        user_id: this.newForm.user_id,
+        username: this.newForm.username,
+        email_address: this.newForm.email_address,
+        genre: this.newForm.genre,
+        adult_only: this.newForm.adult_only,
+        popularity: this.newForm.popularity,
+      };
+    
+      if (this.newForm.account_id === 0) {
+        //<<<<will have to revise this logic
+        //add
+        DatabaseService.addProfile(newForm)
+          .then((response) => {
+            if (response.status === 201) {
+
+              //grab account id in datastore
+              //call mutation
+              this.resetForm();
+            }
+          })
+          .catch((error) => {
+            this.handleErrorResponse(error, "adding");
+          });
+      } //else { //<<<<<might have to comment this out to check .addprofile
+      //     // update
+      //     newForm.user_id = this.$store.state.user.id;
+      //     newForm.username = this.$store.state.user.username;
+      // newForm.email_address = this.newForm.email_address;
+      // newForm.genre = this.newForm.genre;
+      // newForm.adult_only = this.newForm.adult_only;
+      // newForm.popularity = parseInt(this.newForm.popularity);
+      // DatabaseService
+      // .updateProfile(newForm)
+      // .then(response => {
+      //     if(response.status === 200) {this.resetForm()}
+      //  })
+      //  .catch(error => {
+      //          this.handleErrorResponse(error, "adding");
+      //      });
+      // }
     },
     resetForm() {
-        this.newForm = {};
+      this.newForm = {};
     },
-    cancelForm () {
+    cancelForm() {
       this.newForm = {}; //sets the newProfile array to empty
-      this.$router.push('/'); //sends user back to the homepage
+      this.$router.push("/"); //sends user back to the homepage
     },
   },
-  
 };
 </script>
 
@@ -123,7 +126,4 @@ export default {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-
-
-
 </style>
