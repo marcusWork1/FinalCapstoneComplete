@@ -14,23 +14,23 @@
       <div class="form-group">
         Adult Movie?
         <input
-          id="yes plz"
+          id="Yes"
           type="radio"
           value="true"
           v-model="newForm.adult_only"
         />
-        <label for="yes plz">Yes Plz</label>
+        <label for="Yes">Yes</label>
 
         <input
-          id="no thnx"
+          id="No"
           type="radio"
           value="false"
           v-model="newForm.adult_only"
         />
-        <label for="no thnx">No Thnx</label>
+        <label for="No">No</label>
       </div>
       <div class="form-group">
-        <label for="popularity"> Minimum rating preference?: </label>
+        <label for="popularity">Minimum rating preference?: </label>
         <input id="popularity" type="number" v-model="newForm.popularity" />
       </div>
       <button class="button" v-on:click="submitForm">Submit</button>

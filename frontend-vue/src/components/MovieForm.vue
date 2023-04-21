@@ -2,7 +2,6 @@
 <div>
   <form class = "movieform" v-on:submit.prevent="submitMovie">
     <h1> Add a Movie </h1>
-    <p>This works now!</p>
     <div class="form-group">
       <label for="title">Title: </label>
       <input id="title" type="text" v-model="newMovie.title" />
@@ -22,20 +21,20 @@
     <div class="form-group">
       Adult Movie?
       <input
-        id="yes plz"
+        id="Yes"
         type="radio"
         value="true"
         v-model="newMovie.adult_only"
       />
-      <label for="yes plz">Yes Plz</label>
+      <label for="Yes">Yes</label>
 
       <input
-        id="no thnx"
+        id="No"
         type="radio"
         value="false"
         v-model="newMovie.adult_only"
       />
-      <label for="no thnx">No Thnx</label>
+      <label for="No">No</label>
     </div>
     <div class="form-group">
       <label for="popularity">Popularity: </label>
