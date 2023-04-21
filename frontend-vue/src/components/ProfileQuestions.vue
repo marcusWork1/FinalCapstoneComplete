@@ -5,11 +5,11 @@
       <p>This helps personalize your DateFlix and Chill experience</p>
       <div class="form-group">
         <label for="email_address">Please input your email address: </label>
-        <input id="email_address" type="text" v-model="newForm.email_address" />
+        <input id="email_address" type="text" v-model="newProfile.email_address" />
       </div>
       <div class="form-group">
         <label for="genre">What is your favorite movie genre?: </label>
-        <input id="genre" type="text" v-model="newForm.genre" />
+        <input id="genre" type="text" v-model="newProfile.genre" />
       </div>
       <div class="form-group">
         Adult Movie?
@@ -17,7 +17,7 @@
           id="Yes"
           type="radio"
           value="true"
-          v-model="newForm.adult_only"
+          v-model="newProfile.adult_only"
         />
         <label for="Yes">Yes</label>
 
@@ -25,13 +25,13 @@
           id="No"
           type="radio"
           value="false"
-          v-model="newForm.adult_only"
+          v-model="newProfile.adult_only"
         />
         <label for="No">No</label>
       </div>
       <div class="form-group">
         <label for="popularity">Minimum rating preference?: </label>
-        <input id="popularity" type="number" v-model="newForm.popularity" />
+        <input id="popularity" type="number" v-model="newProfile.popularity" />
       </div>
       <button class="button" v-on:click="submitForm">Submit</button>
       <button class="button" v-on:click="cancelForm">Cancel</button>
@@ -46,7 +46,7 @@ export default {
   name: "profile-questions", //account-form initialization
   data() {
     return {
-      newForm: {
+      newProfile: {
         account_id: "",
         user_id: this.$store.state.user.id,
         username: this.$store.state.user.username,
@@ -60,12 +60,12 @@ export default {
   methods: {
     submitForm() {
       const newForm = {
-        user_id: this.newForm.user_id,
-        username: this.newForm.username,
-        email_address: this.newForm.email_address,
-        genre: this.newForm.genre,
-        adult_only: this.newForm.adult_only,
-        popularity: this.newForm.popularity,
+        user_id: this.newProfile.user_id,
+        username: this.newProfile.username,
+        email_address: this.newProfile.email_address,
+        genre: this.newProfile.genre,
+        adult_only: this.newProfile.adult_only,
+        popularity: this.newProfile.popularity,
       };
     
       if (this.$store.state.account === "") {
@@ -95,7 +95,7 @@ export default {
        }
     },
     resetForm() {
-      this.newForm = {
+      this.newProfile = {
         account_id: 0,
         user_id: this.$store.state.user.id,
         username: this.$store.state.user.username,
@@ -106,7 +106,7 @@ export default {
       };
     },
     cancelForm() {
-      this.newForm = {}; //sets the newProfile array to empty
+      this.newProfile = {}; //sets the newProfile array to empty
       this.$router.push("/"); //sends user back to the homepage
     },
      handleErrorResponse(error, verb) {
