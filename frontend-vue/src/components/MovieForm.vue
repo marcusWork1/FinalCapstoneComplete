@@ -1,52 +1,57 @@
 <template>
-<div>
-  <form class = "movieform" v-on:submit.prevent="submitMovie">
-    <h1> Add a Movie </h1>
-    <div class="form-group">
-      <label for="title">Title: </label>
-      <input id="title" type="text" v-model="newMovie.title" />
-    </div>
-    <div class="form-group">
-      <label for="release_date">Release Date: </label>
-      <input id="release_date" type="date" v-model="newMovie.release_date" />
-    </div>
-    <div class="form-group">
-      <label for="overview">Overview: </label>
-      <input id="overview" type="text" v-model="newMovie.overview" />
-    </div>
-    <div class="form-group">
-      <label for="genre">Genre: </label>
-      <input id="genre" type="text" placeholder="make dropdown" v-model="newMovie.genre" />
-    </div>
-    <div class="form-group">
-      Adult Movie?
-      <input
-        id="Yes"
-        type="radio"
-        value="true"
-        v-model="newMovie.adult_only"
-      />
-      <label for="Yes">Yes</label>
+  <div>
+    <form class="movieform" v-on:submit.prevent="submitMovie">
+      <h1>Add a Movie</h1>
+      <div class="form-group">
+        <label for="title">Title: </label>
+        <input id="title" type="text" v-model="newMovie.title" />
+      </div>
+      <div class="form-group">
+        <label for="release_date">Release Date: </label>
+        <input id="release_date" type="date" v-model="newMovie.release_date" />
+      </div>
+      <div class="form-group">
+        <label for="overview">Overview: </label>
+        <input id="overview" type="text" v-model="newMovie.overview" />
+      </div>
+      <div class="form-group">
+        <label for="genre">Genre: </label>
+        <input
+          id="genre"
+          type="text"
+          placeholder="make dropdown"
+          v-model="newMovie.genre"
+        />
+      </div>
+      <div class="form-group">
+        Adult Movie?
+        <input
+          id="Yes"
+          type="radio"
+          value="true"
+          v-model="newMovie.adult_only"
+        />
+        <label for="Yes">Yes</label>
 
-      <input
-        id="No"
-        type="radio"
-        value="false"
-        v-model="newMovie.adult_only"
-      />
-      <label for="No">No</label>
-    </div>
-    <div class="form-group">
-      <label for="popularity">Popularity: </label>
-      <input
-        id="popularity"
-        type="number"
-        v-model.number="newMovie.popularity"
-      />
-    </div>
-    <button class = "button" v-on:click="submitMovie">Submit</button>
-   <button class = "cancel" v-on:click="cancelForm">Cancel</button>
-  </form>
+        <input
+          id="No"
+          type="radio"
+          value="false"
+          v-model="newMovie.adult_only"
+        />
+        <label for="No">No</label>
+      </div>
+      <div class="form-group">
+        <label for="popularity">Popularity: </label>
+        <input
+          id="popularity"
+          type="number"
+          v-model.number="newMovie.popularity"
+        />
+      </div>
+      <button class="button">Submit</button>
+      <button class="cancel" v-on:click="cancelForm">Cancel</button>
+    </form>
   </div>
 </template>
 
@@ -59,8 +64,8 @@ export default {
   props: {
     movieId: {
       type: Number,
-    default: 0
-    }
+      default: 0,
+    },
   },
   data() {
     return {
@@ -71,7 +76,7 @@ export default {
         genre: "",
         adult_only: false,
         popularity: "",
-      }
+      },
     };
   }, //end of data
 
@@ -85,30 +90,31 @@ export default {
         adult_only: this.newMovie.adult_only,
         popularity: this.newMovie.popularity,
       };
-      if(this.movieId === 0) {
-          DatabaseService.postToLocalHost9000(newMovie).then(response => {if (response.status === 201) {this.resetForm();}
+      if (this.movieId === 0) {
+        DatabaseService.postToLocalHost9000(newMovie)
+          .then((response) => {
+            if (response.status === 201) {
+              this.resetForm();
+            }
           })
-          .catch(error => {
+          .catch((error) => {
             this.handleErrorResponse(error, "adding");
-          })
-          
-      } 
-   
-
-     
+          });
+      }
     },
-    cancelForm () {
+    cancelForm() {
       this.newMovie = {}; //sets the newMovie array to empty
-      this.$router.push('/'); //sends user back to the homepage
+      this.$router.push("/"); //sends user back to the homepage
     },
     resetForm() {
       this.newMovie = {};
-    
     },
     handleErrorResponse(error, verb) {
       if (error.response) {
         this.errorMsg =
-          "Error " + verb + " movie. Response received was '" +
+          "Error " +
+          verb +
+          " movie. Response received was '" +
           error.response.statusText +
           "'.";
       } else if (error.request) {
@@ -118,17 +124,15 @@ export default {
         this.errorMsg =
           "Error " + verb + " movie. Request could not be created.";
       }
-    }
-
-
+    },
   }, //end of methods
 }; //end of export data
 </script>
 
 <style>
 .movieform {
-  background-color: #BB9CDF;
-  font-family: 'Chewy',typeface;
+  background-color: #bb9cdf;
+  font-family: "Chewy", typeface;
   padding-left: 25px;
 }
 .button {
@@ -148,7 +152,9 @@ export default {
   box-shadow: 0 7px rgb(59, 59, 59);
 }
 
-.button:hover {background-color: #5b1b6e}
+.button:hover {
+  background-color: #5b1b6e;
+}
 
 .button:active {
   background-color: #8e3e8a;
@@ -174,7 +180,9 @@ export default {
   margin-top: 10px;
 }
 
-.cancel:hover {background-color: #362f38}
+.cancel:hover {
+  background-color: #362f38;
+}
 
 .cancel:active {
   background-color: #8e3e8a;
@@ -184,7 +192,7 @@ export default {
 
 .info {
   color: rgb(17, 17, 17);
-  background-color: #AC8AD3;
+  background-color: #ac8ad3;
   border: 9px solid rgb(231, 223, 240);
   padding: 80px;
   margin: 20px;

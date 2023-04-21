@@ -5,7 +5,11 @@
       <p>This helps personalize your DateFlix and Chill experience</p>
       <div class="form-group">
         <label for="email_address">Please input your email address: </label>
-        <input id="email_address" type="text" v-model="newProfile.email_address" />
+        <input
+          id="email_address"
+          type="text"
+          v-model="newProfile.email_address"
+        />
       </div>
       <div class="form-group">
         <label for="genre">What is your favorite movie genre?: </label>
@@ -33,8 +37,8 @@
         <label for="popularity">Minimum rating preference?: </label>
         <input id="popularity" type="number" v-model="newProfile.popularity" />
       </div>
-      <button class="button" v-on:click="submitForm">Submit</button>
-      <button class="button" v-on:click="cancelForm">Cancel</button>
+      <button class="button">Submit</button>
+      <button class="button" v-on:click="cancelForm">>Cancel</button>
     </form>
   </div>
 </template>
@@ -67,7 +71,7 @@ export default {
         adult_only: this.newProfile.adult_only,
         popularity: this.newProfile.popularity,
       };
-    
+
       if (this.$store.state.account === "") {
         //add
         DatabaseService.addProfile(newForm)
@@ -75,24 +79,30 @@ export default {
             if (response.status === 201) {
               //grab account id in datastore
               //call mutation
-              this.$store.commit("SET_ACCOUNT", response.data) //controller creates an account and sends back an object. no name for object created, so we just collect data.
+              this.$store.commit("SET_ACCOUNT", response.data); //controller creates an account and sends back an object. no name for object created, so we just collect data.
               this.resetForm();
             }
           })
           .catch((error) => {
             this.handleErrorResponse(error, "adding");
           });
-      } else { //<<<<<might have to comment this out to check .addprofile
-      //     // update
-       DatabaseService
-       .updateProfile(newForm)
-       .then(response => {
-           if(response.status === 200 || response.status === 201 || response.status === 202) {this.resetForm()}
-        })
-        .catch(error => {
-                this.handleErrorResponse(error, "adding");
-            });
-       }
+      } else {
+        //<<<<<might have to comment this out to check .addprofile
+        //     // update
+        DatabaseService.updateProfile(newForm)
+          .then((response) => {
+            if (
+              response.status === 200 ||
+              response.status === 201 ||
+              response.status === 202
+            ) {
+              this.resetForm();
+            }
+          })
+          .catch((error) => {
+            this.handleErrorResponse(error, "adding");
+          });
+      }
     },
     resetForm() {
       this.newProfile = {
@@ -109,10 +119,12 @@ export default {
       this.newProfile = {}; //sets the newProfile array to empty
       this.$router.push("/"); //sends user back to the homepage
     },
-     handleErrorResponse(error, verb) {
+    handleErrorResponse(error, verb) {
       if (error.response) {
         this.errorMsg =
-          "Error " + verb + " profile. Response received was '" +
+          "Error " +
+          verb +
+          " profile. Response received was '" +
           error.response.statusText +
           "'.";
       } else if (error.request) {
@@ -122,8 +134,7 @@ export default {
         this.errorMsg =
           "Error " + verb + " profile. Request could not be created.";
       }
-    }
-
+    },
   },
 };
 </script>
