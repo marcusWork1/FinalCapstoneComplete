@@ -60,15 +60,15 @@ export default {
   methods: {
     submitForm() {
       const newForm = {
-        user_id: this.newForm.user_id,
-        username: this.newForm.username,
-        email_address: this.newForm.email_address,
-        genre: this.newForm.genre,
-        adult_only: this.newForm.adult_only,
-        popularity: this.newForm.popularity,
+        user_id: this.newProfile.user_id,
+        username: this.newProfile.username,
+        email_address: this.newProfile.email_address,
+        genre: this.newProfile.genre,
+        adult_only: this.newProfile.adult_only,
+        popularity: this.newProfile.popularity,
       };
     
-      if (this.newForm.account_id === 0) {
+      if (this.newProfile.account_id === 0) {
         //add
         DatabaseService.addProfile(newForm)
           .then((response) => {
