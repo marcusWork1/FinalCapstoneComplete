@@ -11,7 +11,7 @@
             <a href="http://localhost:8080/login"><img class = "logicon" src="../assets/loginicon.png" alt="logicon"> </a>
         </header>
       <h1>Create Account</h1>
-      <img class = "walle" src = "https://i.imgur.com/fPA6ZJC.jpg">
+      <img class = "walle" src = "https://i.imgur.com/ssZGent.png">
       <div role="alert" v-if="registrationErrors">
         {{ registrationErrorMsg }}
       </div>
@@ -107,7 +107,7 @@ form {
   font-size: 25px;
 }
 .walle {
-  height: 90px;
+  height: 200px;
   display: block;
   max-height: 100%;
   max-width: 100%;

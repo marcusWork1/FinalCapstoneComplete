@@ -10,21 +10,21 @@
         </header>
     
           <h1>Dateflix and Chill App Description</h1><br>
-            <img class = "walle" src = "https://i.imgur.com/fPA6ZJC.jpg">
+            <img class = "walle" src = "https://i.imgur.com/ssZGent.png">
             <div></div>
               <div class= "description">
                 <div class = "info">
                   <h2>About Dateflix and Chill</h2>
-                        <p>Welcome to DateFlix, the app that helps you find the perfect movie match! With DateFlix, you can swipe 
+                        <h3>Welcome to DateFlix, the app that helps you find the perfect movie match! With DateFlix, you can swipe 
                           through a variety of movies to discover new titles and find ones that fit your interests. 
                           Whether you're looking for something romantic, thrilling, funny, or thought-provoking, DateFlix has 
-                          something for everyone.</p>
+                          something for everyone.</h3>
 
-                        <p>Our app uses a smart algorithm that takes into account your preferences, viewing history, and 
+                        <p class = "paragraph">Our app uses a smart algorithm that takes into account your preferences, viewing history, and 
                             ratings to match you with movies you're likely to enjoy. Just swipe right on movies you like, and swipe left on those you're 
-                            not interested in. You can also save movies to your Watchlist to come back to later.</p>
-
-                        <p>But DateFlix is more than just a movie recommendation app. It's a community of movie lovers who are passionate about finding great films and sharing them with others. 
+                            not interested in. You can also save movies to your Watchlist to come back to later. 
+                          <br><br>  
+                          But DateFlix is more than just a movie recommendation app. It's a community of movie lovers who are passionate about finding great films and sharing them with others. 
                           Connect with like-minded users, see what movies they've enjoyed, and get inspired by their picks.
                           So why not give DateFlix a try and find your perfect movie match today? Swipe right to movies you'll love, 
                           and left to those you'll pass on. With DateFlix, every night can be a movie night!</p>
@@ -51,11 +51,15 @@ footer {
   padding-bottom: 15px;
   color: #AC8AD3;
 }
+h3 {
+  color: #231b52;
+  font-size: 23px;
+}
 .desc {
   background-color: #231b52;
 }
 .walle {
-  height: 90px;
+  height: 200px;
   display: block;
   max-height: 100%;
   max-width: 100%;
@@ -63,13 +67,16 @@ footer {
   margin-left: auto;
 }
 .info {
-  margin: 10px;
-  padding: 30px;
+  margin: 25px;
+  padding: 15px;
 }
 h1 {
   color: white;
   font-family: "Chewy";
   text-align: center;
+}
+.paragraph {
+  font-size: 23px;
 }
 .description {
   background-color: #231b52;
@@ -82,6 +89,7 @@ h1 {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
+  font-size: 15px;
 }
 .image {
   height: 100%;
