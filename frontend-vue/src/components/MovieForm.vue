@@ -1,6 +1,6 @@
 <template>
 <div>
-  <form class = "movieform" ref="addmovieform" v-on:submit.prevent="submitMovie">
+  <form class = "movieform" v-on:submit.prevent="submitMovie">
     <h1> Add a Movie </h1>
     <p>This works now!</p>
     <div class="form-group">
@@ -79,7 +79,6 @@ export default {
   methods: {
     submitMovie() {
       const newMovie = {
-        //movieId: Number(this.$route.params.movieId),
         title: this.newMovie.title,
         release_date: moment().format("YYYY-MM-Do"),
         overview: this.newMovie.overview,

@@ -7,6 +7,7 @@
   export default {
   postToLocalHost9000 (movieObject) {
     //http://localhost:9000/movie
+    //this posts a new movie to our database
       return httpLocalHost.post('/movie', movieObject);
   },
   addProfile(profileObject) {

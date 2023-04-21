@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form class="profileQuestions" ref = "answerQuestions" v-on:submit.prevent="submitForm">
+    <form class="profileQuestions" v-on:submit.prevent="submitForm">
     <h1>Create your profile!</h1>
     <p> This helps personalize your DateFlix and Chill experience </p>
       <div class="form-group">
