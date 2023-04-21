@@ -43,11 +43,11 @@
 import DatabaseService from "../services/DatabaseService";
 
 export default {
-  name: "profile-questions", //account-form
+  name: "profile-questions", //account-form initialization
   data() {
     return {
       newForm: {
-        account_id: this.$store.state.account_id,
+        account_id: 0,
         user_id: this.$store.state.user.id,
         username: this.$store.state.user.username,
         email_address: "",
@@ -75,7 +75,7 @@ export default {
             if (response.status === 201) {
               //grab account id in datastore
               //call mutation
-              this.$store.commit("SET_ACCOUNT_ID", response.data.account_id)
+              this.$store.commit("SET_ACCOUNT", response.data) //controller creates an account and sends back an object. no name for object created, so we just collect data.
               this.resetForm();
             }
           })

@@ -43,7 +43,9 @@ public class JDBCAccountDao implements AccountDAO {
         String sql = "INSERT INTO account (user_id, username, email_address, genre, adult_only, popularity )" + "VALUES (?, ?, ?, ?, ?, ?) RETURNING account_id;";
         Integer newAccountId = jdbcTemplate.queryForObject(sql, Integer.class, account.getUser_id() , account.getUsername(), account.getEmail_address(), account.getGenre(), account.isAdult_only(), account.getPopularity());
 
-        return getAccount(newAccountId);
+        Account anAccount = getAccount(newAccountId);
+
+        return anAccount;
     }
 
     @Override

@@ -16,4 +16,7 @@
   updateProfile(profileObject2) {
     return httpLocalHost.put(`/account/${profileObject2.user_id}`, profileObject2)
   },
+  getAccount(accountObject) {
+    return httpLocalHost.get(`account/${accountObject.user_id}`, accountObject)
+  }
 }

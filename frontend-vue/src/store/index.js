@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
 
+
 Vue.use(Vuex)
 
 /*
@@ -12,6 +13,7 @@ Vue.use(Vuex)
 const currentToken = localStorage.getItem('token')
 const currentUser = JSON.parse(localStorage.getItem('user'));
 
+
 if(currentToken != null) {
   axios.defaults.headers.common['Authorization'] = `Bearer ${currentToken}`;
 }
@@ -20,7 +22,7 @@ export default new Vuex.Store({
   state: {
     token: currentToken || '',
     user: currentUser || {},
-    account_id: 0
+    account: ""
   },
   mutations: {
     SET_AUTH_TOKEN(state, token) {
@@ -32,8 +34,8 @@ export default new Vuex.Store({
       state.user = user;
       localStorage.setItem('user',JSON.stringify(user));
     },
-    SET_ACCOUNT_ID(state, account_id){
-      state.account_id = account_id;
+    SET_ACCOUNT(state, account){ // spot to store the account object
+      state.account = account;
     },
     LOGOUT(state) {
       localStorage.removeItem('token');

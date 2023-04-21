@@ -49,8 +49,9 @@ public class AccountController {
   //  @PermitAll // Anyone can create an account
     @ResponseStatus(HttpStatus.CREATED)
     @RequestMapping(path="/account",method = RequestMethod.POST)
-    public Account createAccount(@Valid @RequestBody Account newAccount){
-        return accountDAO.createAccount(newAccount);
+    public Account createAccount2(@Valid @RequestBody Account newAccount){
+        Account theNewAccount = accountDAO.createAccount(newAccount);
+        return theNewAccount;
     }
 
     //@PreAuthorize("hasRole('USER')") -- Do we even need to preauthorize user, Does annotation up top already control that
