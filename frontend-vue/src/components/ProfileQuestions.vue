@@ -47,7 +47,7 @@ export default {
   data() {
     return {
       newForm: {
-        account_id: 0,
+        account_id: this.$store.state.account_id,
         user_id: this.$store.state.user.id,
         username: this.$store.state.user.username,
         email_address: "",
@@ -75,6 +75,7 @@ export default {
             if (response.status === 201) {
               //grab account id in datastore
               //call mutation
+              this.$store.commit("SET_ACCOUNT_ID", response.data.account_id)
               this.resetForm();
             }
           })
