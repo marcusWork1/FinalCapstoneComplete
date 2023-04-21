@@ -7,6 +7,8 @@
             <a href="#"><img class = "contacticon" src="../assets/contacticon.jpg" alt="contacticon"/> </a>
             <a href="http://localhost:8080/addmovie"><img class = "movieicon" src="https://i.imgur.com/6tEu04Z.jpg" alt="movieicon"/> </a>
             <a href="http://localhost:8080/login"><img class = "logicon" src="../assets/loginicon.png" alt="logicon"> </a>
+            <a href="http://localhost:8080/profile"> <img class = "profileicon" src="https://i.imgur.com/VP2RcSx.png" alt="profileicon"> </a>
+
         </header>
     
           <h1>Dateflix and Chill App Description</h1><br>
@@ -157,6 +159,19 @@ h1 {
   margin-top: 10px;
 }
 .movieicon:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.profileicon {
+  width: auto;
+  height: 85px;
+  border-radius: 25px;
+  box-shadow: 0px 7px 8px black;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.profileicon:active {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
