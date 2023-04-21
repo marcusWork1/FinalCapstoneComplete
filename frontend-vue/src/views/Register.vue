@@ -1,33 +1,37 @@
 <template>
   <div id="register" class="text-center">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chewy">
+     <div>
+      <form @submit.prevent="register">
         <header>
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chewy">
             <a href="http://localhost:8080/"><img class = "imgicon" src="../assets/webicon.png" alt="webicon"/> </a>
             <a href="http://localhost:8080/description"><img class = "descicon" src="https://i.imgur.com/ZfFZoTz.jpg" alt="descicon"/> </a>
             <a href="#"><img class = "contacticon" src="../assets/contacticon.jpg" alt="contacticon"/> </a>
             <a href="http://localhost:8080/addmovie"><img class = "movieicon" src="https://i.imgur.com/6tEu04Z.jpg" alt="movieicon"/> </a>
             <a href="http://localhost:8080/login"><img class = "logicon" src="../assets/loginicon.png" alt="logicon"> </a>
         </header>
-    <form @submit.prevent="register">
       <h1>Create Account</h1>
+      <img class = "walle" src = "https://i.imgur.com/fPA6ZJC.jpg">
       <div role="alert" v-if="registrationErrors">
         {{ registrationErrorMsg }}
       </div>
-      <div class="form-input-group">
-        <label for="username">Username</label>
+      <div class="form-input-group"><br>
+        <label for="username">Username</label><br>
         <input type="text" id="username" v-model="user.username" required autofocus />
-      </div>
+      </div><br>
       <div class="form-input-group">
-        <label for="password">Password</label>
+        <label for="password">Password</label><br>
         <input type="password" id="password" v-model="user.password" required />
       </div>
-      <div class="form-input-group">
-        <label for="confirmPassword">Confirm Password</label>
+      <div class="form-input-group"><br>
+        <label for="confirmPassword">Confirm Password</label><br>
         <input type="password" id="confirmPassword" v-model="user.confirmPassword" required />
       </div>
-      <button type="submit">Create Account</button>
-      <p><router-link :to="{ name: 'login' }">Already have an account? Log in.</router-link></p>
+      <button type="submit">Create Account</button><br><br>
+      <a class = "buttonedit" href = "http://localhost:8080/login">Already have an account? Log in.</a><br><br><br><br><br><br>
+
     </form>
+        </div>
   </div>
 </template>
 
@@ -82,6 +86,35 @@ export default {
 </script>
 
 <style scoped>
+.buttonedit {
+  color: aliceblue;
+}
+h1 {
+  font-family: "Chewy";
+  color: white;
+  text-align: center;
+  font-size: 30px;
+}
+header {
+  text-align: left;
+}
+form {
+  background-color: #231b52;
+  font-family: "Chewy";
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+.walle {
+  height: 90px;
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 10px;
+}
 .form-input-group {
   margin-bottom: 1rem;
 }

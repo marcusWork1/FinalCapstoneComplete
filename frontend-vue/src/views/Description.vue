@@ -1,7 +1,7 @@
 <template>
     <div class = "desc">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chewy">
         <header>
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chewy">
             <a href="http://localhost:8080/"><img class = "imgicon" src="../assets/webicon.png" alt="webicon"/> </a>
             <a href="http://localhost:8080/description"><img class = "descicon" src="https://i.imgur.com/ZfFZoTz.jpg" alt="descicon"/> </a>
             <a href="#"><img class = "contacticon" src="../assets/contacticon.jpg" alt="contacticon"/> </a>
@@ -9,13 +9,12 @@
             <a href="http://localhost:8080/login"><img class = "logicon" src="../assets/loginicon.png" alt="logicon"> </a>
         </header>
     
-            <h1>Dateflix and Chill App Description</h1><br>
-        <img class = "walle" src = "https://i.imgur.com/fPA6ZJC.jpg">
-    <div class= "description">
-
-
-        <div class = "info">
-                    <h2>About Dateflix and Chill</h2>
+          <h1>Dateflix and Chill App Description</h1><br>
+            <img class = "walle" src = "https://i.imgur.com/fPA6ZJC.jpg">
+            <div></div>
+              <div class= "description">
+                <div class = "info">
+                  <h2>About Dateflix and Chill</h2>
                         <p>Welcome to DateFlix, the app that helps you find the perfect movie match! With DateFlix, you can swipe 
                           through a variety of movies to discover new titles and find ones that fit your interests. 
                           Whether you're looking for something romantic, thrilling, funny, or thought-provoking, DateFlix has 
@@ -29,13 +28,16 @@
                           Connect with like-minded users, see what movies they've enjoyed, and get inspired by their picks.
                           So why not give DateFlix a try and find your perfect movie match today? Swipe right to movies you'll love, 
                           and left to those you'll pass on. With DateFlix, every night can be a movie night!</p>
-        </div><br><br>
-    </div>
+                 </div><br><br>
+                </div>
+        <footer>
+        <p>® DateFlix and Chill<br>
+        <a href="http://localhost:8080/description">More about our company here :)</a></p>
+        </footer>
     </div>
 </template>
 
 <script>
-
 export default {
     name: "description",
     components : {}
@@ -43,6 +45,12 @@ export default {
 </script>
 
 <style scoped>
+footer {
+  font-family: "Chewy";
+  padding-left: 15px;
+  padding-bottom: 15px;
+  color: #AC8AD3;
+}
 .desc {
   background-color: #231b52;
 }
@@ -75,7 +83,6 @@ h1 {
   margin-left: auto;
   margin-right: auto;
 }
-
 .image {
   height: 100%;
 }
@@ -92,7 +99,6 @@ h1 {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-
 .logicon {
   width: auto;
   height: 85px;
@@ -107,7 +113,6 @@ h1 {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-
 .descicon {
   width: auto;
   height: 85px;
@@ -121,7 +126,6 @@ h1 {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-
 .contacticon {
   width: auto;
   height: 85px;
@@ -135,7 +139,6 @@ h1 {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-
 .movieicon {
   width: auto;
   height: 85px;

@@ -1,42 +1,44 @@
 <template>
-
  <div id="login">
-       <div class = "background">
-    <form class = "signinform" @submit.prevent="login">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chewy">
+   <div class = "background">
+      <form class = "signinform" @submit.prevent="login">
         <header>
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chewy">
-            <a href="http://localhost:8080/"><img class = "imgicon" src="../assets/webicon.png" alt="webicon"/> </a>
-            <a href="http://localhost:8080/description"><img class = "descicon" src="https://i.imgur.com/ZfFZoTz.jpg" alt="descicon"/> </a>
-            <a href="#"><img class = "contacticon" src="../assets/contacticon.jpg" alt="contacticon"/> </a>
-            <a href="http://localhost:8080/addmovie"><img class = "movieicon" src="https://i.imgur.com/6tEu04Z.jpg" alt="movieicon"/> </a>
-            <a href="http://localhost:8080/login"><img class = "logicon" src="../assets/loginicon.png" alt="logicon"> </a>
+          <a href="http://localhost:8080/"><img class = "imgicon" src="../assets/webicon.png" alt="webicon"/> </a>
+          <a href="http://localhost:8080/description"><img class = "descicon" src="https://i.imgur.com/ZfFZoTz.jpg" alt="descicon"/> </a>
+          <a href="#"><img class = "contacticon" src="../assets/contacticon.jpg" alt="contacticon"/> </a>
+          <a href="http://localhost:8080/addmovie"><img class = "movieicon" src="https://i.imgur.com/6tEu04Z.jpg" alt="movieicon"/> </a>
+          <a href="http://localhost:8080/login"><img class = "logicon" src="../assets/loginicon.png" alt="logicon"> </a>
         </header>
-
-
-        <h1 >Please Sign In</h1>
+            <h1 >Please Sign In</h1>
               <img class = "walle" src = "https://i.imgur.com/fPA6ZJC.jpg">
-
-      <div role="alert" v-if="invalidCredentials">
-        Invalid username and password!
-      </div>
-      <div role="alert" v-if="this.$route.query.registration">
-        Thank you for registering, please sign in.
-      </div>
-      <div class="form-input-group"><br>
-        <label for="username">Username</label><br>
-        <input type="text" id="username" v-model="user.username" required autofocus />
-      </div><br>
-      <div class="form-input-group">
-        <label for="password">Password</label><br>
-        <input type="password" id="password" v-model="user.password" required />
-      </div>
-      <div class = "buttons">
-      <button type="submit">Sign in</button>
-      <p class = "textcolor">
-      <router-link :to="{ name: 'register' }">Need an account? Sign up.</router-link></p>
-      </div>
-    </form>
-        </div>
+                    <div role="alert" v-if="invalidCredentials">
+                          Invalid username and password!
+                    </div>
+                    <div role="alert" v-if="this.$route.query.registration">
+                          Thank you for registering, please sign in.
+                    </div>
+              <div class="form-input-group"><br>
+                    <label for="username">Username</label><br>
+                    <input type="text" id="username" v-model="user.username" required autofocus />
+              </div><br>
+              <div class="form-input-group">
+                    <label for="password">Password</label><br>
+                    <input type="password" id="password" v-model="user.password" required />
+              </div>
+              <div class = "buttons">
+                    <button type="submit">Sign in</button>
+                    <p class = "textcolor"><br>
+                    <p><b><a class = "signuplink" href="http://localhost:8080/register">Need an Account? Sign up here.</a></b></p> 
+              </div><br><br><br><br><br><br><br><br><br><br><br><br><br>
+               
+                <footer>
+                    <p>® DateFlix and Chill<br>
+                    <a href="http://localhost:8080/description">More about our company here :)</a></p>
+                </footer>
+      </form>
+      
+          </div>
   </div>
   
 </template>
@@ -81,7 +83,16 @@ export default {
 </script>
 
 <style scoped>
-
+footer {
+  font-family: "Chewy";
+  padding-left: 15px;
+  padding-bottom: 15px;
+  color: #AC8AD3;
+}
+.signuplink {
+  color: rgb(222, 184, 243);
+  font-size: 25px;
+}
 .buttons {
   padding-top: 10px;
   text-align: center;
@@ -92,7 +103,7 @@ h1 {
 .form-input-group {
   text-align: center;
   padding-top: 10px;
-  font-size: 20px;
+  font-size: 25px;
 }
 header {
   background-color: #231b52;
@@ -106,7 +117,6 @@ header {
   margin-left: auto;
   padding-top: 10px;
 }
-
 .signinform {
   background-color: #231b52;
   font-family: "Chewy";
@@ -126,11 +136,9 @@ label {
   margin-right: 0.5rem;
     background-color: #231b52;
 }
-
 .div {
   background-color: #140180;
 }
-
 .image {
   height: 100%;
 }
@@ -147,7 +155,6 @@ label {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-
 .logicon {
   width: auto;
   height: 85px;
@@ -162,7 +169,6 @@ label {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-
 .descicon {
   width: auto;
   height: 85px;
@@ -176,7 +182,6 @@ label {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-
 .contacticon {
   width: auto;
   height: 85px;
@@ -190,7 +195,6 @@ label {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-
 .movieicon {
   width: auto;
   height: 85px;

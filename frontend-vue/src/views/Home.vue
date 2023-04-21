@@ -1,9 +1,9 @@
 <template>
   <div class="home">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chewy">
+    
     <body id = "body">
-
         <header>
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chewy">
             <a href="http://localhost:8080/"><img class = "imgicon" src="../assets/webicon.png" alt="webicon"/> </a>
             <a href="http://localhost:8080/description"><img class = "descicon" src="https://i.imgur.com/ZfFZoTz.jpg" alt="descicon"/> </a>
             <a href="#"><img class = "contacticon" src="../assets/contacticon.jpg" alt="contacticon"/> </a>
@@ -13,48 +13,50 @@
         
         <meta charset="UTF-8">
             <p class = "title" >Welcome to DateFlix and Chill &#128521;</p>
-        <navigate />
-          <div class = "hover">
+            <navigate />
+        <div class = "hover">
                 <a><img class = "cantdecide" src="https://i.imgur.com/Ej2G4i1.png" alt="cantdecide"> </a><br>
                 <a href="http://localhost:8080/register"><h2 class = "signup" ><span> Sign Up Here</span> </h2></a> 
-          </div><br>
-
- 
+        </div><br>
     <div id="description">
-
-    <h2>About Dateflix and Chill</h2><br>
-    <p>In April 2023, six Tech Elevator Programmers were tired of 
-      bad movie recommendations that did not align with their interest.
-      Together they brainstromed and created an app that comes up with the best
-      movie to watch based on your personal preference and mood when trying to find
-      the perfect title to watch for date night. Our app follows a tinder-style 
-      format of clicking right or left on a movie if you’ve seen it, and you rate how you felt about 
-      it the app would suggest movies based off of your swipes. 
-    </p>
- 
-   </div>
-    <!-- <movie-form/> -->
-    </body>
-   <br><br><br><br><br><br><br><br><br>
+        <h2>About Dateflix and Chill</h2><br>
+        <p>In April 2023, six Tech Elevator Programmers were tired of 
+          bad movie recommendations that did not align with their interest.
+          Together they brainstromed and created an app that comes up with the best
+          movie to watch based on your personal preference and mood when trying to find
+          the perfect title to watch for date night. Our app follows a tinder-style 
+          format of clicking right or left on a movie if you’ve seen it, and you rate how you felt about 
+          it the app would suggest movies based off of your swipes. 
+        </p>
+    </div>
+    </body><br><br><br><br>
+   
+        <footer>
+          <p>® DateFlix and Chill<br>
+          <a href="http://localhost:8080/description">More about our company here :)</a></p>
+        </footer>
   </div>
-  
 </template>
 
 <script>
 import Navigate from '../components/Navigate.vue';
-//import MovieForm from '../components/MovieForm.vue';
-
 export default {
   name: "home",
   components: {
     Navigate,
-   // MovieForm
   }
 };
 </script>
 
 <style scoped>
 * { margin:0; padding:0; }
+
+footer {
+  font-family: "Chewy";
+  padding-left: 15px;
+  padding-bottom: 15px;
+  color: #AC8AD3;
+}
 .home {
   background-color: #231b52;
   margin: 0px;
@@ -78,7 +80,6 @@ export default {
 a:visited {
   color:thistle;
 }
-
 #description{
   color: rgb(17, 17, 17);
   background-color: #AC8AD3;
@@ -102,7 +103,6 @@ a:visited {
   margin-left: auto;
   box-shadow: 0px 7px 8px black;
 }
-
 .hover {
   padding-top: 10pt;
   display: block;
@@ -146,7 +146,6 @@ h1 {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-
 .logicon {
   width: auto;
   height: 85px;
@@ -161,7 +160,6 @@ h1 {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-
 .descicon {
   width: auto;
   height: 85px;
@@ -175,7 +173,6 @@ h1 {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-
 .contacticon {
   width: auto;
   height: 85px;
@@ -189,7 +186,6 @@ h1 {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-
 .movieicon {
   width: auto;
   height: 85px;
@@ -203,11 +199,9 @@ h1 {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-
 li {
   display: inline-block;
 }
-
 .navbar {
   list-style-type: none;
   padding-bottom: 0;
