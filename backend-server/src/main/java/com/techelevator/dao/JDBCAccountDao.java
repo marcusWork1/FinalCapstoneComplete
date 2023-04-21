@@ -29,6 +29,7 @@ public class JDBCAccountDao implements AccountDAO {
     public Account getAccount(int account_id) {
         Account user = null;
         String sql = "SELECT account_id, user_id, username, email_address, genre, adult_only, popularity " + "FROM account " + "WHERE account_id = ?;";
+
         SqlRowSet results = jdbcTemplate.queryForRowSet(sql, account_id);
         if(results.next()){
             user = mapRowToUser(results);
@@ -40,7 +41,7 @@ public class JDBCAccountDao implements AccountDAO {
     @Override
     public Account createAccount(Account account) {
         String sql = "INSERT INTO account (user_id, username, email_address, genre, adult_only, popularity )" + "VALUES (?, ?, ?, ?, ?, ?) RETURNING account_id;";
-        Integer newAccountId = jdbcTemplate.queryForObject(sql, Integer.class, account.getAccount_id(), account.getUsername(), account.getEmail_address(), account.getGenre(), account.isAdult_only(), account.getPopularity());
+        Integer newAccountId = jdbcTemplate.queryForObject(sql, Integer.class, account.getAccount_id() , account.getUsername(), account.getEmail_address(), account.getGenre(), account.isAdult_only(), account.getPopularity());
 
         return getAccount(newAccountId);
     }
@@ -48,8 +49,8 @@ public class JDBCAccountDao implements AccountDAO {
     @Override
     public void updateAccount(Account account) {
         String sql = "UPDATE account " + "SET  username = ?, email_address = ?, genre = ?, adult_only = ?, popularity = ? " +
-                "WHERE account_id = ?;";
-        jdbcTemplate.update(sql, account.getUsername(),account.getEmail_address(), account.getGenre(), account.isAdult_only(), account.getPopularity(), account.getAccount_id());
+                "WHERE user_id = ?;";
+        jdbcTemplate.update(sql, account.getUsername(),account.getEmail_address(), account.getGenre(), account.isAdult_only(), account.getPopularity(), account.getUser_id());
         }
 
 

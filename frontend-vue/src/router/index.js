@@ -7,6 +7,7 @@ import Register from '../views/Register.vue'
 import AddMovie from '../views/AddMovie'
 import Description from '../views/Description.vue'
 import store from '../store/index'
+import Profile from '../views/Profile.vue'
 
 Vue.use(Router)
 
@@ -70,6 +71,14 @@ const router = new Router({
       meta: {
         requiresAuth: false
       }
+    },
+    {
+    path: "/profile",
+    name: "profile",
+    component: Profile,
+    meta: {
+      requiresAuth: false
+    }
     }
   ]
 })
