@@ -9,7 +9,7 @@
     </div>
     <div class="form-group">
       <label for="genre">What is your favorite movie genre?: </label>
-      <input id="genre" type="dropdown" v-model="newForm.genre" />
+      <input id="genre" type="text" v-model="newForm.genre" />
     </div>
     <div class="form-group">
       Adult Movie?
@@ -46,7 +46,7 @@ import DatabaseService from "../services/DatabaseService";
 
 
 export default {
-    name: 'account-form',
+    name: 'profile-questions', //account-form
   data() {
     return {
       newForm: {
@@ -69,7 +69,7 @@ export default {
             adult_only: this.newForm.adult_only,
             popularity: parseInt(this.newForm.popularity)
         };
-        if (this.email_address != null) {
+        if (this.email_address != null) { //<<<<will have to revise this logic
             //add
             DatabaseService
             .addProfile(newForm)
@@ -79,23 +79,23 @@ export default {
              .catch(error => {
                  this.handleErrorResponse(error, "adding");
              });
-        } else {
-            // update
-            newForm.user_id = this.$store.state.user.id;
-            newForm.username = this.$store.state.user.username;
-        newForm.email_address = this.newForm.email_address;
-        newForm.genre = this.newForm.genre;
-        newForm.adult_only = this.newForm.adult_only;
-        newForm.popularity = parseInt(this.newForm.popularity);
-        DatabaseService
-        .updateProfile(newForm)
-        .then(response => {
-            if(response.status === 200) {this.resetForm()}
-         })
-         .catch(error => {
-                 this.handleErrorResponse(error, "adding");
-             });
-        }
+        } //else { //<<<<<might have to comment this out to check .addprofile
+        //     // update
+        //     newForm.user_id = this.$store.state.user.id;
+        //     newForm.username = this.$store.state.user.username;
+        // newForm.email_address = this.newForm.email_address;
+        // newForm.genre = this.newForm.genre;
+        // newForm.adult_only = this.newForm.adult_only;
+        // newForm.popularity = parseInt(this.newForm.popularity);
+        // DatabaseService
+        // .updateProfile(newForm)
+        // .then(response => {
+        //     if(response.status === 200) {this.resetForm()}
+        //  })
+        //  .catch(error => {
+        //          this.handleErrorResponse(error, "adding");
+        //      });
+        // }
     },
     resetForm() {
         this.newForm = {};
