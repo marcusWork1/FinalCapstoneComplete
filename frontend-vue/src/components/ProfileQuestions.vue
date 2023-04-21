@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form class="profileQuestions" v-on:submit.prevent="submitForm">
+    <form class="profile-questions" v-on:submit.prevent="submitForm">
       <h1>Create your profile!</h1>
       <p>This helps personalize your DateFlix and Chill experience</p>
       <div class="form-group">
@@ -38,7 +38,7 @@
         <input id="popularity" type="number" v-model="newProfile.popularity" />
       </div>
       <button class="button">Submit</button>
-      <button class="button" v-on:click="cancelForm">>Cancel</button>
+      <button class="button" v-on:click="cancelForm">Cancel</button>
     </form>
   </div>
 </template>
@@ -152,5 +152,84 @@ export default {
 .imgicon:active {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+.profile-questions {
+  background-color: #bb9cdf;
+  font-family: "Chewy", typeface;
+  padding-left: 25px;
+}
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+  font-family: "Chewy";
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #a049a3;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 7px rgb(59, 59, 59);
+}
+
+.button:hover {
+  background-color: #5b1b6e;
+}
+
+.button:active {
+  background-color: #8e3e8a;
+  box-shadow: 0 5px rgb(61, 61, 61);
+  transform: translateY(4px);
+}
+.cancel {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+  font-family: "Chewy";
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #a398a3;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 7px rgb(59, 59, 59);
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+.cancel:hover {
+  background-color: #362f38;
+}
+
+.cancel:active {
+  background-color: #8e3e8a;
+  box-shadow: 0 5px rgb(61, 61, 61);
+  transform: translateY(4px);
+}
+
+.info {
+  color: rgb(17, 17, 17);
+  background-color: #ac8ad3;
+  border: 9px solid rgb(231, 223, 240);
+  padding: 80px;
+  margin: 20px;
+  font-family: "Chewy";
+  border-radius: 10px;
+  text-align: center;
+  display: block;
+  margin-left: 220px;
+  margin-right: 220px;
+  font-size: 20px;
+}
+
+.form-group {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 </style>
