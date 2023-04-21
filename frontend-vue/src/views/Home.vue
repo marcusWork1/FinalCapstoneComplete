@@ -200,7 +200,7 @@ h1 {
   transform: translateY(4px);
 }
 .profileicon {
-  width: auto;
+  width: 87px;
   height: 85px;
   border-radius: 25px;
   box-shadow: 0px 7px 8px black;
