@@ -8,6 +8,7 @@ import AddMovie from '../views/AddMovie'
 import Description from '../views/Description.vue'
 import store from '../store/index'
 import Profile from '../views/Profile.vue'
+import ContactUs from '../views/ContactUs.vue'
 
 Vue.use(Router)
 
@@ -79,7 +80,15 @@ const router = new Router({
     meta: {
       requiresAuth: false
     }
-    }
+    },
+    {
+      path: "/contactus",
+      name: "contactus",
+      component: ContactUs,
+      meta: {
+        requiresAuth: false
+      }
+      }
   ]
 })
 
