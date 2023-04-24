@@ -2,7 +2,7 @@
 <!--this should show ONE movie with the option of liking or disliking, have you watched it?-->
   <div class="display">
     <!--uses props to get the data from the API service -->
-    <div v-for="movie in movies" :key="movie.id">
+    <div>
       <!--trying to display the movie title and release date-->
             <h3 class="movie-title">{{ movie.original_title }}</h3>
             <h3 class="movie-year">{{ movie.release_date }}</h3>
@@ -47,13 +47,16 @@
 <script>
 
 export default {
-    name: "movie-details",
-    props: ['movies'],
-     enableAdd: {
-      type: Boolean,
-      default: false,
-      },
-    
+    name: "movie-display",
+    props: ["movie"],
+    data() {
+      return {
+        movies: ""
+      }
+    },
+    created() {
+      this.movies = this.$store.currentMovieList.results
+    },
     methods: {
 
 

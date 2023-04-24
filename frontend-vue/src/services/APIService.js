@@ -18,10 +18,10 @@ export default {
     return APIServer.get(
       "/discover/movie?api_key=5ca2c64fc6ec1bf4c74259e634823759&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1"
     )
-      //  .then((response) => {
-      // //   //assigns the json array to this.movie...
-      //  return response.data
-      //  })
+       .then((response) => {
+      //   //assigns the json array to this.movie...
+       return response.data
+       })
       .catch((error) => {
         console.log(error);
       });
