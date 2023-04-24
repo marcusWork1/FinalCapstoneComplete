@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Vuex from 'vuex'
+import Vuex, { mapActions } from 'vuex'
 import axios from 'axios'
 
 
@@ -22,7 +22,30 @@ export default new Vuex.Store({
   state: {
     token: currentToken || '',
     user: currentUser || {},
-    account: ""
+    account: "",
+    //for our dropdowns
+    genres: [
+      {
+        id: 29,
+        genre: "Action"
+      },
+      {
+        id: 35,
+        genre: "Comedy"
+      },
+      {
+        id: 18,
+        genre: "Drama"
+      },
+      {
+        id: 27,
+        genre: "Horror"
+      },
+      {
+        id: 10749,
+        genre: "Romance"
+      },
+    ],
   },
   mutations: {
     SET_AUTH_TOKEN(state, token) {
