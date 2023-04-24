@@ -1,16 +1,17 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Home from '../views/Home.vue'
-import Login from '../views/Login.vue'
-import Logout from '../views/Logout.vue'
-import Register from '../views/Register.vue'
-import AddMovie from '../views/AddMovie'
-import Description from '../views/Description.vue'
-import store from '../store/index'
-import Profile from '../views/Profile.vue'
-import ContactUs from '../views/ContactUs.vue'
+import Vue from "vue";
+import Router from "vue-router";
+import Home from "../views/Home.vue";
+import Login from "../views/Login.vue";
+import Logout from "../views/Logout.vue";
+import Register from "../views/Register.vue";
+import AddMovie from "../views/AddMovie";
+import Description from "../views/Description.vue";
+import store from "../store/index";
+import Profile from "../views/Profile.vue";
+import ContactUs from "../views/ContactUs.vue";
+import BrowseMoviesList from "../views/BrowseMoviesList.vue";
 
-Vue.use(Router)
+Vue.use(Router);
 
 /**
  * The Vue Router is used to "direct" the browser to render a specific view component
@@ -22,82 +23,90 @@ Vue.use(Router)
  */
 
 const router = new Router({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
-      name: 'home',
+      path: "/",
+      name: "home",
       component: Home,
       meta: {
-        requiresAuth: false
-      }
+        requiresAuth: false,
+      },
     },
     {
       path: "/login",
       name: "login",
       component: Login,
       meta: {
-        requiresAuth: false
-      }
+        requiresAuth: false,
+      },
     },
     {
       path: "/logout",
       name: "logout",
       component: Logout,
       meta: {
-        requiresAuth: false
-      }
+        requiresAuth: false,
+      },
     },
     {
       path: "/register",
       name: "register",
       component: Register,
       meta: {
-        requiresAuth: false
-      }
+        requiresAuth: false,
+      },
     },
     {
       path: "/addmovie",
       name: "addmovie",
       component: AddMovie,
       meta: {
-        requiresAuth: true
-      }
+        requiresAuth: true,
+      },
     },
     {
       path: "/description",
       name: "description",
       component: Description,
       meta: {
-        requiresAuth: false
-      }
+        requiresAuth: false,
+      },
     },
     {
-    path: "/profile",
-    name: "profile",
-    component: Profile,
-    meta: {
-      requiresAuth: false
-    }
+      path: "/profile",
+      name: "profile",
+      component: Profile,
+      meta: {
+        requiresAuth: false,
+      },
     },
     {
       path: "/contactus",
       name: "contactus",
       component: ContactUs,
       meta: {
-        requiresAuth: false
+        requiresAuth: false,
       }
+    },
+    {
+      path: "/browse",
+      name: "browse",
+      component: BrowseMoviesList,
+      meta: {
+        requiresAuth: false,
       }
-  ]
-})
+    },
+  ],
+});
 
 router.beforeEach((to, from, next) => {
   // Determine if the route requires Authentication
-  const requiresAuth = to.matched.some(x => x.meta.requiresAuth);
+  const requiresAuth = to.matched.some((x) => x.meta.requiresAuth);
 
   // If it does and they are not logged in, send the user to "/login"
-  if (requiresAuth && store.state.token === '') {
+  if (requiresAuth && store.state.token === "") {
     next("/login");
   } else {
     // Else let them go to their next destination

@@ -13,6 +13,7 @@
       />
       <!--Trying to display overview/plot of the movie-->
     <p>{{ movie.overview }}</p>
+    </div>
     <!--Liked/notliked buttons-->
     <div class="button-container" v-if="!enableAdd">
         <button
@@ -55,13 +56,13 @@ export default {
     
     methods: {
 
-      setWatched(value) { //this method for set watched status doesn't exist yet
-        this.$store.commit("SET_WATCHED_STATUS", { movie: this.movie, value: value });
-      },
+      // setWatched(value) { //this method for set watched status doesn't exist yet
+      //   this.$store.commit("SET_WATCHED_STATUS", { movie: this.movie, value: value });
+      // },
   
-      addToLikedList(WEONLYWANTMOVIEIDRIGHT) {
-         this.$OURDATABASE.COMMIT("SAVEDISBOOKTOSOMETABLE", WEONLYWANTMOVIEIDRIGHT)
-      },
+      // addToLikedList(WEONLYWANTMOVIEIDRIGHT) {
+      //    this.$OURDATABASE.COMMIT("SAVEDISBOOKTOSOMETABLE", WEONLYWANTMOVIEIDRIGHT)
+      // },
       
     },
 }
