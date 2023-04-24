@@ -23,20 +23,20 @@
         > <!--movie.liked might need to be changed because of the way we're storing it in our tables-->
           Mark Liked
         </button>
-        <button
+        <!-- <button
           class="mark-dislike"
           v-on:click.prevent="setLiked(false)"
           v-if="movie.liked"
         >
           Mark Disliked
-        </button>
-        <button
+        </button> -->
+        <!-- <button
           class="mark-notwatched"
           v-on:click.prevent="setWatched(false)"
           v-if="movie.watched"
         >
           Mark Not Watched
-        </button>
+        </button> -->
       </div>
       <button v-if="enableAdd" v-on:click.prevent="addMovieList(book)">
         Add to Watch List
