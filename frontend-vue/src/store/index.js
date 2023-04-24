@@ -23,6 +23,7 @@ export default new Vuex.Store({
     token: currentToken || '',
     user: currentUser || {},
     account: "",
+    userGenre:"",
     //for our dropdowns
     genres: [
       {
@@ -66,6 +67,9 @@ export default new Vuex.Store({
       state.token = '';
       state.user = {};
       axios.defaults.headers.common = {};
+    },
+    SET_USER_GENRE(state, userGenre){
+      state.userGenre = userGenre;
     }
   }
 })
