@@ -6,11 +6,11 @@ public class Account {
     private int user_id;
     private String username;
     private String email_address;
-    private String genre;
+    private int genre;
     private boolean adult_only;
     private int popularity;
 
-    public Account(int account_id, int user_id, String username, String email_address, String genre, boolean adult_only, int popularity) {
+    public Account(int account_id, int user_id, String username, String email_address, int genre, boolean adult_only, int popularity) {
         this.account_id = account_id;
         this.user_id = user_id;
         this.username = username;
@@ -55,11 +55,11 @@ public class Account {
         this.email_address = email_address;
     }
 
-    public String getGenre() {
+    public int getGenre() {
         return genre;
     }
 
-    public void setGenre(String genre) {
+    public void setGenre(int genre) {
         this.genre = genre;
     }
 

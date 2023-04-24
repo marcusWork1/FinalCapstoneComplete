@@ -63,7 +63,7 @@ public class JDBCAccountDao implements AccountDAO {
         account.setUser_id(rowSet.getInt("user_id"));
         account.setUsername(rowSet.getString("username"));
         account.setEmail_address(rowSet.getString("email_address"));
-        account.setGenre(rowSet.getString("genre"));
+        account.setGenre(rowSet.getInt("genre"));
         account.setAdult_only(rowSet.getBoolean("adult_only"));
         account.setPopularity(rowSet.getInt("popularity"));
         return account;
