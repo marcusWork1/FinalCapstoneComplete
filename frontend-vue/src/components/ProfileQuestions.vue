@@ -12,8 +12,16 @@
         />
       </div>
       <div class="form-group">
-        <label for="genre">What is your favorite movie genre?: </label>
-        <input id="genre" type="text" v-model="newProfile.genre" />
+        <label for="genre"> Please select your favorite Genre: </label>
+        <select v-model="newProfile.genre">
+          <option value="">--- Select a Genre ---</option>
+          <option value="Action">Action</option>
+          <option value="Comedy">Comedy</option>
+          <option value="Drama">Drama</option>
+          <option value="Horror">Horror</option>
+          <option value="Romance">Romance</option>
+          </select>
+       <!-- <input id="genre" type="text" v-model="newProfile.genre" />-->
       </div>
       <div class="form-group">
         Adult Movie?
@@ -80,6 +88,7 @@ export default {
               //grab account id in datastore
               //call mutation
               this.$store.commit("SET_ACCOUNT", response.data); //controller creates an account and sends back an object. no name for object created, so we just collect data.
+              
               this.resetForm();
             }
           })
