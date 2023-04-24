@@ -24,13 +24,7 @@
           <!-- Mark Liked
         </button> -->
         <!-- <button
-          class="mark-dislike"
-          v-on:click.prevent="setLiked(false)"
-          v-if="movie.liked"
-        >
-          Mark Disliked
-        </button> -->
-        <!-- <button
+          
           class="mark-notwatched"
           v-on:click.prevent="setWatched(false)"
           v-if="movie.watched"
@@ -72,10 +66,19 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .display {
 color: black;
 font-family: 'Courier New', Courier, monospace;
 
+}
+img {
+width: 500px;
+  /* height: 200px; */
+  border-radius: 25px;
+  box-shadow: 0px 7px 8px black;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 </style>
