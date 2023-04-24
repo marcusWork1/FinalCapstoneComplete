@@ -11,7 +11,7 @@ Vue.use(Vuex)
  * exists you should set the header so that it will be attached to each request
  */
 const currentToken = localStorage.getItem('token')
-const currentUser = JSON.parse(localStorage.getItem('user'));
+const currentUser = JSON.parse(localStorage.getItem('user'))
 
 
 if(currentToken != null) {
@@ -24,6 +24,7 @@ export default new Vuex.Store({
     user: currentUser || {},
     account: "",
     userGenre:"",
+    currentMovieList: [],
     //for our dropdowns
     genres: [
       {
@@ -70,6 +71,9 @@ export default new Vuex.Store({
     },
     SET_USER_GENRE(state, userGenre){
       state.userGenre = userGenre;
+    },
+    SET_CURRENTMOVIELIST(state, currentMovieList){
+      state.currentMovieList = currentMovieList;
     }
   }
 })

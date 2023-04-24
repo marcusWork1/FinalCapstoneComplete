@@ -1,6 +1,6 @@
 <template>
 <!--this should show ONE movie with the option of liking or disliking, have you watched it?-->
-  <div>
+  <div class="display">
     <!--uses props to get the data from the API service -->
     <div v-for="movie in movies" :key="movie.id">
       <!--trying to display the movie title and release date-->
@@ -15,14 +15,14 @@
     <p>{{ movie.overview }}</p>
     </div>
     <!--Liked/notliked buttons-->
-    <div class="button-container" v-if="!enableAdd">
+    <!-- <div class="button-container" v-if="!enableAdd">
         <button
           class="mark-like"
           v-on:click.prevent="setLiked(true)"
           v-if="!movie.liked"
-        > <!--movie.liked might need to be changed because of the way we're storing it in our tables-->
-          Mark Liked
-        </button>
+        > movie.liked might need to be changed because of the way we're storing it in our tables -->
+          <!-- Mark Liked
+        </button> -->
         <!-- <button
           class="mark-dislike"
           v-on:click.prevent="setLiked(false)"
@@ -37,11 +37,11 @@
         >
           Mark Not Watched
         </button> -->
-      </div>
+      <!-- </div>
       <button v-if="enableAdd" v-on:click.prevent="addMovieList(book)">
         Add to Watch List
-      </button>
-    </div>
+      </button> -->
+    </div> 
 </template>
 
 <script>
@@ -56,6 +56,7 @@ export default {
     
     methods: {
 
+
       // setWatched(value) { //this method for set watched status doesn't exist yet
       //   this.$store.commit("SET_WATCHED_STATUS", { movie: this.movie, value: value });
       // },
@@ -69,5 +70,9 @@ export default {
 </script>
 
 <style>
+.display {
+color: black;
+font-family: 'Courier New', Courier, monospace;
 
+}
 </style>
