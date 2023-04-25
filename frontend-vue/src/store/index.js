@@ -26,28 +26,28 @@ export default new Vuex.Store({
     userGenre:"",
     currentMovieList: [],
     //for our dropdowns
-    genres: [
-      {
-        id: 29,
-        genre: "Action"
-      },
-      {
-        id: 35,
-        genre: "Comedy"
-      },
-      {
-        id: 18,
-        genre: "Drama"
-      },
-      {
-        id: 27,
-        genre: "Horror"
-      },
-      {
-        id: 10749,
-        genre: "Romance"
-      },
-    ],
+    // genres: [
+    //   {
+    //     id: 29,
+    //     genre: "Action"
+    //   },
+    //   {
+    //     id: 35,
+    //     genre: "Comedy"
+    //   },
+    //   {
+    //     id: 18,
+    //     genre: "Drama"
+    //   },
+    //   {
+    //     id: 27,
+    //     genre: "Horror"
+    //   },
+    //   {
+    //     id: 10749,
+    //     genre: "Romance"
+    //   },
+    // ],
   },
   mutations: {
     SET_AUTH_TOKEN(state, token) {
@@ -61,6 +61,7 @@ export default new Vuex.Store({
     },
     SET_ACCOUNT(state, account){ // spot to store the account object
       state.account = account;
+      
     },
     LOGOUT(state) {
       localStorage.removeItem('token');
@@ -69,9 +70,9 @@ export default new Vuex.Store({
       state.user = {};
       axios.defaults.headers.common = {};
     },
-    SET_USER_GENRE(state, userGenre){
-      state.userGenre = userGenre;
-    },
+    // SET_USER_GENRE(state, userGenre){
+    //   state.userGenre = userGenre;
+    // },
     SET_CURRENTMOVIELIST(state, currentMovieList){
       state.currentMovieList = currentMovieList;
     }

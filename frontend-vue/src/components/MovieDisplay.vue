@@ -14,6 +14,13 @@
       <!--Trying to display overview/plot of the movie-->
     <p>{{ movie.overview }}</p>
     </div>
+      <form class="movieform" v-on:submit.prevent="addFavorite">>
+      <button class="button">Add to Favorites</button>
+    
+    </form> 
+     
+
+
     <!--Liked/notliked buttons-->
     <!-- <div class="button-container" v-if="!enableAdd">
         <button
@@ -24,7 +31,13 @@
           <!-- Mark Liked
         </button> -->
         <!-- <button
-          
+          class="mark-dislike"
+          v-on:click.prevent="setLiked(false)"
+          v-if="movie.liked"
+        >
+          Mark Disliked
+        </button> -->
+        <!-- <button
           class="mark-notwatched"
           v-on:click.prevent="setWatched(false)"
           v-if="movie.watched"
@@ -39,19 +52,33 @@
 </template>
 
 <script>
+import DatabaseService from '../services/DatabaseService';
 
 export default {
     name: "movie-display",
     props: ["movie"],
     data() {
       return {
-        movies: ""
-      }
+        movies: "",
+        // favoritedMovie: {
+        //   account_id: this.$store.state.account.account_id,
+        //   movie_id: this.$store.currentMovieList.results.id,
+
+        // },
+      };
     },
     created() {
-      this.movies = this.$store.currentMovieList.results
+      this.movies = this.$store.currentMovieList
     },
     methods: {
+      addFavorite() {
+        const newFavorite= {
+          account_id: this.$store.state.account.account_id,
+          movie_id: this.favoritedMovie.movie_id,
+    };
+    console.log(newFavorite);
+     DatabaseService.postFavorite(newFavorite)
+      }
 
 
       // setWatched(value) { //this method for set watched status doesn't exist yet
@@ -74,7 +101,6 @@ font-family: 'Courier New', Courier, monospace;
 }
 img {
 width: 500px;
-  /* height: 200px; */
   border-radius: 25px;
   box-shadow: 0px 7px 8px black;
   margin-left: 10px;

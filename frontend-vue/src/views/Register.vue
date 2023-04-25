@@ -4,12 +4,13 @@
      <div>
       <form @submit.prevent="register">
         <header>
-            <a href="http://localhost:8080/"><img class = "imgicon" src="../assets/webicon.png" alt="webicon"/> </a>
-            <a href="http://localhost:8080/description"><img class = "descicon" src="https://i.imgur.com/ZfFZoTz.jpg" alt="descicon"/> </a>
-            <a href="#"><img class = "contacticon" src="../assets/contacticon.jpg" alt="contacticon"/> </a>
-            <a href="http://localhost:8080/addmovie"><img class = "movieicon" src="https://i.imgur.com/6tEu04Z.jpg" alt="movieicon"/> </a>
-            <a href="http://localhost:8080/login"><img class = "logicon" src="../assets/loginicon.png" alt="logicon"> </a>
-         <a href="http://localhost:8080/profile"> <img class = "profileicon" src="https://i.imgur.com/VP2RcSx.png" alt="profileicon"> </a>
+             <router-link v-bind:to="{ name: 'home' }">Back Home</router-link>&nbsp;
+          <router-link v-bind:to="{ name: 'description' }">Description</router-link>&nbsp;
+          <!-- <router-link v-bind:to="{ name: 'addmovie' }">Add Movie</router-link>&nbsp; -->
+          <router-link v-bind:to="{ name: 'login' }">Login</router-link>&nbsp;|
+          <!-- <router-link v-bind:to="{ name: 'profile' }">Profile</router-link>&nbsp;
+          <router-link v-bind:to="{ name: 'browse' }">Browse</router-link>&nbsp; -->
+          <router-link v-bind:to="{ name: 'contactus' }">Contact Us</router-link>&nbsp;
         </header>
       <h1>Create Account</h1>
       <img class = "walle" src = "https://i.imgur.com/ssZGent.png">
