@@ -43,6 +43,13 @@ export default {
   components: {
     FavMovieList,
   },
+  // created() {
+  //   APIService.getFavoriteMoviesById() // set up api call and retrieve list with path the array of ids from database
+  //   .then((response) => {
+  //     this.$store.commit("SET_FAVMOVIELIST", response); // set favorite movie list with response array
+  //   });
+  //   console.log
+  // }
 };
 </script>
 
