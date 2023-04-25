@@ -25,8 +25,7 @@
         >&nbsp;
       <router-link v-bind:to="{ name: 'favoritemovies'}">Favorite Movies</router-link>
       </header>
-      <meta charset="UTF-8" /><br>
-      <p class="title">Flick Finder &#128521;</p>
+
 
          <img class="mainimage" src="https://i.imgur.com/dZqOSDB.jpg" />
 
@@ -71,6 +70,7 @@ h2 {
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 .mainimage {
+  margin-top: 80px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -155,12 +155,12 @@ a:visited {
   color: rgb(0, 95, 139);
 }
 .imgicon {
-  width: auto;
-  height: 85px;
+  width: 6%;
+  height: 120px;
   border-radius: 25px;
   box-shadow: 0px 7px 8px black;
   margin-left: 10px;
-  margin-top: 10px;
+  margin-top: 25px;
   margin-bottom: 10px;
 }
 .imgicon:active {
@@ -168,22 +168,22 @@ a:visited {
   transform: translateY(4px);
 }
 .logicon {
-  width: auto;
-  height: 85px;
+  width: 120px;
+  height: 120px;
   border-radius: 25px;
   box-shadow: 0px 7px 8px black;
   margin-bottom: 10px;
   float: right;
   margin-right: 10px;
-  margin-top: 10px;
+  margin-top: 25px;
 }
 .logicon:active {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
 .descicon {
-  width: auto;
-  height: 85px;
+  width: 120px;
+  height: 120px;
   border-radius: 25px;
   box-shadow: 0px 7px 8px black;
   margin-bottom: 10px;
@@ -195,8 +195,8 @@ a:visited {
   transform: translateY(4px);
 }
 .contacticon {
-  width: auto;
-  height: 85px;
+  width: 120px;
+  height: 120px;
   border-radius: 25px;
   box-shadow: 0px 7px 8px black;
   margin-bottom: 10px;
@@ -208,8 +208,8 @@ a:visited {
   transform: translateY(4px);
 }
 .movieicon {
-  width: auto;
-  height: 85px;
+  width: 120px;
+  height: 120px;;
   border-radius: 25px;
   box-shadow: 0px 7px 8px black;
   margin-bottom: 10px;
@@ -221,8 +221,8 @@ a:visited {
   transform: translateY(4px);
 }
 .profileicon {
-  width: 87px;
-  height: 85px;
+  width: 120px;
+  height: 120px;
   border-radius: 25px;
   box-shadow: 0px 7px 8px black;
   margin-bottom: 10px;
