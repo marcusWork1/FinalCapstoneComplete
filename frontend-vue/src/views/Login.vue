@@ -149,9 +149,7 @@ h1 {
   padding-top: 10px;
   font-size: 25px;
 }
-header {
-  background-color: #231b52;
-}
+
 .walle {
   height: 200px;
   display: block;
@@ -180,77 +178,5 @@ label {
   margin-right: 0.5rem;
   background-color: #231b52;
 }
-.div {
-  background-color: #140180;
-}
-.image {
-  height: 100%;
-}
 
-.logicon {
-  width: auto;
-  height: 85px;
-  border-radius: 25px;
-  box-shadow: 0px 7px 8px black;
-  margin-bottom: 10px;
-  float: right;
-  margin-right: 10px;
-  margin-top: 10px;
-}
-.logicon:active {
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-.descicon {
-  width: auto;
-  height: 85px;
-  border-radius: 25px;
-  box-shadow: 0px 7px 8px black;
-  margin-bottom: 10px;
-  margin-left: 20px;
-  margin-top: 10px;
-}
-.descicon:active {
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-.contacticon {
-  width: auto;
-  height: 85px;
-  border-radius: 25px;
-  box-shadow: 0px 7px 8px black;
-  margin-bottom: 10px;
-  margin-left: 20px;
-  margin-top: 10px;
-}
-.contacticon:active {
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-.movieicon {
-  width: auto;
-  height: 85px;
-  border-radius: 25px;
-  box-shadow: 0px 7px 8px black;
-  margin-bottom: 10px;
-  margin-left: 20px;
-  margin-top: 10px;
-}
-.movieicon:active {
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-.profileicon {
-  width: 87px;
-  height: 85px;
-  border-radius: 25px;
-  box-shadow: 0px 7px 8px black;
-  margin-bottom: 10px;
-  margin-left: 20px;
-  margin-top: 10px;
-}
-.profileicon:active {
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
 </style>

@@ -74,7 +74,7 @@ export default {
   height: 60%;
   width: 50%;
 }
-.home {
+.bodyimage {
   background-image: url("https://i.imgur.com/Bm1I1fA.png");
   background-size: cover;
   background-repeat: no-repeat;

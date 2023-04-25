@@ -1,12 +1,12 @@
 <template>
-  <div class="contactus">
+  <div class="bodyimage">
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Chewy"
     />
     <header>
       <router-link v-bind:to="{ name: 'home' }"
-        ><img class="imgicon" src="../assets/webicon.png" /></router-link
+        ><img class="imgicon" src="https://i.imgur.com/LajHZNM.png" /></router-link
       >&nbsp;
       <router-link v-bind:to="{ name: 'description' }"
         ><img class="descicon" src="../assets/descicon.jpg" /></router-link
@@ -85,69 +85,5 @@ h2 {
 }
 .image {
   height: 100%;
-}
-
-
-.logicon {
-  width: auto;
-  height: 85px;
-  border-radius: 25px;
-  box-shadow: 0px 7px 8px black;
-  margin-bottom: 10px;
-  float: right;
-  margin-right: 10px;
-  margin-top: 10px;
-}
-.logicon:active {
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-.descicon {
-  width: auto;
-  height: 85px;
-  border-radius: 25px;
-  box-shadow: 0px 7px 8px black;
-  margin-bottom: 10px;
-  margin-left: 20px;
-  margin-top: 10px;
-}
-.descicon:active {
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-.movieicon {
-  width: auto;
-  height: 85px;
-  border-radius: 25px;
-  box-shadow: 0px 7px 8px black;
-  margin-bottom: 10px;
-  margin-left: 20px;
-  margin-top: 10px;
-}
-.movieicon:active {
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-.profileicon {
-  width: 87px;
-  height: 85px;
-  border-radius: 25px;
-  box-shadow: 0px 7px 8px black;
-  margin-bottom: 10px;
-  margin-left: 20px;
-  margin-top: 10px;
-}
-.profileicon:active {
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-header {
-  background-color: #231b52;
-}
-footer {
-  font-family: "Chewy";
-  padding-left: 15px;
-  padding-bottom: 15px;
-  color: #ac8ad3;
 }
 </style>
