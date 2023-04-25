@@ -1,8 +1,10 @@
 <template>
+<body>
   <div class="navigate">
       <img class = "swiperight"
         src="https://i.imgur.com/GgpkPhT.jpg">
     </div>
+    </body>
 </template>
 
 
@@ -13,9 +15,5 @@
   margin-right: auto;
   height: 70%;
   width: 60%;
-}
-
-.navigate {
-  background-color: #231b52 ;
 }
 </style>

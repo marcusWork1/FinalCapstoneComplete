@@ -1,65 +1,90 @@
 <template>
   <div class="home">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chewy">
-    
-    <body id = "body">
-        <header>
-              <router-link v-bind:to="{ name: 'home' }">Back Home</router-link>&nbsp;
-          <router-link v-bind:to="{ name: 'description' }">Description</router-link>&nbsp;
-          <router-link v-bind:to="{ name: 'addmovie' }">Add Movie</router-link>&nbsp;
-          <router-link v-bind:to="{ name: 'login' }">Login</router-link>&nbsp;|
-          <router-link v-bind:to="{ name: 'profile' }">Profile</router-link>&nbsp;
-          <router-link v-bind:to="{ name: 'browse' }">Browse</router-link>&nbsp;
-          <router-link v-bind:to="{ name: 'contactus' }">Contact Us</router-link>&nbsp;
-        </header>
-        <meta charset="UTF-8">
-            <p class = "title" >Welcome to DateFlix and Chill &#128521;</p>
-            <navigate />
-        <div class = "hover">
-                <a><img class = "cantdecide" src="https://i.imgur.com/Ej2G4i1.png" alt="cantdecide"> </a><br>
-                <a href="http://localhost:8080/register"><h2 class = "signup" ><span> Sign Up Here</span> </h2></a> 
-        </div><br>
-    <div id="description">
-        <h2>About Dateflix and Chill</h2><br>
-        <p>In April 2023, six Tech Elevator Programmers were tired of 
-          bad movie recommendations that did not align with their interest.
-          Together they brainstromed and created an app that comes up with the best
-          movie to watch based on your personal preference and mood when trying to find
-          the perfect title to watch for date night. Our app follows a tinder-style 
-          format of clicking right or left on a movie if you’ve seen it, and you rate how you felt about 
-          it the app would suggest movies based off of your swipes. 
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Chewy"
+    />
+    <body id="body">
+      <header>
+      <router-link v-bind:to="{ name: 'home' }"><img class="imgicon" src="../assets/webicon.png"/></router-link>&nbsp;
+      <router-link v-bind:to="{ name: 'description' }"><img class = "descicon" src="../assets/descicon.jpg"></router-link
+      >&nbsp;
+      <router-link v-bind:to="{ name: 'addmovie' }"><img class = "movieicon" src="../assets/movieicon.jpg"></router-link
+      >&nbsp;
+      <router-link v-bind:to="{ name: 'login' }"><img class = "logicon" src="../assets/loginicon.png"></router-link>&nbsp;
+      <router-link v-bind:to="{ name: 'profile' }"><img class = "profileicon" src="../assets/profileicon.png"></router-link>&nbsp;
+      <router-link v-bind:to="{ name: 'browse' }">Browse</router-link>&nbsp;
+      <router-link v-bind:to="{ name: 'contactus' }"><img class = "contacticon" src="../assets/contacticon.jpg"></router-link
+      >&nbsp;
+      </header>
+      <meta charset="UTF-8" />
+      <p class="title">Welcome to DateFlix and Chill &#128521;</p>
+      <navigate />
+      <div class="hover">
+        <a
+          ><img
+            class="cantdecide"
+            src="https://i.imgur.com/Ej2G4i1.png"
+            alt="cantdecide"
+          /> </a
+        ><br />
+        <a href="http://localhost:8080/register"
+          ><h2 class="signup"><span> Sign Up Here</span></h2></a
+        >
+      </div>
+      <br />
+      <div id="description">
+        <h2>About Dateflix and Chill</h2>
+        <br />
+        <p>
+          In April 2023, six Tech Elevator Programmers were tired of bad movie
+          recommendations that did not align with their interest. Together they
+          brainstromed and created an app that comes up with the best movie to
+          watch based on your personal preference and mood when trying to find
+          the perfect title to watch for date night. Our app follows a
+          tinder-style format of clicking right or left on a movie if you’ve
+          seen it, and you rate how you felt about it the app would suggest
+          movies based off of your swipes.
         </p>
-    </div>
-    </body><br><br><br><br>
-   
-        <footer>
-          <p>® DateFlix and Chill<br>
-          <a href="http://localhost:8080/description">More about our company here :)</a></p>
-        </footer>
+      </div>
+    </body>
+    <br /><br /><br /><br />
+
+    <footer>
+      <p>
+        ® DateFlix and Chill<br />
+        <a href="http://localhost:8080/description"
+          >More about our company here :)</a
+        >
+      </p>
+    </footer>
   </div>
 </template>
 
 <script>
-import Navigate from '../components/Navigate.vue';
+import Navigate from "../components/Navigate.vue";
 export default {
   name: "home",
   components: {
     Navigate,
-  }
+  },
 };
 </script>
 
 <style scoped>
-* { margin:0; padding:0; }
+* {
+  margin: 0;
+  padding: 0;
+}
 
 footer {
   font-family: "Chewy";
   padding-left: 15px;
   padding-bottom: 15px;
-  color: #AC8AD3;
+  color: #ac8ad3;
 }
 .home {
-  background-color: #231b52;
+
   margin: 0px;
   padding: 0px;
 }
@@ -75,15 +100,15 @@ footer {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  height:35px;
+  height: 35px;
   padding-top: 10px;
 }
 a:visited {
-  color:thistle;
+  color: thistle;
 }
-#description{
+#description {
   color: rgb(17, 17, 17);
-  background-color: #AC8AD3;
+  background-color: #ac8ad3;
   border: 9px solid rgb(231, 223, 240);
   padding: 12px;
   margin: 10px;
@@ -110,26 +135,26 @@ a:visited {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  font-family: 'Chewy',typeface;
+  font-family: "Chewy", typeface;
   text-shadow: 4px 3px #19181a;
   width: 200px;
 }
 .signup {
-  color:#c0aed4;
+  color: #c0aed4;
 }
 .signup:hover {
-  color:darkmagenta;
+  color: darkmagenta;
 }
 span {
-  position:relative;
-    display:inline-block;
-    border:4px solid #CCC;
-    padding-inline: 10px;
-    padding-bottom: 5px;
-    padding-top: 3px;
+  position: relative;
+  display: inline-block;
+  border: 4px solid #ccc;
+  padding-inline: 10px;
+  padding-bottom: 5px;
+  padding-top: 3px;
 }
 h1 {
-  color:#c0aed4;
+  color: #c0aed4;
 }
 .image {
   height: 100%;
