@@ -1,6 +1,5 @@
 package com.techelevator.dao;
 
-import com.techelevator.model.Movie;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Component;
@@ -8,8 +7,6 @@ import com.techelevator.model.Favorite;
 import javax.sql.DataSource;
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.sql.DataSource;
 
 @Component
 public class JDBCFavoriteListDAO implements FavoriteDAO {
@@ -20,16 +17,27 @@ public class JDBCFavoriteListDAO implements FavoriteDAO {
         this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
 
-    @Override
-    public List<Favorite> allFavorites() {
+        @Override
+        public Object[] allFavorites(int id) {
+        //public List<Favorite> allFavorites(int id) {
 
-        List<Favorite> favorites = new ArrayList();
-        SqlRowSet results = jdbcTemplate.queryForRowSet("SELECT movie_id FROM favorite_list WHERE account_id = ?;");
-        while (results.next()) {
-            favorites.add(mapRowToFav(results));
+            List<Favorite> favorites = new ArrayList<>();
+            String sql = "SELECT movie_id FROM favorite_list WHERE account_id = ?;"; // test this sql
+            SqlRowSet results = jdbcTemplate.queryForRowSet(sql, id);
+            while (results.next()) {
+                favorites.add(mapRowToFav(results));
+            }
+            return favorites.toArray();
+            //return favorites;
         }
-        return favorites;
-    }
+
+
+//        SqlRowSet results = jdbcTemplate.queryForRowSet("SELECT movie_id FROM favorite_list WHERE account_id = ?;");
+//        while (results.next()) {
+//            favorites.add(mapRowToFav(results));
+//        }
+//        return favorites;
+//    }
 
 //    @Override
 //    public Favorite getFavorite(int account_id) {
