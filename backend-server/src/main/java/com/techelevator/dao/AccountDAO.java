@@ -10,8 +10,12 @@ public interface AccountDAO {
 
     Account getAccount(int account_id);
 
+    Account getAccountByUserId(int user_id);
+
     Account createAccount(Account account);
 
     void updateAccount(Account account);
+
+
 
 } // End of AccountDAO

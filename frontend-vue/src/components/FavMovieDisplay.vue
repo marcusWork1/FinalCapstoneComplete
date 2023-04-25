@@ -26,26 +26,37 @@
 
 <script>
 import DatabaseService from "../services/DatabaseService";
+import APIService from "../services/APIService";
 export default {
   name: "fav-movie-display",
   props: ["favmovie"], // props for the fav movie api response, allowing us to use the data in the display/sending elsewhere
   data() {
     return {
-      movies: "",
+      movie: "",
     };
   },
-  created() {
+  created() { // call the API here to return a movie object that we can populate in this display
+   
+   APIService.getMovieByMovieId(this.favmovie)
     this.movies = this.$store.favMovieList; // not completely sure what this does
   },
   methods: {
-    // method for calling the favaorite movie GET in the services,  based on the account id in the store
-    getFavoriteMovie() {
+    getFavorites() {
       DatabaseService.getAllFavorites(
         this.$route.params.$store.state.account.account_id
       ).then((response) => {
+       
         this.movies = response.data;
       });
     },
+    // method for calling the favaorite movie GET in the services,  based on the account id in the store
+    // getFavoriteMovie() {
+    //   DatabaseService.getAllFavorites(
+    //     this.$route.params.$store.state.account.account_id
+    //   ).then((response) => {
+    //     this.movies = response.data;
+    //   });
+    // },
 
     removeFavorite() {
       // method for removing a favorite as per trello board

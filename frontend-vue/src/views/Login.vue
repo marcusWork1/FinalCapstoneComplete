@@ -77,7 +77,7 @@
 
         <footer>
           <p>
-            ® DateFlix and Chill<br />
+            ® Flick Finder<br />
             <a href="http://localhost:8080/description"
               >More about our company here :)</a
             >

@@ -31,13 +31,7 @@ public class JDBCFavoriteListDAO implements FavoriteDAO {
             //return favorites;
         }
 
-
-//        SqlRowSet results = jdbcTemplate.queryForRowSet("SELECT movie_id FROM favorite_list WHERE account_id = ?;");
-//        while (results.next()) {
-//            favorites.add(mapRowToFav(results));
-//        }
-//        return favorites;
-//    }
+        // delete favorite
 
 //    @Override
 //    public Favorite getFavorite(int account_id) {
@@ -57,6 +51,12 @@ public class JDBCFavoriteListDAO implements FavoriteDAO {
                 "VALUES (?,?);";
 
          jdbcTemplate.update(sql, aFavorite.getAccount_id(), aFavorite.getMovie_id());
+
+    }
+
+    @Override
+    public void deleteFavorite(int id, int movie_id){
+
 
     }
 

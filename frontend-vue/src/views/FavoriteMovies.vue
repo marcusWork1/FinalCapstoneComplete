@@ -39,7 +39,7 @@
 import FavMovieList from "../components/FavMovieList.vue";
 
 export default {
-  name: "favorite-movies",
+  name: "fav-movie-list", // name must be the same as the tag above ^ so vue knows
   components: {
     FavMovieList,
   },
