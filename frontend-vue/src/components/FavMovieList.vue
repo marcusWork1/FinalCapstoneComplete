@@ -3,8 +3,8 @@
       <body>
       <h1> Browse Favorite Movies</h1>
 
-     <movie-display class ="favmoviedisplay" v-for="favoritedMovie in this.$store.state.favMovieList.results" v-bind:key="favoritedMovie.id"
-                     v-bind:movie = "favoritedmovie"/>
+     <fav-movie-display class ="favmoviedisplay" v-for="favoritedMovie in this.$store.state.favMovieList.results" v-bind:key="favoritedMovie.id"
+                     v-bind:favmovie = "favoritedmovie"/>
   </body>
   </div>
 </template>
@@ -14,12 +14,12 @@ import FavMovieDisplay from '../components/FavMovieDisplay.vue';
 
 
 
-//export default {
-//    name:"fav-movie-list",
- //   components:{
-        FavMovieDisplay
- //   },
-//}
+export default{
+   name: "fav-movie-list",
+   components: {
+     FavMovieDisplay
+   },
+}
 
 
 </script>
