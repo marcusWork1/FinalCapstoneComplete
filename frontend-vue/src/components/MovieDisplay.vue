@@ -74,11 +74,12 @@ export default {
       addFavorite() {
         const newFavorite= {
           account_id: this.$store.state.account.account_id,
-          movie_id: this.favoritedMovie.movie_id,
+          movie_id: this.favoritedMovie.movie_id.id,
     };
     console.log(newFavorite);
      DatabaseService.postFavorite(newFavorite)
       }
+     
 
 
       // setWatched(value) { //this method for set watched status doesn't exist yet
