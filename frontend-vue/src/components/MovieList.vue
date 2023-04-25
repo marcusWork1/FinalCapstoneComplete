@@ -23,6 +23,7 @@ export default {
 div {
   display: inline-block;
   background-color: #231b52;
+  color: white;
 }
 
 </style>

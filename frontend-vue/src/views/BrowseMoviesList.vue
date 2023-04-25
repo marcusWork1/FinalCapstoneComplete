@@ -13,7 +13,7 @@
         </header>
           <h1></h1><br>
     <!--shows a list of movies to browse by genre-->
-    <movie-list />
+    <body><movie-list /></body>
   </div>
 </template>
 
@@ -34,5 +34,7 @@ export default {
 
 <style>
 
-
+body {
+  color: white;
+}
 </style>
