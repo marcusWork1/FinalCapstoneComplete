@@ -85,11 +85,6 @@ public class JDBCMovieDAO implements MovieDAO {
 //}
 //@Override
     // need inner joins
-public void addFavorite(int account_id, int movie_id) {
-    String sql = "INSERT into favorite_list (account_id, movie_id) " +
-                 "VALUES (?,?);";
-    jdbcTemplate.update(sql, account_id, movie_id);
-}
 
 
     private Movie mapRowToMovie(SqlRowSet rowSet){

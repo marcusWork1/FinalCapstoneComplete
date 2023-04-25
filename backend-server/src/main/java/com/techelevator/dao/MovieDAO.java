@@ -16,5 +16,4 @@ public interface MovieDAO {
 
  //    List<Movie> getList(int accountId); // getListByAccountID(Account anaccount)
 
-    void addFavorite(int accountId, int movieId);
 }
