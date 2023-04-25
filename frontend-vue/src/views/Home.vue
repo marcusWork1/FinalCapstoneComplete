@@ -67,6 +67,9 @@ export default {
 </script>
 
 <style>
+h2 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
 .mainimage {
   display: block;
   margin-left: auto;
@@ -76,8 +79,19 @@ export default {
 }
 .bodyimage {
   background-image: url("https://i.imgur.com/Bm1I1fA.png");
+  min-height: 100%;
+  min-width: 1024px;
+	background-repeat: no-repeat;
   background-size: cover;
-  background-repeat: no-repeat;
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 * {
   margin: 0;
@@ -103,7 +117,7 @@ footer {
   font-family: 'Yanone Kaffeesatz', sans-serif;
   color: rgb(65, 107, 186);
   text-shadow: 1px 1px #19181a;
-  font-size: 45px;
+  font-size: 40px;
 }
 a:visited {
   color: thistle;
@@ -118,9 +132,9 @@ a:visited {
   border-radius: 10px;
   text-align: center;
   display: block;
-  margin-left: 110px;
-  margin-right: 110px;
-  font-size: 35px;
+  margin-left: 140px;
+  margin-right: 140px;
+  font-size: 30px;
 }
 .hover {
   padding-top: 10pt;
@@ -134,7 +148,7 @@ a:visited {
   font-family: 'Yanone Kaffeesatz', sans-serif;
   color: #000000;
   padding-top: 10px;
-  font-size: 35px;
+  font-size: 30px;
   text-decoration-style: bold;
 }
 .signup:hover {

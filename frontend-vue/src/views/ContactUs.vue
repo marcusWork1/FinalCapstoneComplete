@@ -58,22 +58,18 @@ export default {
 <style>
 h1 {
   color: rgb(12, 12, 12);
-  font-family: "Chewy";
   text-align: center;
 }
 h2 {
   color: #231b52;
   font-size: 23px;
-  font-family: "Chewy";
   text-align: center;
 }
 .paragraph {
   font-size: 23px;
 }
 .description {
-  background-color: #231b52;
   color: white;
-  font-family: "Chewy";
   text-align: center;
   margin: 0px;
   padding: 0;
@@ -82,8 +78,5 @@ h2 {
   margin-left: auto;
   margin-right: auto;
   font-size: 15px;
-}
-.image {
-  height: 100%;
 }
 </style>

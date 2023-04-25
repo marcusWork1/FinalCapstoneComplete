@@ -125,7 +125,6 @@ export default {
   color: aliceblue;
 }
 h1 {
-  font-family: "Chewy";
   color: white;
   text-align: center;
   font-size: 30px;
@@ -135,7 +134,6 @@ header {
 }
 form {
   background-color: #231b52;
-  font-family: "Chewy";
   color: white;
   text-align: center;
   margin-bottom: 20px;

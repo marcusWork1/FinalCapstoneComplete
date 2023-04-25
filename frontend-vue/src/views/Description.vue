@@ -77,12 +77,6 @@ export default {
 </script>
 
 <style>
-footer {
-  font-family: "Chewy";
-  padding-left: 15px;
-  padding-bottom: 15px;
-  color: #ac8ad3;
-}
 h3 {
   color: #231b52;
   font-size: 23px;
@@ -101,16 +95,13 @@ h3 {
 }
 h1 {
   color: white;
-  font-family: "Chewy";
   text-align: center;
 }
 .paragraph {
   font-size: 23px;
 }
 .description {
-  background-color: #231b52;
   color: white;
-  font-family: "Chewy";
   text-align: center;
   margin: 0px;
   padding: 0;

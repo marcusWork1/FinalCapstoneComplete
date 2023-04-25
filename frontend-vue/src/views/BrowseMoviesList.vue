@@ -1,5 +1,6 @@
 <template>
-  <div class="desc">
+  <div >
+        <body class="bodyimage">
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Chewy"
@@ -33,7 +34,7 @@
     <h1></h1>
     <br />
     <!--shows a list of movies to browse by genre-->
-    <body>
+
       <movie-list />
     </body>
   </div>
@@ -58,7 +59,5 @@ export default {
 </script>
 
 <style>
-body {
-  color: white;
-}
+
 </style>

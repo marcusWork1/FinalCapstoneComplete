@@ -28,7 +28,6 @@ export default {
 body {
   overflow-x: scroll;
   overflow-x: visible;
-  background-color: #231b52;
   flex-wrap: wrap;
 }
 div {

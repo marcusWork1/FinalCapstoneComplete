@@ -136,7 +136,6 @@ div {
 }
 .movieform {
   background-color: #bb9cdf;
-  font-family: "Chewy", typeface;
   padding-left: 25px;
   text-align: center;
   padding-inline-start: 10px;
@@ -204,7 +203,6 @@ div {
   border: 9px solid rgb(231, 223, 240);
   padding: 80px;
   margin: 20px;
-  font-family: "Chewy";
   border-radius: 10px;
   text-align: center;
   display: block;

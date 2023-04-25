@@ -51,7 +51,6 @@ export default {
 
 h1 {
   color: white;
-  font-family: "Chewy";
   text-align: center;
 }
 .walle {

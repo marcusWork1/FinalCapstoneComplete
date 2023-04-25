@@ -1,5 +1,5 @@
 <template>
-  <div id="login">
+  <div class = "bodyimage">
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Chewy"
@@ -8,7 +8,7 @@
       <form class="signinform" @submit.prevent="login">
         <header>
           <router-link v-bind:to="{ name: 'home' }"
-            ><img class="imgicon" src="../assets/webicon.png" /></router-link
+            ><img class="imgicon" src="https://i.imgur.com/LajHZNM.png" /></router-link
           >&nbsp;
           <router-link v-bind:to="{ name: 'description' }"
             ><img class="descicon" src="../assets/descicon.jpg" /></router-link
@@ -127,12 +127,6 @@ export default {
 </script>
 
 <style>
-footer {
-  font-family: "Chewy";
-  padding-left: 15px;
-  padding-bottom: 15px;
-  color: #ac8ad3;
-}
 .signuplink {
   color: rgb(222, 184, 243);
   font-size: 25px;
@@ -160,23 +154,20 @@ h1 {
   padding-top: 10px;
 }
 .signinform {
-  background-color: #231b52;
-  font-family: "Chewy";
+
   color: white;
   display: block;
   padding: 0px;
 }
 .body {
-  background-color: #231b52;
+
 }
 .form-input-group {
   margin-bottom: 1rem;
-  background-color: #231b52;
   margin: 0;
 }
 label {
   margin-right: 0.5rem;
-  background-color: #231b52;
 }
 
 </style>
