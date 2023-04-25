@@ -2,7 +2,7 @@
   <div>
     <form class="profile-questions" v-on:submit.prevent="submitForm">
       <h1>Create your profile!</h1>
-      <p>This helps personalize your DateFlix and Chill experience</p>
+      <p>This helps personalize your Flick Finder experience</p>
       <div class="form-group">
         <label for="email_address">Please input your email address: </label>
         <input
@@ -42,7 +42,7 @@
         <label for="No">No</label>
       </div>
       <div class="form-group">
-        <label for="popularity">Minimum rating preference?: </label>
+        <label for="popularity">Minimum rating preference? 1-100: </label>
         <input id="popularity" type="number" v-model="newProfile.popularity" />
       </div>
       <button class="button">Submit</button>

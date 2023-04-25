@@ -31,7 +31,7 @@
       <router-link v-bind:to="{ name: 'favoritemovies'}">Favorite Movies</router-link>
     </header>
 
-    <h1>Dateflix and Chill App Description</h1>
+    <h1>Flick Finder Description</h1>
     <br />
     <img class="walle" src="https://i.imgur.com/ssZGent.png" />
     <div></div>
