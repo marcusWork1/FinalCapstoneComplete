@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
       <header>
         <router-link v-bind:to="{ name: 'home' }"
-          ><img class="imgicon" src="https://i.imgur.com/mFkJiL3.jpg" /></router-link
+          ><img class="imgicon" src="https://i.imgur.com/LajHZNM.png" /></router-link
         >&nbsp;
         <router-link v-bind:to="{ name: 'description' }"
           ><img class="descicon" src="../assets/descicon.jpg" /></router-link
@@ -26,7 +26,7 @@
       <router-link v-bind:to="{ name: 'favoritemovies'}">Favorite Movies</router-link>
       </header>
       <meta charset="UTF-8" /><br>
-      <p class="title">Welcome to Flick Finder &#128521;</p>
+      <p class="title">Flick Finder &#128521;</p>
 
          <img class="mainimage" src="https://i.imgur.com/dZqOSDB.jpg" />
 
@@ -49,7 +49,7 @@
 
     <footer>
       <p>
-        ® DateFlix and Chill<br />
+        ® Flick Finder<br />
         <a href="http://localhost:8080/description"
           >More about our company here :)</a>
       </p>

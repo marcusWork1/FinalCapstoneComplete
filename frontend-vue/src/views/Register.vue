@@ -120,7 +120,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .buttonedit {
   color: aliceblue;
 }
@@ -160,19 +160,7 @@ label {
 .image {
   height: 100%;
 }
-.imgicon {
-  width: auto;
-  height: 85px;
-  border-radius: 25px;
-  box-shadow: 0px 7px 8px black;
-  margin-left: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.imgicon:active {
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
+
 
 .logicon {
   width: auto;

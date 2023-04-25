@@ -6,7 +6,7 @@
     />
     <header>
       <router-link v-bind:to="{ name: 'home' }"
-        ><img class="imgicon" src="../assets/webicon.png" /></router-link
+        ><img class="imgicon" src="https://i.imgur.com/LajHZNM.pngg" /></router-link
       >&nbsp;
       <router-link v-bind:to="{ name: 'description' }"
         ><img class="descicon" src="../assets/descicon.jpg" /></router-link
@@ -76,7 +76,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 footer {
   font-family: "Chewy";
   padding-left: 15px;
@@ -126,19 +126,7 @@ h1 {
 .image {
   height: 100%;
 }
-.imgicon {
-  width: auto;
-  height: 85px;
-  border-radius: 25px;
-  box-shadow: 0px 7px 8px black;
-  margin-left: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.imgicon:active {
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
+
 .logicon {
   width: auto;
   height: 85px;
