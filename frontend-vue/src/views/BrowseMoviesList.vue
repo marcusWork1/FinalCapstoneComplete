@@ -11,7 +11,7 @@
           <router-link v-bind:to="{ name: 'contactus' }">Contact Us</router-link>&nbsp;
 
         </header>
-          <h1>Browse Movies</h1><br>
+          <h1></h1><br>
     <!--shows a list of movies to browse by genre-->
     <movie-list />
   </div>
