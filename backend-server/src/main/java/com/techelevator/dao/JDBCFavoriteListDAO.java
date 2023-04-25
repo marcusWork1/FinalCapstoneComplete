@@ -31,17 +31,17 @@ public class JDBCFavoriteListDAO implements FavoriteDAO {
         return favorites;
     }
 
-    @Override
-    public Favorite getFavorite(int account_id) {
-        Favorite fav = null;
-        String sql = "SELECT * " + "FROM favorite_list " + "WHERE account_id = ?;";
-
-        SqlRowSet results = jdbcTemplate.queryForRowSet(sql, account_id);
-        if (results.next()) {
-            fav = mapRowToFav(results);
-        }
-        return fav;
-    }
+//    @Override
+//    public Favorite getFavorite(int account_id) {
+//        Favorite fav = null;
+//        String sql = "SELECT * " + "FROM favorite_list " + "WHERE account_id = ?;";
+//
+//        SqlRowSet results = jdbcTemplate.queryForRowSet(sql, account_id);
+//        if (results.next()) {
+//            fav = mapRowToFav(results);
+//        }
+//        return fav;
+//    }
 
     @Override
     public void  addFavorite(Favorite aFavorite) {
