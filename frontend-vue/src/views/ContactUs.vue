@@ -28,47 +28,10 @@
         service team:
       </p>
       <ul>
-        <li><strong>Email:</strong> customerservice@dfchill.com</li>
+        <li><strong>Email:</strong> hello@flickfinder.com</li>
         <li><strong>Phone:</strong> 1-800-123-4567</li>
       </ul>
     </div>
-    <div class="suggestions-section">
-      <h2>Suggestions or Ideas</h2>
-      <p>
-        Want to see something added or think our app can be improved in a
-        particular area?
-      </p>
-      <ul>
-        <li><strong>Email:</strong> suggestions@dfchill.com</li>
-      </ul>
-    </div>
-    <div class="bug fix-section">
-      <h2>Report App Issues or Bugs</h2>
-      <p>
-        Experiencing technical difficulties or breaks within the app? Submit a
-        report to our technology team, screenshots and screen recordings
-        encouraged.
-      </p>
-      <ul>
-        <li><strong>Email:</strong> technology@dfchill.com</li>
-      </ul>
-    </div>
-    <div class="ad-part-section">
-      <h2>Advertisements/Partnerships</h2>
-      <p>Want to partner with us or advertise on our site?</p>
-      <ul>
-        <li><strong>Email:</strong> marketing@dfchill.com</li>
-        <li><strong>Phone:</strong> 1-800-234-5678</li>
-      </ul>
-    </div>
-    <footer>
-      <p>
-        ® DateFlix and Chill<br />
-        <a href="http://localhost:8080/description"
-          >More about our company here :)</a
-        >
-      </p>
-    </footer>
   </div>
 </template>
 

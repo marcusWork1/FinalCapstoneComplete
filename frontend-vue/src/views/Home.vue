@@ -17,8 +17,8 @@
       <router-link v-bind:to="{ name: 'contactus' }"><img class = "contacticon" src="../assets/contacticon.jpg"></router-link
       >&nbsp;
       </header>
-      <meta charset="UTF-8" />
-      <p class="title">Welcome to DateFlix and Chill &#128521;</p>
+
+      <p class="title">Flick Finder &#128521;</p>
       <navigate />
       <div class="hover">
         <a
@@ -28,41 +28,29 @@
             alt="cantdecide"
           /> </a
         ><br />
-        <a href="http://localhost:8080/register"
-          ><h2 class="signup"><span> Sign Up Here</span></h2></a
-        >
+        <router-link v-bind:to="{ name: 'register' }">Register Here</router-link
+      >&nbsp;
       </div>
       <br />
       <div id="description">
-        <h2>About Dateflix and Chill</h2>
+        <h2>About Flick Finder</h2>
         <br />
         <p>
           In April 2023, six Tech Elevator Programmers were tired of bad movie
           recommendations that did not align with their interest. Together they
           brainstromed and created an app that comes up with the best movie to
           watch based on your personal preference and mood when trying to find
-          the perfect title to watch for date night. Our app follows a
-          tinder-style format of clicking right or left on a movie if you’ve
-          seen it, and you rate how you felt about it the app would suggest
-          movies based off of your swipes.
+          the perfect title to watch for any night.
         </p>
       </div>
     </body>
     <br /><br /><br /><br />
-
-    <footer>
-      <p>
-        ® DateFlix and Chill<br />
-        <a href="http://localhost:8080/description"
-          >More about our company here :)</a
-        >
-      </p>
-    </footer>
   </div>
 </template>
 
 <script>
 import Navigate from "../components/Navigate.vue";
+
 export default {
   name: "home",
   components: {

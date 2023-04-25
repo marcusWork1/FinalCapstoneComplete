@@ -16,7 +16,7 @@
       <router-link v-bind:to="{ name: 'contactus' }"><img class = "contacticon" src="../assets/contacticon.jpg"></router-link
       >&nbsp;
     </header>
-    <h1>Dateflix Profile Page</h1>
+    <h1>Flick Finder Profile Page</h1>
     <br />
     <img class="walle" src="https://i.imgur.com/ssZGent.png" />
     <profile-questions />

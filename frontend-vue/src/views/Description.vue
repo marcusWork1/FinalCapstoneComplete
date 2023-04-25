@@ -23,38 +23,33 @@
     <div></div>
     <div class="description">
       <div class="info">
-        <h2>About Dateflix and Chill</h2>
+        <h2>About Flick Finder</h2>
         <h3>
-          Welcome to DateFlix, the app that helps you find the perfect movie
-          match! With DateFlix, you can swipe through a variety of movies to
+          Welcome to Flick Finder, the app that helps you find the perfect movie
+          match! With Flick Finder, you can swipe through a variety of movies to
           discover new titles and find ones that fit your interests. Whether
           you're looking for something romantic, thrilling, funny, or
-          thought-provoking, DateFlix has something for everyone.
+          thought-provoking, Flick Finder has something for everyone.
         </h3>
 
         <p class="paragraph">
           Our app uses a smart algorithm that takes into account your
-          preferences, viewing history, and ratings to match you with movies
-          you're likely to enjoy. Just swipe right on movies you like, and swipe
-          left on those you're not interested in. You can also save movies to
-          your Watchlist to come back to later. <br /><br />
-          But DateFlix is more than just a movie recommendation app. It's a
+          genre preferences to match you with movies
+          you're likely to enjoy. You can also save movies to
+          your Favorites to come back to later. <br /><br />
+          Flick Finder is more than just a movie recommendation app. It's a
           community of movie lovers who are passionate about finding great films
-          and sharing them with others. Connect with like-minded users, see what
-          movies they've enjoyed, and get inspired by their picks. So why not
-          give DateFlix a try and find your perfect movie match today? Swipe
-          right to movies you'll love, and left to those you'll pass on. With
-          DateFlix, every night can be a movie night!
+          and sharing them with others. So why not
+          give Flick Finder a try and find your perfect movie match today? Slide
+          right to movies you'll love. With
+          Flick Finder, every night can be a movie night!
         </p>
       </div>
       <br /><br />
     </div>
     <footer>
       <p>
-        ® DateFlix and Chill<br />
-        <a href="http://localhost:8080/description"
-          >More about our company here :)</a
-        >
+        ® Flick Finder<br />
       </p>
     </footer>
   </div>
