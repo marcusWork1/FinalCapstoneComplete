@@ -37,17 +37,17 @@ export default {
         console.log(error);
       });
   },
-
-  getMovieByMovieId(movie_id) {
-    //returns a single JSON object with specific movie details based on TMDB's movie ID
-    return APIServer.get(
-      "/movie/{movie_id}?api_key=5ca2c64fc6ec1bf4c74259e634823759"
-    )
-      .then((response) => {
-        return response.data;
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  },
+  //!!UNCOMMENT THIS WHEN READY!!
+  // getMovieByMovieId(movie_id) {
+  //   //returns a single JSON object with specific movie details based on TMDB's movie ID
+  //   return APIServer.get(
+  //     "/movie/{movie_id}?api_key=5ca2c64fc6ec1bf4c74259e634823759"
+  //   )
+  //     .then((response) => {
+  //       return response.data;
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // },
 }; // end of export
