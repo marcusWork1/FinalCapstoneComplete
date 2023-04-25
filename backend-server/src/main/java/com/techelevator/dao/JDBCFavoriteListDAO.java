@@ -54,10 +54,11 @@ public class JDBCFavoriteListDAO implements FavoriteDAO {
 
     }
 
-    @Override
-    public void deleteFavorite(int id, int movie_id){
-
-
+   @Override
+  public void deleteFavorite(int id, int movie_id){
+       String sql = "DELETE from favorite_list  " +
+                    "WHERE account_id = ? and movie_id = ?;";
+      jdbcTemplate.update(sql, id,movie_id);
     }
 
     private Favorite mapRowToFav(SqlRowSet rowSet) {

@@ -24,7 +24,7 @@ public class FavoriteListController {
     @ResponseStatus(HttpStatus.CREATED)
     @RequestMapping(path="/favorite_list" , method = RequestMethod.POST)
     public void createFavorite(@Valid @RequestBody Favorite favMovie) {
-        APILogger.logAPICall("Successfully added to Favorites");
+        APILogger.logAPICall("POST for path  /favorite_list/" + "id" + " Successfully added to Favorites");
         favoriteDAO.addFavorite(favMovie);
 
     }
@@ -35,7 +35,16 @@ public class FavoriteListController {
         return favoriteDAO.allFavorites(id);
     }
 
-    // delete favorite path="/favorite_list/{id}"
+  @ResponseStatus(HttpStatus.OK)
+   @RequestMapping(path="/favorite_list/{id}&{movie_id}", method = RequestMethod.DELETE)
+    public void deleteFavorite(@PathVariable int id, @PathVariable int movie_id){
+
+       APILogger.logAPICall("DELETE for path /favorite_list/" + id + "&" + movie_id );
+
+       favoriteDAO.deleteFavorite(id,movie_id);
+   } 
+   // getting error when testing in postman:
+   //[org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' not supported]
 
 //    @ResponseStatus(HttpStatus.ACCEPTED)
 //    @Re
