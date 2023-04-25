@@ -25,7 +25,6 @@
         >&nbsp;
       <router-link v-bind:to="{ name: 'favoritemovies'}">Favorite Movies</router-link>
       </header>
-<<<<<<< HEAD
       <meta charset="UTF-8" /><br>
       <p class="title">Welcome to Flick Finder &#128521;</p>
 
@@ -34,31 +33,11 @@
       <div class="hover"><br>
       <h1 class = "cantdecide"> Can't Decide? </h1>
       <a href="http://localhost:8080/register"><h2 class="signup"><span> Sign Up Here</span></h2></a>
-=======
-
-      <p class="title">Flick Finder &#128521;</p>
-      <navigate />
-      <div class="hover">
-        <a
-          ><img
-            class="cantdecide"
-            src="https://i.imgur.com/Ej2G4i1.png"
-            alt="cantdecide"
-          /> </a
-        ><br />
-        <router-link v-bind:to="{ name: 'register' }">Register Here</router-link
-      >&nbsp;
->>>>>>> 5713001e0ba6916665187d4618eec936c32ce5df
       </div>
 
       <br />
       <div id="description">
-<<<<<<< HEAD
         <h2 >About Flick Finder</h2><br>
-=======
-        <h2>About Flick Finder</h2>
-        <br />
->>>>>>> 5713001e0ba6916665187d4618eec936c32ce5df
         <p>
           In April 2023, six Tech Elevator Programmers were tired of bad movie
           recommendations that did not align with their interest. Together they
@@ -66,7 +45,6 @@
           watch based on your personal preference and mood when trying to find
           the perfect title to watch for any night.
         </p>
-<<<<<<< HEAD
     </div><br /><br /><br /><br />
 
     <footer>
@@ -76,21 +54,11 @@
           >More about our company here :)</a>
       </p>
     </footer>
-=======
-      </div>
-    </body>
-    <br /><br /><br /><br />
->>>>>>> 5713001e0ba6916665187d4618eec936c32ce5df
   </div>
 </body>
 </template>
 
 <script>
-<<<<<<< HEAD
-=======
-import Navigate from "../components/Navigate.vue";
-
->>>>>>> 5713001e0ba6916665187d4618eec936c32ce5df
 export default {
   name: "home",
   components: {
