@@ -18,8 +18,11 @@
   },
   postFavorite(favoriteObject) {
     return httpLocalHost.post(`/favorite_list`, favoriteObject);
-  }
+  },
   // getAccount(accountObject) {
   //   return httpLocalHost.get(`account/${accountObject.user_id}`, accountObject)
   // }
+  getAllFavorites(profileObject2){
+        return httpLocalHost.get(`/favorite_list/${profileObject2.account_id}`);
+  }
 }

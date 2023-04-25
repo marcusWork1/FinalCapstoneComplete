@@ -15,7 +15,7 @@ methods: {
           movie_id: this.movie.id,
           title: this.movie.original_title,
       };
-    DatabaseService.getFavorite(favMovie)
+    DatabaseService.getAllFavorites(favMovie)
     }
 
 },
