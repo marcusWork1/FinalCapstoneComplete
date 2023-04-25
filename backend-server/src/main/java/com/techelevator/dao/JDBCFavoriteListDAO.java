@@ -20,6 +20,7 @@ public class JDBCFavoriteListDAO implements FavoriteDAO {
         this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
 
+    @Override
     public List<Favorite> allFavorites() {
 
         List<Favorite> favorites = new ArrayList();
@@ -28,26 +29,21 @@ public class JDBCFavoriteListDAO implements FavoriteDAO {
             favorites.add(mapRowToFav(results));
         }
         return favorites;
-
-
-
     }
 
-
-
-
-    public Favorite getFavorite(int accountId) {
-        com.techelevator.model.Favorite fav = null;
+    @Override
+    public Favorite getFavorite(int account_id) {
+        Favorite fav = null;
         String sql = "SELECT * " + "FROM favorite_list " + "WHERE account_id = ?;";
 
-        SqlRowSet results = jdbcTemplate.queryForRowSet(sql, accountId);
+        SqlRowSet results = jdbcTemplate.queryForRowSet(sql, account_id);
         if (results.next()) {
             fav = mapRowToFav(results);
         }
         return fav;
     }
 
-
+    @Override
     public void  addFavorite(Favorite aFavorite) {
         String sql = "INSERT into favorite_list (account_id, movie_id) " +
                 "VALUES (?,?);";
@@ -56,8 +52,8 @@ public class JDBCFavoriteListDAO implements FavoriteDAO {
 
     }
 
-    private com.techelevator.model.Favorite mapRowToFav(SqlRowSet rowSet) {
-        com.techelevator.model.Favorite favorite = new com.techelevator.model.Favorite();
+    private Favorite mapRowToFav(SqlRowSet rowSet) {
+        Favorite favorite = new Favorite();
         favorite.setMovie_id(rowSet.getInt("movie_id"));
         favorite.setAccount_id(rowSet.getInt("account_id"));
 
