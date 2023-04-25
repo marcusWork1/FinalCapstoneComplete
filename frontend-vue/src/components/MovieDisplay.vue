@@ -3,10 +3,12 @@
   <div class="display">
     <!--uses props to get the data from the API service -->
     <div>
+          <form class="movieform" v-on:submit.prevent="addFavorite">
+      <button class="button">Add to Favorites</button>
+    </form>
       <!--trying to display the movie title and release date-->
-      <h3 class="movie-title">{{ movie.original_title }}</h3>
-      <h3 class="movie-year">{{ movie.release_date }}</h3>
-      <h3 class="movie-year">{{ movie.id }}</h3>
+      <h4 class="movie-title">{{ movie.original_title }}</h4>
+      <h5 class="movie-year">{{ movie.release_date }} | ID:{{ movie.id }}</h5>
       <!-- tries to display the poster image. it's always the v-bind:src and whatever is in the poster_path: from the json object -->
       <img
         v-bind:src="'https://image.tmdb.org/t/p/original/' + movie.poster_path"
@@ -15,9 +17,7 @@
       <!--Trying to display overview/plot of the movie-->
       <p>{{ movie.overview }}</p>
     </div>
-    <form class="movieform" v-on:submit.prevent="addFavorite">
-      <button class="button">Add to Favorites</button>
-    </form>
+
   </div>
 </template>
 
@@ -65,5 +65,13 @@ img {
   margin-left: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+.movieform {
+  margin-top: -200px;
+  overflow-x: auto;
+  display: block;
+}
+p {
+  font-size: 23px;
 }
 </style>
