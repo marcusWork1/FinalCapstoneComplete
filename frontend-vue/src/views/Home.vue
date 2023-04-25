@@ -59,7 +59,7 @@ footer {
   color: #AC8AD3;
 }
 .home {
-  background-color: #231b52;
+
   margin: 0px;
   padding: 0px;
 }
