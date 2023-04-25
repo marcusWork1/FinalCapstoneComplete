@@ -91,7 +91,7 @@ footer {
 }
 .title {
   font-family: 'Yanone Kaffeesatz', sans-serif;
-  font-size: 70px;
+  font-size: 60px;
   color: #f0f2f5;
   text-align: center;
   padding-bottom: 20px;
@@ -103,7 +103,7 @@ footer {
   font-family: 'Yanone Kaffeesatz', sans-serif;
   color: rgb(65, 107, 186);
   text-shadow: 1px 1px #19181a;
-  font-size: 60px;
+  font-size: 45px;
 }
 a:visited {
   color: thistle;
@@ -131,11 +131,11 @@ a:visited {
   font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 .signup {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
   color: #000000;
   padding-top: 10px;
-  font-size: 40px;
+  font-size: 35px;
   text-decoration-style: bold;
-  letter-spacing: 1px;
 }
 .signup:hover {
   color: rgb(0, 95, 139);
