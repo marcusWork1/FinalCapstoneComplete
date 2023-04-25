@@ -10,4 +10,5 @@ public interface FavoriteDAO {
 
     void addFavorite(Favorite aFavorite);
 
+    // delete favorite method
 }

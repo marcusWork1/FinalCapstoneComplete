@@ -6,7 +6,7 @@
       <fav-movie-display
         class="favmoviedisplay"
         v-for="favoritedMovie in this.$store.state.favMovieList.results"
-        v-bind:key="favoritedMovie.id"
+        v-bind:key="favoritedMovie.id" 
         v-bind:favmovie="favoritedmovie"
       />
     </body>

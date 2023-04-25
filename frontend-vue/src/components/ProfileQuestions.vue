@@ -99,13 +99,15 @@ export default {
       } else {
         //<<<<<might have to comment this out to check .addprofile
         //     // update
+        // need a 
         DatabaseService.updateProfile(newForm)
           .then((response) => {
             if (
               response.status === 200 ||
               response.status === 201 ||
               response.status === 202
-            ) {
+            ) {  
+              this.$store.commit("SET_ACCOUNT", response.data);
               this.resetForm();
             }
           })

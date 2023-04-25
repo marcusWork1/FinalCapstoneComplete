@@ -34,6 +34,10 @@ public class FavoriteListController {
         return favoriteDAO.allFavorites(id);
     }
 
+    // delete favorite path="/favorite_list/{id}"
+
+//    @ResponseStatus(HttpStatus.ACCEPTED)
+//    @Re
 }
 /*
  @ResponseStatus(HttpStatus.ACCEPTED)
