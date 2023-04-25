@@ -1,11 +1,15 @@
 <template>
   <div>
-      <body>
-      <h1> Browse Favorite Movies</h1>
+    <body>
+      <h1>Browse Favorite Movies</h1>
 
-     <fav-movie-display class ="favmoviedisplay" v-for="favoritedMovie in this.$store.state.favMovieList.results" v-bind:key="favoritedMovie.id"
-                     v-bind:favmovie = "favoritedmovie"/>
-  </body>
+      <fav-movie-display
+        class="favmoviedisplay"
+        v-for="favoritedMovie in this.$store.state.favMovieList.results"
+        v-bind:key="favoritedMovie.id"
+        v-bind:favmovie="favoritedmovie"
+      />
+    </body>
   </div>
 </template>
 
