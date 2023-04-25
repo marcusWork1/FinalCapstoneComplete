@@ -36,18 +36,19 @@ export default {
     };
   },
   created() { // call the API here to return a movie object that we can populate in this display
-    console.log("hi")
+   
+   APIService.getMovieByMovieId(this.favmovie)
+    this.movies = this.$store.favMovieList; // not completely sure what this does
+  },
+  methods: {
+    getFavorites() {
       DatabaseService.getAllFavorites(
         this.$route.params.$store.state.account.account_id
       ).then((response) => {
        
         this.movies = response.data;
       });
-   
-   APIService.getMovieByMovieId(this.favmovie)
-    this.movies = this.$store.favMovieList; // not completely sure what this does
-  },
-  methods: {
+    },
     // method for calling the favaorite movie GET in the services,  based on the account id in the store
     // getFavoriteMovie() {
     //   DatabaseService.getAllFavorites(

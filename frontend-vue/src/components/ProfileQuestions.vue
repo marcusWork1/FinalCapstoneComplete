@@ -80,7 +80,7 @@ export default {
         popularity: this.newProfile.popularity,
       };
 
-      if (this.$store.state.account === "") {
+      if (DatabaseService.getAccount === "") {
         //add
         DatabaseService.addProfile(newForm)
           .then((response) => {
