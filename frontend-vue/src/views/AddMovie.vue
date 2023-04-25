@@ -17,7 +17,8 @@
       >&nbsp;
     </header>
     <div>
-      <img class="walle" src="https://i.imgur.com/fPA6ZJC.jpg" />
+          <h1>Add a Movie</h1>
+      <img class="walle" src="https://i.imgur.com/ssZGent.png" />
 
       <movie-form />
     </div>
@@ -36,7 +37,12 @@ export default {
 
 <style scoped>
 .walle {
-  height: 90px;
+  height: 200px;
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }
 .image {
   height: 100%;
