@@ -6,6 +6,7 @@
       <!--trying to display the movie title and release date-->
             <h3 class="movie-title">{{ movie.original_title }}</h3>
             <h3 class="movie-year">{{ movie.release_date }}</h3>
+            <h3 class="movie-year"> {{movie.id}}</h3>
        <!-- tries to display the poster image. it's always the v-bind:src and whatever is in the poster_path: from the json object -->
        <img v-bind:src="
           'https://image.tmdb.org/t/p/original/' + movie.poster_path
@@ -14,7 +15,7 @@
       <!--Trying to display overview/plot of the movie-->
     <p>{{ movie.overview }}</p>
     </div>
-      <form class="movieform" v-on:submit.prevent="addFavorite">>
+      <form class="movieform" v-on:submit.prevent="addFavorite">
       <button class="button">Add to Favorites</button>
     
     </form> 
@@ -74,7 +75,7 @@ export default {
       addFavorite() {
         const newFavorite= {
           account_id: this.$store.state.account.account_id,
-          movie_id: this.favoritedMovie.movie_id.id,
+          movie_id: this.movie.id,
     };
     console.log(newFavorite);
      DatabaseService.postFavorite(newFavorite)

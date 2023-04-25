@@ -28,18 +28,13 @@ CREATE TABLE movie (
 
 	CONSTRAINT PK_movie PRIMARY KEY (movie_id)
 );
-CREATE SEQUENCE seq_movie_id
-  INCREMENT BY 1
-  START WITH 2001
-  NO MAXVALUE;
+
 
 
 CREATE TABLE favorite_list (
 	account_id int NOT NULL,
-	movie_id int NOT NULL DEFAULT nextval('seq_movie_id'),
-	CONSTRAINT PK_favorite_list_account_id PRIMARY KEY (account_id),
-	CONSTRAINT FK_favorite_list_account_id FOREIGN KEY (account_id) REFERENCES account (account_id),
-	CONSTRAINT FK_favorite_list_movie_id FOREIGN KEY (movie_id) REFERENCES movie (movie_id)
+	movie_id int NOT NULL,
+	CONSTRAINT FK_favorite_list_account_id FOREIGN KEY (account_id) REFERENCES account (account_id)
 );
 
 

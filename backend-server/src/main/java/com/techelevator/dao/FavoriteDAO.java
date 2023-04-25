@@ -9,7 +9,7 @@ public interface FavoriteDAO {
 
     List<Favorite> allFavorites();
 
-    Favorite getFavorite(int account_id);
+//    Favorite getFavorite(int account_id);
 
     void addFavorite(Favorite aFavorite);
 

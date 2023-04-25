@@ -1,48 +1,76 @@
 <template>
- <div id="login">
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chewy">
-   <div class = "background">
-      <form class = "signinform" @submit.prevent="login">
+  <div id="login">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Chewy"
+    />
+    <div class="background">
+      <form class="signinform" @submit.prevent="login">
         <header>
-           <router-link v-bind:to="{ name: 'home' }">Back Home</router-link>&nbsp;
-          <router-link v-bind:to="{ name: 'description' }">Description</router-link>&nbsp;
-          <router-link v-bind:to="{ name: 'addmovie' }">Add Movie</router-link>&nbsp;
-          <router-link v-bind:to="{ name: 'login' }">Login</router-link>&nbsp;|
-          <router-link v-bind:to="{ name: 'profile' }">Profile</router-link>&nbsp;
-          <router-link v-bind:to="{ name: 'browse' }">Browse</router-link>&nbsp;
-          <router-link v-bind:to="{ name: 'contactus' }">Contact Us</router-link>&nbsp;
+      <router-link v-bind:to="{ name: 'home' }"><img class="imgicon" src="../assets/webicon.png"/></router-link>&nbsp;
+      <router-link v-bind:to="{ name: 'description' }"><img class = "descicon" src="../assets/descicon.jpg"></router-link
+      >&nbsp;
+      <router-link v-bind:to="{ name: 'addmovie' }"><img class = "movieicon" src="../assets/movieicon.jpg"></router-link
+      >&nbsp;
+      <router-link v-bind:to="{ name: 'login' }"><img class = "logicon" src="../assets/loginicon.png"></router-link>&nbsp;
+      <router-link v-bind:to="{ name: 'profile' }"><img class = "profileicon" src="../assets/profileicon.png"></router-link>&nbsp;
+      <router-link v-bind:to="{ name: 'browse' }">Browse</router-link>&nbsp;
+      <router-link v-bind:to="{ name: 'contactus' }"><img class = "contacticon" src="../assets/contacticon.jpg"></router-link
+      >&nbsp;
         </header>
-            <h1 >Please Sign In</h1>
-              <img class = "walle" src = "https://i.imgur.com/ssZGent.png">
-                    <div role="alert" v-if="invalidCredentials">
-                          Invalid username and password!
-                    </div>
-                    <div role="alert" v-if="this.$route.query.registration">
-                          Thank you for registering, please sign in.
-                    </div>
-              <div class="form-input-group"><br>
-                    <label for="username">Username</label><br>
-                    <input type="text" id="username" v-model="user.username" required autofocus />
-              </div><br>
-              <div class="form-input-group">
-                    <label for="password">Password</label><br>
-                    <input type="password" id="password" v-model="user.password" required />
-              </div>
-              <div class = "buttons">
-                    <button type="submit">Sign in</button>
-                    <p class = "textcolor"><br>
-                    <p><b><a class = "signuplink" href="http://localhost:8080/register">Need an Account? Sign up here.</a></b></p> 
-              </div><br><br><br><br><br><br><br><br><br><br><br><br><br>
-               
-                <footer>
-                    <p>® DateFlix and Chill<br>
-                    <a href="http://localhost:8080/description">More about our company here :)</a></p>
-                </footer>
+        <h1>Please Sign In</h1>
+        <img class="walle" src="https://i.imgur.com/ssZGent.png" />
+        <div role="alert" v-if="invalidCredentials">
+          Invalid username and password!
+        </div>
+        <div role="alert" v-if="this.$route.query.registration">
+          Thank you for registering, please sign in.
+        </div>
+        <div class="form-input-group">
+          <br />
+          <label for="username">Username</label><br />
+          <input
+            type="text"
+            id="username"
+            v-model="user.username"
+            required
+            autofocus
+          />
+        </div>
+        <br />
+        <div class="form-input-group">
+          <label for="password">Password</label><br />
+          <input
+            type="password"
+            id="password"
+            v-model="user.password"
+            required
+          />
+        </div>
+        <div class="buttons">
+          <button type="submit">Sign in</button>
+          <p class="textcolor"><br /></p>
+          <p>
+            <b
+              ><a class="signuplink" href="http://localhost:8080/register"
+                >Need an Account? Sign up here.</a
+              ></b
+            >
+          </p>
+        </div>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+        <footer>
+          <p>
+            ® DateFlix and Chill<br />
+            <a href="http://localhost:8080/description"
+              >More about our company here :)</a
+            >
+          </p>
+        </footer>
       </form>
-      
-          </div>
+    </div>
   </div>
-  
 </template>
 
 <script>
@@ -50,37 +78,36 @@ import authService from "../services/AuthService";
 
 export default {
   name: "login",
-  components: {
-  },
+  components: {},
   data() {
     return {
       user: {
         username: "",
-        password: ""
+        password: "",
       },
-      invalidCredentials: false
+      invalidCredentials: false,
     };
   },
   methods: {
     login() {
       authService
         .login(this.user)
-        .then(response => {
+        .then((response) => {
           if (response.status == 200) {
             this.$store.commit("SET_AUTH_TOKEN", response.data.token);
             this.$store.commit("SET_USER", response.data.user);
             this.$router.push("/");
           }
         })
-        .catch(error => {
+        .catch((error) => {
           const response = error.response;
 
           if (response.status === 401) {
             this.invalidCredentials = true;
           }
         });
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -89,7 +116,7 @@ footer {
   font-family: "Chewy";
   padding-left: 15px;
   padding-bottom: 15px;
-  color: #AC8AD3;
+  color: #ac8ad3;
 }
 .signuplink {
   color: rgb(222, 184, 243);
@@ -123,7 +150,7 @@ header {
   background-color: #231b52;
   font-family: "Chewy";
   color: white;
-  display:block;
+  display: block;
   padding: 0px;
 }
 .body {
@@ -136,7 +163,7 @@ header {
 }
 label {
   margin-right: 0.5rem;
-    background-color: #231b52;
+  background-color: #231b52;
 }
 .div {
   background-color: #140180;
