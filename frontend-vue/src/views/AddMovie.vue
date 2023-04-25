@@ -1,30 +1,36 @@
 <template>
+  <div>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Chewy"
+    />
+    <header>
+      <router-link v-bind:to="{ name: 'home' }">Back Home</router-link>&nbsp;
+      <router-link v-bind:to="{ name: 'description' }">Description</router-link
+      >&nbsp;
+      <router-link v-bind:to="{ name: 'addmovie' }">Add Movie</router-link
+      >&nbsp;
+      <router-link v-bind:to="{ name: 'login' }">Login</router-link>&nbsp;|
+      <router-link v-bind:to="{ name: 'profile' }">Profile</router-link>&nbsp;
+      <router-link v-bind:to="{ name: 'browse' }">Browse</router-link>&nbsp;
+      <router-link v-bind:to="{ name: 'contactus' }">Contact Us</router-link
+      >&nbsp;
+    </header>
     <div>
-        <header>
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chewy">
-               <router-link v-bind:to="{ name: 'home' }">Back Home</router-link>&nbsp;
-          <router-link v-bind:to="{ name: 'description' }">Description</router-link>&nbsp;
-          <router-link v-bind:to="{ name: 'addmovie' }">Add Movie</router-link>&nbsp;
-          <router-link v-bind:to="{ name: 'login' }">Login</router-link>&nbsp;|
-          <router-link v-bind:to="{ name: 'profile' }">Profile</router-link>&nbsp;
-          <router-link v-bind:to="{ name: 'browse' }">Browse</router-link>&nbsp;
-          <router-link v-bind:to="{ name: 'contactus' }">Contact Us</router-link>&nbsp;
-        </header>
-        <div>
-                <img class = "walle" src = "https://i.imgur.com/fPA6ZJC.jpg">
-      
-        <movie-form />
-          </div>
+      <img class="walle" src="https://i.imgur.com/fPA6ZJC.jpg" />
+
+      <movie-form />
     </div>
+  </div>
 </template>
 
 <script>
 import MovieForm from "../components/MovieForm.vue";
 
 export default {
-    components : {
-        MovieForm
-    }
+  components: {
+    MovieForm,
+  },
 };
 </script>
 

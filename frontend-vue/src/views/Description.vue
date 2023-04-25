@@ -1,49 +1,69 @@
 <template>
-    <div class = "desc">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chewy">
-        <header>
-              <router-link v-bind:to="{ name: 'home' }">Back Home</router-link>&nbsp;
-          <router-link v-bind:to="{ name: 'description' }">Description</router-link>&nbsp;
-          <router-link v-bind:to="{ name: 'addmovie' }">Add Movie</router-link>&nbsp;
-          <router-link v-bind:to="{ name: 'login' }">Login</router-link>&nbsp;|
-          <router-link v-bind:to="{ name: 'profile' }">Profile</router-link>&nbsp;
-          <router-link v-bind:to="{ name: 'browse' }">Browse</router-link>&nbsp;
-          <router-link v-bind:to="{ name: 'contactus' }">Contact Us</router-link>&nbsp;
+  <div class="desc">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Chewy"
+    />
+    <header>
+      <router-link v-bind:to="{ name: 'home' }">Back Home</router-link>&nbsp;
+      <router-link v-bind:to="{ name: 'description' }">Description</router-link
+      >&nbsp;
+      <router-link v-bind:to="{ name: 'addmovie' }">Add Movie</router-link
+      >&nbsp;
+      <router-link v-bind:to="{ name: 'login' }">Login</router-link>&nbsp;|
+      <router-link v-bind:to="{ name: 'profile' }">Profile</router-link>&nbsp;
+      <router-link v-bind:to="{ name: 'browse' }">Browse</router-link>&nbsp;
+      <router-link v-bind:to="{ name: 'contactus' }">Contact Us</router-link
+      >&nbsp;
+    </header>
 
-        </header>
-    
-          <h1>Dateflix and Chill App Description</h1><br>
-            <img class = "walle" src = "https://i.imgur.com/ssZGent.png">
-            <div></div>
-              <div class= "description">
-                <div class = "info">
-                  <h2>About Dateflix and Chill</h2>
-                        <h3>Welcome to DateFlix, the app that helps you find the perfect movie match! With DateFlix, you can swipe 
-                          through a variety of movies to discover new titles and find ones that fit your interests. 
-                          Whether you're looking for something romantic, thrilling, funny, or thought-provoking, DateFlix has 
-                          something for everyone.</h3>
+    <h1>Dateflix and Chill App Description</h1>
+    <br />
+    <img class="walle" src="https://i.imgur.com/ssZGent.png" />
+    <div></div>
+    <div class="description">
+      <div class="info">
+        <h2>About Dateflix and Chill</h2>
+        <h3>
+          Welcome to DateFlix, the app that helps you find the perfect movie
+          match! With DateFlix, you can swipe through a variety of movies to
+          discover new titles and find ones that fit your interests. Whether
+          you're looking for something romantic, thrilling, funny, or
+          thought-provoking, DateFlix has something for everyone.
+        </h3>
 
-                        <p class = "paragraph">Our app uses a smart algorithm that takes into account your preferences, viewing history, and 
-                            ratings to match you with movies you're likely to enjoy. Just swipe right on movies you like, and swipe left on those you're 
-                            not interested in. You can also save movies to your Watchlist to come back to later. 
-                          <br><br>  
-                          But DateFlix is more than just a movie recommendation app. It's a community of movie lovers who are passionate about finding great films and sharing them with others. 
-                          Connect with like-minded users, see what movies they've enjoyed, and get inspired by their picks.
-                          So why not give DateFlix a try and find your perfect movie match today? Swipe right to movies you'll love, 
-                          and left to those you'll pass on. With DateFlix, every night can be a movie night!</p>
-                 </div><br><br>
-                </div>
-        <footer>
-        <p>® DateFlix and Chill<br>
-        <a href="http://localhost:8080/description">More about our company here :)</a></p>
-        </footer>
+        <p class="paragraph">
+          Our app uses a smart algorithm that takes into account your
+          preferences, viewing history, and ratings to match you with movies
+          you're likely to enjoy. Just swipe right on movies you like, and swipe
+          left on those you're not interested in. You can also save movies to
+          your Watchlist to come back to later. <br /><br />
+          But DateFlix is more than just a movie recommendation app. It's a
+          community of movie lovers who are passionate about finding great films
+          and sharing them with others. Connect with like-minded users, see what
+          movies they've enjoyed, and get inspired by their picks. So why not
+          give DateFlix a try and find your perfect movie match today? Swipe
+          right to movies you'll love, and left to those you'll pass on. With
+          DateFlix, every night can be a movie night!
+        </p>
+      </div>
+      <br /><br />
     </div>
+    <footer>
+      <p>
+        ® DateFlix and Chill<br />
+        <a href="http://localhost:8080/description"
+          >More about our company here :)</a
+        >
+      </p>
+    </footer>
+  </div>
 </template>
 
 <script>
 export default {
-    name: "description",
-    components : {}
+  name: "description",
+  components: {},
 };
 </script>
 
@@ -52,7 +72,7 @@ footer {
   font-family: "Chewy";
   padding-left: 15px;
   padding-bottom: 15px;
-  color: #AC8AD3;
+  color: #ac8ad3;
 }
 h3 {
   color: #231b52;
