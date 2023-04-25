@@ -98,6 +98,14 @@ const router = new Router({
         requiresAuth: false,
       }
     },
+    {
+      path: "/favoritemovies",
+      name: "favoritemovies",
+      component: FavoriteMovies,
+      meta: {
+        requiresAuth: false,
+      }
+    },
   ],
 });
 
