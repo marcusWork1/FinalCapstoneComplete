@@ -54,6 +54,12 @@ public class JDBCFavoriteListDAO implements FavoriteDAO {
 
     }
 
+    @Override
+    public void deleteFavorite(int id, int movie_id){
+
+
+    }
+
     private Favorite mapRowToFav(SqlRowSet rowSet) {
         Favorite favorite = new Favorite();
         favorite.setMovie_id(rowSet.getInt("movie_id"));

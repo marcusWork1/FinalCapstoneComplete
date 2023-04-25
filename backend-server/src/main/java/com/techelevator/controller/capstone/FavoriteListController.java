@@ -1,6 +1,7 @@
 package com.techelevator.controller.capstone;
 
 import com.techelevator.dao.FavoriteDAO;
+import com.techelevator.generalpurposelogger.APILogger;
 import com.techelevator.model.Favorite;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -23,7 +24,7 @@ public class FavoriteListController {
     @ResponseStatus(HttpStatus.CREATED)
     @RequestMapping(path="/favorite_list" , method = RequestMethod.POST)
     public void createFavorite(@Valid @RequestBody Favorite favMovie) {
-
+        APILogger.logAPICall("Successfully added to Favorites");
         favoriteDAO.addFavorite(favMovie);
 
     }

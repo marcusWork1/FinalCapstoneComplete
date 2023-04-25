@@ -1,6 +1,7 @@
 package com.techelevator.controller.capstone;
 
 import com.techelevator.dao.MovieDAO;
+import com.techelevator.generalpurposelogger.APILogger;
 import com.techelevator.model.Movie;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -41,6 +42,8 @@ public class MovieController {
         @ResponseStatus(HttpStatus.CREATED)
         @RequestMapping(path="/movie" , method = RequestMethod.POST)
              public Movie createMovie(@Valid @RequestBody Movie newMovie) {
+
+            APILogger.logAPICall("POST for path /add movie with movie id: " + newMovie.getMovieId() );
 
             return movieDAO.addMovie(newMovie);
         }

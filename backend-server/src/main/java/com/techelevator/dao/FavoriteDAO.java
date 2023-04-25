@@ -10,5 +10,5 @@ public interface FavoriteDAO {
 
     void addFavorite(Favorite aFavorite);
 
-    // delete favorite method
-}
+    void deleteFavorite(int id, int movie_id);
+
