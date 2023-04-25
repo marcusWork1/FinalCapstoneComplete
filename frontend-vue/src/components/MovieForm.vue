@@ -50,7 +50,7 @@
           v-model.number="newMovie.popularity"
         />
       </div>
-      <button class="button">Submit</button>
+      <button class="buttons">Submit</button>
       <button class="cancel" v-on:click="cancelForm">Cancel</button>
     </form>
   </div>
@@ -131,18 +131,22 @@ export default {
 </script>
 
 <style>
+div {
+  color: black;
+}
 .movieform {
   background-color: #bb9cdf;
   font-family: "Chewy", typeface;
   padding-left: 25px;
   text-align: center;
   padding-inline-start: 10px;
+  color: black;
 }
-.button {
+.buttons {
   display: inline-block;
-  padding: 20px 70px;
+  padding: 9px 50px;
   margin-bottom: 20px;
-  font-size: 26px;
+  font-size: 20px;
   cursor: pointer;
   text-align: center;
   font-family: "Chewy";
@@ -152,15 +156,15 @@ export default {
   background-color: #a049a3;
   border: none;
   border-radius: 15px;
-  box-shadow: 0 10px rgb(59, 59, 59);
+  box-shadow: 0 7px rgb(59, 59, 59);
   margin-top: 13px;
 }
 
-.button:hover {
+.buttons:hover {
   background-color: #5b1b6e;
 }
 
-.button:active {
+.buttons:active {
   background-color: #8e3e8a;
   box-shadow: 0 5px rgb(61, 61, 61);
   transform: translateY(4px);

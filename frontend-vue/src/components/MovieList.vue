@@ -36,7 +36,7 @@ div {
   color: white;
 }
 .moviedisplay {
-  scale: 70%;
+  scale: 60%;
   font-size: 30px;
   display: table-cell;
   word-wrap: break-word;

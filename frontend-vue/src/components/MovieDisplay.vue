@@ -2,7 +2,7 @@
   <!--this should show ONE movie with the option of liking or disliking, have you watched it?-->
   <div class="display">
     <!--uses props to get the data from the API service -->
-    <div>
+    <div class = "movie">
           <form class="movieform" v-on:submit.prevent="addFavorite">
       <button class="button">Add to Favorites</button>
     </form>
@@ -54,6 +54,7 @@ export default {
 </script>
 
 <style scoped>
+
 .display {
   color: black;
   font-family: "Courier New", Courier, monospace;
@@ -67,7 +68,7 @@ img {
   margin-bottom: 10px;
 }
 .movieform {
-  margin-top: -200px;
+  margin-top: -320px;
   overflow-x: auto;
   display: block;
 }
