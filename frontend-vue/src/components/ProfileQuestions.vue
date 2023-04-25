@@ -15,13 +15,13 @@
         <label for="genre"> Please select your favorite Genre: </label>
         <select v-model="newProfile.genre">
           <option value="">--- Select a Genre ---</option>
-          <option value= 29 >Action</option>
-          <option value= 35 >Comedy</option>
-          <option value= 18 >Drama</option>
-          <option value= 27 >Horror</option>
-          <option value= 10749 >Romance</option>
-          </select>
-       <!-- <input id="genre" type="text" v-model="newProfile.genre" />-->
+          <option value="29">Action</option>
+          <option value="35">Comedy</option>
+          <option value="18">Drama</option>
+          <option value="27">Horror</option>
+          <option value="10749">Romance</option>
+        </select>
+        <!-- <input id="genre" type="text" v-model="newProfile.genre" />-->
       </div>
       <div class="form-group">
         Adult Movie?
@@ -90,7 +90,6 @@ export default {
               this.$store.commit("SET_ACCOUNT", response.data); //controller creates an account and sends back an object. no name for object created, so we just collect data.
               // this.$store.commit("SET_USER_GENRE", response.data)
 
-              
               this.resetForm();
             }
           })

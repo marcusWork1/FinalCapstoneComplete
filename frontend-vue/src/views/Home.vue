@@ -6,16 +6,29 @@
     />
     <body id="body">
       <header>
-      <router-link v-bind:to="{ name: 'home' }"><img class="imgicon" src="../assets/webicon.png"/></router-link>&nbsp;
-      <router-link v-bind:to="{ name: 'description' }"><img class = "descicon" src="../assets/descicon.jpg"></router-link
-      >&nbsp;
-      <router-link v-bind:to="{ name: 'addmovie' }"><img class = "movieicon" src="../assets/movieicon.jpg"></router-link
-      >&nbsp;
-      <router-link v-bind:to="{ name: 'login' }"><img class = "logicon" src="../assets/loginicon.png"></router-link>&nbsp;
-      <router-link v-bind:to="{ name: 'profile' }"><img class = "profileicon" src="../assets/profileicon.png"></router-link>&nbsp;
-      <router-link v-bind:to="{ name: 'browse' }">Browse</router-link>&nbsp;
-      <router-link v-bind:to="{ name: 'contactus' }"><img class = "contacticon" src="../assets/contacticon.jpg"></router-link
-      >&nbsp;
+        <router-link v-bind:to="{ name: 'home' }"
+          ><img class="imgicon" src="../assets/webicon.png" /></router-link
+        >&nbsp;
+        <router-link v-bind:to="{ name: 'description' }"
+          ><img class="descicon" src="../assets/descicon.jpg" /></router-link
+        >&nbsp;
+        <router-link v-bind:to="{ name: 'addmovie' }"
+          ><img class="movieicon" src="../assets/movieicon.jpg" /></router-link
+        >&nbsp;
+        <router-link v-bind:to="{ name: 'login' }"
+          ><img class="logicon" src="../assets/loginicon.png" /></router-link
+        >&nbsp;
+        <router-link v-bind:to="{ name: 'profile' }"
+          ><img
+            class="profileicon"
+            src="../assets/profileicon.png" /></router-link
+        >&nbsp;
+        <router-link v-bind:to="{ name: 'browse' }">Browse</router-link>&nbsp;
+        <router-link v-bind:to="{ name: 'contactus' }"
+          ><img
+            class="contacticon"
+            src="../assets/contacticon.jpg" /></router-link
+        >&nbsp;
       </header>
       <meta charset="UTF-8" />
       <p class="title">Welcome to DateFlix and Chill &#128521;</p>
@@ -84,7 +97,6 @@ footer {
   color: #ac8ad3;
 }
 .home {
-
   margin: 0px;
   padding: 0px;
 }

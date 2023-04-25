@@ -30,13 +30,13 @@
       >&nbsp;
     </header>
     <body>
-      <fav-movie-list/>
+      <fav-movie-list />
     </body>
   </div>
 </template>
 
 <script>
-import FavMovieList from '../components/FavMovieList.vue';
+import FavMovieList from "../components/FavMovieList.vue";
 
 export default {
   name: "favorite-movies",
@@ -122,4 +122,5 @@ export default {
 .movieicon:active {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
-}</style>
+}
+</style>
