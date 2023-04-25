@@ -14,7 +14,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @CrossOrigin
-@PreAuthorize("isAuthenticated()") // All users must be authenticated to access (comment out for testing)
+//@PreAuthorize("isAuthenticated()") // All users must be authenticated to access (comment out for testing)
 @RestController
 public class FavoriteListController {
 

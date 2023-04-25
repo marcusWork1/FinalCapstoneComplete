@@ -17,7 +17,7 @@
     return httpLocalHost.put(`/account/${profileObject2.user_id}`, profileObject2)
   },
   postFavorite(favoriteObject) {
-    return httpLocalHost.post(`/favorite`, favoriteObject);
+    return httpLocalHost.post(`/favorite_list`, favoriteObject);
   }
   // getAccount(accountObject) {
   //   return httpLocalHost.get(`account/${accountObject.user_id}`, accountObject)
