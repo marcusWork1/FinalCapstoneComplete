@@ -10,6 +10,7 @@ import store from "../store/index";
 import Profile from "../views/Profile.vue";
 import ContactUs from "../views/ContactUs.vue";
 import BrowseMoviesList from "../views/BrowseMoviesList.vue";
+import FavoriteMovies from "../views/FavoriteMovies.vue";
 
 Vue.use(Router);
 
@@ -88,7 +89,7 @@ const router = new Router({
       component: ContactUs,
       meta: {
         requiresAuth: false,
-      }
+      },
     },
     {
       path: "/browse",
@@ -96,7 +97,7 @@ const router = new Router({
       component: BrowseMoviesList,
       meta: {
         requiresAuth: false,
-      }
+      },
     },
     {
       path: "/favoritemovies",
@@ -104,7 +105,7 @@ const router = new Router({
       component: FavoriteMovies,
       meta: {
         requiresAuth: false,
-      }
+      },
     },
   ],
 });

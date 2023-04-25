@@ -30,19 +30,26 @@
       >&nbsp;
     </header>
     <body>
-      <fav-movie-list/>
+      <fav-movie-list />
     </body>
   </div>
 </template>
 
 <script>
-import FavMovieList from '../components/FavMovieList.vue';
+import FavMovieList from "../components/FavMovieList.vue";
 
 export default {
   name: "favorite-movies",
   components: {
     FavMovieList,
   },
+  // created() {
+  //   APIService.getFavoriteMoviesById() // set up api call and retrieve list with path the array of ids from database
+  //   .then((response) => {
+  //     this.$store.commit("SET_FAVMOVIELIST", response); // set favorite movie list with response array
+  //   });
+  //   console.log
+  // }
 };
 </script>
 
@@ -122,4 +129,5 @@ export default {
 .movieicon:active {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
-}</style>
+}
+</style>

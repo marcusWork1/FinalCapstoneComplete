@@ -7,11 +7,22 @@
     <div>
       <form @submit.prevent="register">
         <header>
-      <router-link v-bind:to="{ name: 'home' }"><img class="imgicon" src="../assets/webicon.png"/></router-link>&nbsp;
-      <router-link v-bind:to="{ name: 'login' }"><img class = "logicon" src="../assets/loginicon.png"></router-link>&nbsp;
-      <router-link v-bind:to="{ name: 'profile' }"><img class = "profileicon" src="../assets/profileicon.png"></router-link>&nbsp;
-      <router-link v-bind:to="{ name: 'contactus' }"><img class = "contacticon" src="../assets/contacticon.jpg"></router-link
-      >&nbsp;
+          <router-link v-bind:to="{ name: 'home' }"
+            ><img class="imgicon" src="../assets/webicon.png" /></router-link
+          >&nbsp;
+          <router-link v-bind:to="{ name: 'login' }"
+            ><img class="logicon" src="../assets/loginicon.png" /></router-link
+          >&nbsp;
+          <router-link v-bind:to="{ name: 'profile' }"
+            ><img
+              class="profileicon"
+              src="../assets/profileicon.png" /></router-link
+          >&nbsp;
+          <router-link v-bind:to="{ name: 'contactus' }"
+            ><img
+              class="contacticon"
+              src="../assets/contacticon.jpg" /></router-link
+          >&nbsp;
         </header>
         <h1>Create Account</h1>
         <img class="walle" src="https://i.imgur.com/ssZGent.png" />
@@ -100,6 +111,7 @@ export default {
           });
       }
     },
+
     clearErrors() {
       this.registrationErrors = false;
       this.registrationErrorMsg = "There were problems registering this user.";

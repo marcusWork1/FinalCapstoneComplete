@@ -1,7 +1,8 @@
 <template>
   <div>
     <form class="movieform" v-on:submit.prevent="submitMovie">
-      <h1></h1><br><br>
+      <h1></h1>
+      <br /><br />
       <div class="form-group">
         <label for="title">Title: </label>
         <input id="title" type="text" v-model="newMovie.title" />
@@ -139,9 +140,9 @@ export default {
 }
 .button {
   display: inline-block;
-  padding: 10px 20px;
-  margin-bottom: 30px;
-  font-size: 18px;
+  padding: 20px 70px;
+  margin-bottom: 20px;
+  font-size: 26px;
   cursor: pointer;
   text-align: center;
   font-family: "Chewy";
@@ -151,7 +152,8 @@ export default {
   background-color: #a049a3;
   border: none;
   border-radius: 15px;
-  box-shadow: 0 7px rgb(59, 59, 59);
+  box-shadow: 0 10px rgb(59, 59, 59);
+  margin-top: 13px;
 }
 
 .button:hover {
