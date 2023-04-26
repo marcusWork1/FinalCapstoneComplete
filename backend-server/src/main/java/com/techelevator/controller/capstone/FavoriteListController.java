@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @CrossOrigin
 //@PreAuthorize("isAuthenticated()") // All users must be authenticated to access (comment out for testing)
@@ -30,9 +31,9 @@ public class FavoriteListController {
     }
 
     @ResponseStatus(HttpStatus.ACCEPTED)
-    @RequestMapping(path="/favorite_list/{id}" , method = RequestMethod.GET)
-    public Object[] favoriteMovies(@RequestParam int id) {
-        return favoriteDAO.allFavorites(id);
+    @RequestMapping(path="/favorite_list/{account_id}" , method = RequestMethod.GET)
+    public Favorite[] favoriteMovies(@PathVariable int account_id) {
+        return favoriteDAO.allFavorites(account_id);
     }
 
   @ResponseStatus(HttpStatus.OK)

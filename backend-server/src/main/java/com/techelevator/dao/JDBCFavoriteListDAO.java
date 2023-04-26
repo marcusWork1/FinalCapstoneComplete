@@ -18,16 +18,18 @@ public class JDBCFavoriteListDAO implements FavoriteDAO {
     }
 
         @Override
-        public Object[] allFavorites(int id) {
+        public Favorite[] allFavorites(int account_id) {
         //public List<Favorite> allFavorites(int id) {
 
             List<Favorite> favorites = new ArrayList<>();
             String sql = "SELECT movie_id FROM favorite_list WHERE account_id = ?;"; // test this sql
-            SqlRowSet results = jdbcTemplate.queryForRowSet(sql, id);
+            SqlRowSet results = jdbcTemplate.queryForRowSet(sql, account_id);
             while (results.next()) {
-                favorites.add(mapRowToFav(results));
+                favorites.add(mapRowToFav2(results));
             }
-            return favorites.toArray();
+            Favorite[] favoritesArray = favorites.toArray(new Favorite[favorites.size()]);
+
+            return favoritesArray;
             //return favorites;
         }
 
@@ -65,6 +67,13 @@ public class JDBCFavoriteListDAO implements FavoriteDAO {
         Favorite favorite = new Favorite();
         favorite.setMovie_id(rowSet.getInt("movie_id"));
         favorite.setAccount_id(rowSet.getInt("account_id"));
+
+        return favorite;
+    }
+    private Favorite mapRowToFav2(SqlRowSet rowSet) {
+        Favorite favorite = new Favorite();
+        favorite.setMovie_id(rowSet.getInt("movie_id"));
+        //favorite.setAccount_id(rowSet.getInt("account_id"));
 
         return favorite;
     }

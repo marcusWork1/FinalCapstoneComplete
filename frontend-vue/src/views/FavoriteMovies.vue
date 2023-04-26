@@ -34,19 +34,21 @@
 
 <script>
 import FavMovieList from "../components/FavMovieList.vue";
+import DatabaseService from "../services/DatabaseService";
 
 export default {
   name: "favorite-movies", // name must be the same as the tag above ^ so vue knows
   components: {
     FavMovieList,
   },
-  // created() {
-  //   APIService.getFavoriteMoviesById() // set up api call and retrieve list with path the array of ids from database
-  //   .then((response) => {
-  //     this.$store.commit("SET_FAVMOVIELIST", response); // set favorite movie list with response array
-  //   });
-  //   console.log
-  // }
+  created() {
+        console.log(this.$store.state.account.account_id)
+        DatabaseService.getAllFavorites(this.$store.state.account.account_id).then((response) => {
+        this.$store.commit("SET_FAVMOVIELIST", response.data)
+        //this.movies = response.data;
+      });
+     
+  }
 };
 </script>
 

@@ -4,7 +4,7 @@ import com.techelevator.model.Favorite;
 
 public interface FavoriteDAO {
 
-    Object[] allFavorites(int id);
+   Favorite[] allFavorites(int id);
 
 //    Favorite getFavorite(int account_id);
 
