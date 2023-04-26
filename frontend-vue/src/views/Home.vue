@@ -167,7 +167,7 @@ a:visited {
   box-shadow: 0px 7px 8px black;
   margin-bottom: 10px;
   float: right;
-  margin-right: 10px;
+  margin-right: 5px;
   margin-top: 25px;
 }
 .logicon:active {
@@ -195,7 +195,7 @@ a:visited {
   margin-bottom: 10px;
   margin-top: 25px;
   float: right;
-  margin-right: 30px;
+  margin-right: 20px;
 }
 .contacticon:active {
   box-shadow: 0 5px #666;
@@ -207,7 +207,8 @@ a:visited {
   border-radius: 25px;
   box-shadow: 0px 7px 8px black;
   margin-bottom: 10px;
-  margin-left: 20px;
+  margin-left: 15px;
+  margin-right: -10px;
   margin-top: 10px;
 }
 .movieicon:active {
