@@ -80,8 +80,13 @@ export default {
         popularity: this.newProfile.popularity,
       };
 
-      console.log(DatabaseService.getAccount(this.$store.state.user.id));
-      if (DatabaseService.getAccount(this.$store.state.user.id) === "") {
+DatabaseService.getAccount(this.$store.state.user.id)
+.then((response) => {
+  this.$store.commit("SET_ACCOUNTDB", response.data);
+})
+if (this.$store.state.accountDB === "") {
+      // console.log(DatabaseService.getAccount(this.$store.state.user.id));
+      // if (DatabaseService.getAccount(this.$store.state.user.id) === "") {
         //add
         console.log("hit");
         DatabaseService.addProfile(newForm)

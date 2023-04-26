@@ -95,6 +95,7 @@ export default {
         username: "",
         password: "",
       },
+      userId: 0,
       invalidCredentials: false,
     };
   },
@@ -106,7 +107,8 @@ export default {
           if (response.status == 200) {
             this.$store.commit("SET_AUTH_TOKEN", response.data.token);
             this.$store.commit("SET_USER", response.data.user);
-            this.$router.push("/");
+            this.userId = response.data.user.id;
+            //this.$router.push("/");
           }
         })
         .catch((error) => {
@@ -118,10 +120,13 @@ export default {
         });
 // see if have account
 // if dont, go to profile page
+console.log(this.userId);
 DatabaseService.getAccount(this.$store.state.user.id)
 .then((response) => {
   this.$store.commit("SET_ACCOUNT", response.data);
+  //console.log(this.$store.state.user.id)
 })
+//if (this.$store.state.account === "undefined") {
 if (this.$store.state.account === "") {
   this.$router.push("/profile");
 }
