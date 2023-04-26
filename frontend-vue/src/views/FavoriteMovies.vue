@@ -29,6 +29,10 @@
       <router-link v-bind:to="{ name: 'favoritemovies'}"
         ><img class="favoriteicon" src="https://i.imgur.com/W6WfGod.png" /></router-link>
       </header>
+      <div><br>
+      <img class="bannerimage" src = "https://i.imgur.com/ZX8xxy2.jpg"/>
+      </div>
+
     <body>
       <fav-movie-list />
     </body>

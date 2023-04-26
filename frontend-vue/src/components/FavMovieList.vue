@@ -2,9 +2,9 @@
   <div>
     <body>
 
-<img class = "bannerimage" src = "https://i.imgur.com/ZX8xxy2.jpg">
+<img class = "browsebody"> 
       <fav-movie-display
-        class="favmoviedisplay"
+        class="table"
         v-for="singlemovie in this.$store.state.favMovieList"
         v-bind:key="singlemovie.id" 
         v-bind:favmovie="singlemovie"
@@ -24,7 +24,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .table {
   scale: 50%;
   min-height: 200px;
