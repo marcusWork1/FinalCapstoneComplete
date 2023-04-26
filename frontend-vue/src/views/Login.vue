@@ -3,8 +3,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
-    <div class="background">
-      <form class="signinform" @submit.prevent="login">
+    <div >
+
        <header>
         <router-link v-bind:to="{ name: 'home' }"
           ><img class="imgicon" src="https://i.imgur.com/LajHZNM.png" /></router-link
@@ -29,9 +29,7 @@
         ><img class="favoriteicon" src="https://i.imgur.com/W6WfGod.png" /></router-link>
       </header>
             <img class="bannerimage" src="https://i.imgur.com/8QDiBww.jpg" />
-
-        <h1>Please Sign In</h1>
-        
+      <form class="signinform" @submit.prevent="login">
         <div role="alert" v-if="invalidCredentials">
           Invalid username and password!
         </div>
@@ -39,7 +37,7 @@
           Thank you for registering, please sign in.
         </div>
         <div class="form-input-group">
-          <br />
+          <br /><br>
           <label for="username">Username</label><br />
           <input
             type="text"
@@ -64,22 +62,13 @@
           <p class="textcolor"><br /></p>
           <p>
             <b
-              ><a class="signuplink" href="http://localhost:8080/register"
+              ><br><a class="signuplink" href="http://localhost:8080/register"
                 >Need an Account? Sign up here.</a
               ></b
             >
           </p>
         </div>
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
-        <footer>
-          <p>
-            ® Flick Finder<br />
-            <a href="http://localhost:8080/description"
-              >More about our company here :)</a
-            >
-          </p>
-        </footer>
       </form>
     </div>
   </div>
@@ -128,23 +117,18 @@ export default {
           if (response.status === 401) {
             this.invalidCredentials = true;
           }
-
 }) 
 this.$router.push("/browse");
         });
 // see if have account
 // if dont, go to profile page
 
-
-
     },
-
-
   },
 };
 </script>
 
-<style>
+<style scoped>
 
 
 </style>
