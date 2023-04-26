@@ -25,10 +25,10 @@
       <router-link v-bind:to="{ name: 'favoritemovies'}">Favorite Movies</router-link>
       </header>
     <br />
-    <img class="bannerimage" src="https://i.imgur.com/X3EFSeS.jpg" />
+    <img class="bannerimage" src="https://i.imgur.com/7He2qAV.jpg" />
 
     <div id="description">
-      <div>
+      <div class = "border">
         <h1>About Flick Finder</h1><br>
         <p>
           Welcome to Flick Finder, the app that helps you find the perfect movie
@@ -70,12 +70,14 @@ export default {
 <style>
 .bannerimage {
   height: 165px;
-  box-shadow: 0px 7px 8px black;
+  box-shadow: rgb(19, 31, 44) 30px 30px 30px -15px;
   border-radius: 10px;
   display: block;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 55px;
+  margin-bottom: 70px;
 }
-
+.border {
+  padding: 60px;
+}
 </style>

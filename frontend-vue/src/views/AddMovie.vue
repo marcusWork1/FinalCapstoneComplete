@@ -24,9 +24,9 @@
         >&nbsp;
       <router-link v-bind:to="{ name: 'favoritemovies'}">Favorite Movies</router-link>
       </header>
-    <div>
-      <h1>Add a Movie</h1>
-      <img class="walle" src="https://i.imgur.com/ssZGent.png" />
+    <div><br>
+
+      <img class="bannerimage" src="https://i.imgur.com/3vK2Mv9.jpg" />
 
       <movie-form />
     </div>

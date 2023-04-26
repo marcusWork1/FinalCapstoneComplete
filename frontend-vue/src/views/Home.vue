@@ -125,7 +125,7 @@ a:visited {
   margin-left: 240px;
   margin-right: 240px;
   font-size: 30px;
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  box-shadow: rgb(19, 31, 44) 30px 30px 30px -15px;
 }
 .hover {
   padding-top: 10pt;
