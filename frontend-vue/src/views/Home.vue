@@ -9,19 +9,19 @@
           ><img class="imgicon" src="https://i.imgur.com/LajHZNM.png" /></router-link
         >&nbsp;
         <router-link v-bind:to="{ name: 'description' }"
-          ><img class="descicon" src="../assets/descicon.jpg" /></router-link
+          ><img class="descicon" src="https://i.imgur.com/SEaHA1C.png" /></router-link
         >&nbsp;
         <router-link v-bind:to="{ name: 'addmovie' }"
-          ><img class="movieicon" src="../assets/movieicon.jpg" /></router-link
+          ><img class="movieicon" src="https://i.imgur.com/MixOVcC.png" /></router-link
         >&nbsp;
         <router-link v-bind:to="{ name: 'login' }"
-          ><img class="logicon" src="../assets/loginicon.png" /></router-link
+          ><img class="logicon" src="https://i.imgur.com/LCzEoo0.png" /></router-link
         >&nbsp;
         <router-link v-bind:to="{ name: 'profile' }"
-          ><img class="profileicon" src="../assets/profileicon.png" /></router-link
+          ><img class="profileicon" src="https://i.imgur.com/lfIq5sT.png" /></router-link
         >&nbsp;
         <router-link v-bind:to="{ name: 'browse' }">Browse</router-link>&nbsp;
-        <router-link v-bind:to="{ name: 'contactus' }"><img class="contacticon" src="../assets/contacticon.jpg" /></router-link
+        <router-link v-bind:to="{ name: 'contactus' }"><img class="contacticon" src="https://i.imgur.com/ORWfoJL.png" /></router-link
         >&nbsp;
       <router-link v-bind:to="{ name: 'favoritemovies'}">Favorite Movies</router-link>
       </header>
@@ -68,30 +68,30 @@ export default {
 <style>
 h2 {
     font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 40px;
 }
 .mainimage {
-  margin-top: 80px;
+  margin-top: 40px;
   display: block;
   margin-left: auto;
   margin-right: auto;
   height: 60%;
   width: 50%;
+  box-shadow: 1px 1px 15px 15px rgb(41, 79, 122);
 }
 .bodyimage {
   background-image: url("https://i.imgur.com/Bm1I1fA.png");
   min-height: 100%;
   min-width: 1024px;
+  position:absolute;
 	background-repeat: no-repeat;
   background-size: cover;
-  /* Set up proportionate scaling */
   width: 100%;
   height: auto;
-	
-  /* Set up positioning */
-  position: fixed;
   top: 0;
   left: 0;
   font-family: 'Yanone Kaffeesatz', sans-serif;
+  overflow: scroll;
 }
 * {
   margin: 0;
@@ -101,17 +101,7 @@ footer {
   font-family: 'Yanone Kaffeesatz', sans-serif;
   padding-left: 15px;
   padding-bottom: 15px;
-  color: #ac8ad3;
-}
-.title {
-  font-family: 'Yanone Kaffeesatz', sans-serif;
-  font-size: 60px;
-  color: #f0f2f5;
-  text-align: center;
-  padding-bottom: 20px;
-  text-shadow: 4px 3px #19181a;
-  font-weight: bold;
-  letter-spacing: 5px;
+  color:  rgb(13, 26, 49);
 }
 .cantdecide {
   font-family: 'Yanone Kaffeesatz', sans-serif;
@@ -120,27 +110,23 @@ footer {
   font-size: 40px;
 }
 a:visited {
-  color: thistle;
+  color: rgb(149, 162, 235);
 }
 #description {
   color: rgb(227, 235, 242);
-  background-color: rgb(65, 107, 186);
-  border: 8px solid rgb(34, 56, 97);
+  background-color: rgb(34, 56, 97);
   padding: 12px;
   margin: 10px;
   font-family: 'Yanone Kaffeesatz', sans-serif;
   border-radius: 10px;
   text-align: center;
-  display: block;
-  margin-left: 140px;
-  margin-right: 140px;
+  margin-left: 240px;
+  margin-right: 240px;
   font-size: 30px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 .hover {
   padding-top: 10pt;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
   font-family: 'Yanone Kaffeesatz', sans-serif;
 }
@@ -155,7 +141,7 @@ a:visited {
   color: rgb(0, 95, 139);
 }
 .imgicon {
-  width: 6%;
+  width: 150px;
   height: 120px;
   border-radius: 25px;
   box-shadow: 0px 7px 8px black;
@@ -200,8 +186,9 @@ a:visited {
   border-radius: 25px;
   box-shadow: 0px 7px 8px black;
   margin-bottom: 10px;
-  margin-left: 20px;
-  margin-top: 10px;
+  margin-top: 25px;
+  float: right;
+  margin-right: 30px;
 }
 .contacticon:active {
   box-shadow: 0 5px #666;
@@ -226,7 +213,7 @@ a:visited {
   border-radius: 25px;
   box-shadow: 0px 7px 8px black;
   margin-bottom: 10px;
-  margin-left: 20px;
+  margin-left: 15px;
   margin-top: 10px;
 }
 .profileicon:active {

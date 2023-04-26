@@ -6,33 +6,27 @@
     />
     <div class="background">
       <form class="signinform" @submit.prevent="login">
-        <header>
-          <router-link v-bind:to="{ name: 'home' }"
-            ><img class="imgicon" src="https://i.imgur.com/LajHZNM.png" /></router-link
-          >&nbsp;
-          <router-link v-bind:to="{ name: 'description' }"
-            ><img class="descicon" src="../assets/descicon.jpg" /></router-link
-          >&nbsp;
-          <router-link v-bind:to="{ name: 'addmovie' }"
-            ><img
-              class="movieicon"
-              src="../assets/movieicon.jpg" /></router-link
-          >&nbsp;
-          <router-link v-bind:to="{ name: 'login' }"
-            ><img class="logicon" src="../assets/loginicon.png" /></router-link
-          >&nbsp;
-          <router-link v-bind:to="{ name: 'profile' }"
-            ><img
-              class="profileicon"
-              src="../assets/profileicon.png" /></router-link
-          >&nbsp;
-          <router-link v-bind:to="{ name: 'browse' }">Browse</router-link>&nbsp;
-          <router-link v-bind:to="{ name: 'contactus' }"
-            ><img
-              class="contacticon"
-              src="../assets/contacticon.jpg" /></router-link
-          >&nbsp;
-        </header>
+      <header>
+        <router-link v-bind:to="{ name: 'home' }"
+          ><img class="imgicon" src="https://i.imgur.com/LajHZNM.png" /></router-link
+        >&nbsp;
+        <router-link v-bind:to="{ name: 'description' }"
+          ><img class="descicon" src="https://i.imgur.com/SEaHA1C.png" /></router-link
+        >&nbsp;
+        <router-link v-bind:to="{ name: 'addmovie' }"
+          ><img class="movieicon" src="https://i.imgur.com/MixOVcC.png" /></router-link
+        >&nbsp;
+        <router-link v-bind:to="{ name: 'login' }"
+          ><img class="logicon" src="https://i.imgur.com/LCzEoo0.png" /></router-link
+        >&nbsp;
+        <router-link v-bind:to="{ name: 'profile' }"
+          ><img class="profileicon" src="https://i.imgur.com/lfIq5sT.png" /></router-link
+        >&nbsp;
+        <router-link v-bind:to="{ name: 'browse' }">Browse</router-link>&nbsp;
+        <router-link v-bind:to="{ name: 'contactus' }"><img class="contacticon" src="https://i.imgur.com/ORWfoJL.png" /></router-link
+        >&nbsp;
+      <router-link v-bind:to="{ name: 'favoritemovies'}">Favorite Movies</router-link>
+      </header>
         <h1>Please Sign In</h1>
         <img class="walle" src="https://i.imgur.com/ssZGent.png" />
         <div role="alert" v-if="invalidCredentials">
@@ -127,47 +121,6 @@ export default {
 </script>
 
 <style>
-.signuplink {
-  color: rgb(222, 184, 243);
-  font-size: 25px;
-}
-.buttons {
-  padding-top: 10px;
-  text-align: center;
-}
-h1 {
-  text-align: center;
-}
-.form-input-group {
-  text-align: center;
-  padding-top: 10px;
-  font-size: 25px;
-}
 
-.walle {
-  height: 200px;
-  display: block;
-  max-height: 100%;
-  max-width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding-top: 10px;
-}
-.signinform {
-
-  color: white;
-  display: block;
-  padding: 0px;
-}
-.body {
-
-}
-.form-input-group {
-  margin-bottom: 1rem;
-  margin: 0;
-}
-label {
-  margin-right: 0.5rem;
-}
 
 </style>

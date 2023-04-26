@@ -55,24 +55,5 @@ export default {
 
 <style>
 
-.display {
-  color: black;
-  font-family: "Courier New", Courier, monospace;
-}
-img {
-  width: 500px;
-  border-radius: 25px;
-  box-shadow: 0px 7px 8px black;
-  margin-left: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.movieform {
-  margin-top: -320px;
-  overflow-x: auto;
-  display: block;
-}
-p {
-  font-size: 23px;
-}
+
 </style>
