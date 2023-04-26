@@ -72,7 +72,7 @@ export default {
 
     submitForm() {
       const newForm = {
-        user_id: this.newProfile.user_id,
+        user_id: this.$store.state.user.id,
         username: this.newProfile.username,
         email_address: this.newProfile.email_address,
         genre: this.newProfile.genre,
@@ -82,11 +82,11 @@ export default {
 
 DatabaseService.getAccount(this.$store.state.user.id)
 .then((response) => {
-  this.$store.commit("SET_ACCOUNTDB", response.data);
+  this.$store.commit("SET_ACCOUNT", response.data);
 })
-if (this.$store.state.accountDB === "") {
+if (this.$store.state.account == "") {
       // console.log(DatabaseService.getAccount(this.$store.state.user.id));
-      // if (DatabaseService.getAccount(this.$store.state.user.id) === "") {
+      // if (DatabaseService.getAccount(this.newProfile.user_id) === "") {
         //add
         console.log("hit");
         DatabaseService.addProfile(newForm)
@@ -103,7 +103,8 @@ if (this.$store.state.accountDB === "") {
           .catch((error) => {
             this.handleErrorResponse(error, "adding");
           });
-      } else {
+      } 
+      else{
         //<<<<<might have to comment this out to check .addprofile
         //     // update
         // need a 
