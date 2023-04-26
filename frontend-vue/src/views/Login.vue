@@ -29,7 +29,7 @@
         ><img class="favoriteicon" src="https://i.imgur.com/W6WfGod.png" /></router-link>
       </header>
         <h1>Please Sign In</h1>
-        <img class="walle" src="https://i.imgur.com/ssZGent.png" />
+        
         <div role="alert" v-if="invalidCredentials">
           Invalid username and password!
         </div>
