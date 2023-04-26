@@ -21,10 +21,12 @@
         <router-link v-bind:to="{ name: 'profile' }"
           ><img class="profileicon" src="https://i.imgur.com/lfIq5sT.png" /></router-link
         >&nbsp;
-        <router-link v-bind:to="{ name: 'browse' }">Browse</router-link>&nbsp;
+        <router-link v-bind:to="{ name: 'browse' }"
+        ><img class="browseicon" src="https://i.imgur.com/NFVyR0z.png" /></router-link>
         <router-link v-bind:to="{ name: 'contactus' }"><img class="contacticon" src="https://i.imgur.com/ORWfoJL.png" /></router-link
         >&nbsp;
-      <router-link v-bind:to="{ name: 'favoritemovies'}">Favorite Movies</router-link>
+      <router-link v-bind:to="{ name: 'favoritemovies'}"
+        ><img class="favoriteicon" src="https://i.imgur.com/W6WfGod.png" /></router-link>
       </header>
         <h1>Create Account</h1>
         <img class="walle" src="https://i.imgur.com/ssZGent.png" />

@@ -5,7 +5,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
     <div class="background">
       <form class="signinform" @submit.prevent="login">
-      <header>
+       <header>
         <router-link v-bind:to="{ name: 'home' }"
           ><img class="imgicon" src="https://i.imgur.com/LajHZNM.png" /></router-link
         >&nbsp;
@@ -21,10 +21,12 @@
         <router-link v-bind:to="{ name: 'profile' }"
           ><img class="profileicon" src="https://i.imgur.com/lfIq5sT.png" /></router-link
         >&nbsp;
-        <router-link v-bind:to="{ name: 'browse' }">Browse</router-link>&nbsp;
+        <router-link v-bind:to="{ name: 'browse' }"
+        ><img class="browseicon" src="https://i.imgur.com/NFVyR0z.png" /></router-link>
         <router-link v-bind:to="{ name: 'contactus' }"><img class="contacticon" src="https://i.imgur.com/ORWfoJL.png" /></router-link
         >&nbsp;
-      <router-link v-bind:to="{ name: 'favoritemovies'}">Favorite Movies</router-link>
+      <router-link v-bind:to="{ name: 'favoritemovies'}"
+        ><img class="favoriteicon" src="https://i.imgur.com/W6WfGod.png" /></router-link>
       </header>
         <h1>Please Sign In</h1>
         <img class="walle" src="https://i.imgur.com/ssZGent.png" />
