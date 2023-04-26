@@ -20,10 +20,12 @@
         <router-link v-bind:to="{ name: 'profile' }"
           ><img class="profileicon" src="https://i.imgur.com/lfIq5sT.png" /></router-link
         >&nbsp;
-        <router-link v-bind:to="{ name: 'browse' }">Browse</router-link>&nbsp;
+        <router-link v-bind:to="{ name: 'browse' }"
+        ><img class="browseicon" src="https://i.imgur.com/NFVyR0z.png" /></router-link>
         <router-link v-bind:to="{ name: 'contactus' }"><img class="contacticon" src="https://i.imgur.com/ORWfoJL.png" /></router-link
         >&nbsp;
-      <router-link v-bind:to="{ name: 'favoritemovies'}">Favorite Movies</router-link>
+      <router-link v-bind:to="{ name: 'favoritemovies'}"
+        ><img class="favoriteicon" src="https://i.imgur.com/W6WfGod.png" /></router-link>
       </header>
 
       <img class="mainimage" src="https://i.imgur.com/dZqOSDB.jpg" />
@@ -219,6 +221,32 @@ a:visited {
   margin-top: 10px;
 }
 .profileicon:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.favoriteicon {
+  width: 120px;
+  height: 120px;
+  border-radius: 25px;
+  box-shadow: 0px 7px 8px black;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+.favoriteicon:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.browseicon {
+  width: 120px;
+  height: 120px;
+  border-radius: 25px;
+  box-shadow: 0px 7px 8px black;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+.browseicon:active {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
