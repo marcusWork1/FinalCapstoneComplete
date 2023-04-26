@@ -13,6 +13,9 @@
         <router-link v-bind:to="{ name: 'addmovie' }"
           ><img class="movieicon" src="https://i.imgur.com/MixOVcC.png" /></router-link
         >&nbsp;
+        <router-link v-bind:to="{ name: 'logout' }"
+          ><img class="logouticon" src="https://i.imgur.com/IVGcyIo.jpg" /></router-link
+        >&nbsp;
         <router-link v-bind:to="{ name: 'login' }"
           ><img class="logicon" src="https://i.imgur.com/LCzEoo0.png" /></router-link
         >&nbsp;
@@ -78,6 +81,7 @@ export default {
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 70px;
+  margin-top: 30px;
 }
 .border {
   padding: 60px;

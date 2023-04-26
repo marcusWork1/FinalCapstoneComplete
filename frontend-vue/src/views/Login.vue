@@ -4,8 +4,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
     <div >
-
-       <header>
+      <header>
         <router-link v-bind:to="{ name: 'home' }"
           ><img class="imgicon" src="https://i.imgur.com/LajHZNM.png" /></router-link
         >&nbsp;
@@ -14,6 +13,9 @@
         >&nbsp;
         <router-link v-bind:to="{ name: 'addmovie' }"
           ><img class="movieicon" src="https://i.imgur.com/MixOVcC.png" /></router-link
+        >&nbsp;
+        <router-link v-bind:to="{ name: 'logout' }"
+          ><img class="logouticon" src="https://i.imgur.com/IVGcyIo.jpg" /></router-link
         >&nbsp;
         <router-link v-bind:to="{ name: 'login' }"
           ><img class="logicon" src="https://i.imgur.com/LCzEoo0.png" /></router-link
