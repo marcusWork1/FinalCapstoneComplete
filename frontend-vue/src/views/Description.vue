@@ -1,9 +1,8 @@
 <template>
   <div class="bodyimage">
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Chewy"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
       <header>
         <router-link v-bind:to="{ name: 'home' }"
           ><img class="imgicon" src="https://i.imgur.com/LajHZNM.png" /></router-link
@@ -25,23 +24,21 @@
         >&nbsp;
       <router-link v-bind:to="{ name: 'favoritemovies'}">Favorite Movies</router-link>
       </header>
-
-    <h1>Flick Finder Description</h1>
     <br />
-    <img class="walle" src="https://i.imgur.com/ssZGent.png" />
-    <div></div>
-    <div class="description">
-      <div class="info">
-        <h2>About Flick Finder</h2>
-        <h3>
+    <img class="bannerimage" src="https://i.imgur.com/X3EFSeS.jpg" />
+
+    <div id="description">
+      <div>
+        <h1>About Flick Finder</h1><br>
+        <p>
           Welcome to Flick Finder, the app that helps you find the perfect movie
           match! With Flick Finder, you can swipe through a variety of movies to
           discover new titles and find ones that fit your interests. Whether
           you're looking for something romantic, thrilling, funny, or
           thought-provoking, Flick Finder has something for everyone.
-        </h3>
+        </p><br>
 
-        <p class="paragraph">
+        <p>
           Our app uses a smart algorithm that takes into account your
           genre preferences to match you with movies
           you're likely to enjoy. You can also save movies to
@@ -54,7 +51,6 @@
           Flick Finder, every night can be a movie night!
         </p>
       </div>
-      <br /><br />
     </div>
     <footer>
       <p>
@@ -72,6 +68,14 @@ export default {
 </script>
 
 <style>
-
+.bannerimage {
+  height: 165px;
+  box-shadow: 0px 7px 8px black;
+  border-radius: 10px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 55px;
+}
 
 </style>

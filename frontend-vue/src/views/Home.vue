@@ -26,8 +26,7 @@
       <router-link v-bind:to="{ name: 'favoritemovies'}">Favorite Movies</router-link>
       </header>
 
-
-         <img class="mainimage" src="https://i.imgur.com/dZqOSDB.jpg" />
+      <img class="mainimage" src="https://i.imgur.com/dZqOSDB.jpg" />
 
       <div class="hover"><br>
       <h1 class = "cantdecide"> Can't Decide? </h1>
@@ -79,6 +78,9 @@ h2 {
   width: 50%;
   box-shadow: 1px 1px 15px 15px rgb(41, 79, 122);
 }
+p {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
 .bodyimage {
   background-image: url("https://i.imgur.com/Bm1I1fA.png");
   min-height: 100%;
@@ -115,7 +117,7 @@ a:visited {
 #description {
   color: rgb(227, 235, 242);
   background-color: rgb(34, 56, 97);
-  padding: 12px;
+  padding: 22px;
   margin: 10px;
   font-family: 'Yanone Kaffeesatz', sans-serif;
   border-radius: 10px;
