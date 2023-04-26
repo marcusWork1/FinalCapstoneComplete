@@ -3,22 +3,20 @@
   <div class="display">
     <!--uses props to get the data from the API service -->
     <div>
+       <button class="button" v-on:click="removeFavorite">Remove from Favorites</button>
       <!--trying to display the movie title and release date-->
-      <h3 class="favmovie-title">{{ favmovie.original_title }}</h3>
-      <h3 class="favmovie-year">{{ favmovie.release_date }}</h3>
-      <h3 class="favmovie-id">{{ favmovie.id }}</h3>
+      <h4 class="favmovie-title">{{ movie.original_title }}</h4>
+      <h5 class="favmovie-year">{{ movie.release_date }} | ID:{{ movie.id }}</h5>
       <!-- tries to display the poster image. it's always the v-bind:src and whatever is in the poster_path: from the json object -->
       <img
         v-bind:src="
-          'https://image.tmdb.org/t/p/original/' + favmovie.poster_path
-        "
+          'https://image.tmdb.org/t/p/original/' + favmovie.poster_path"
         alt="favmovie.original_title"
       />
       <!--Trying to display overview/plot of the movie-->
       <p>{{ favmovie.overview }}</p>
     </div>
     
-      <button class="button" v-on:click="removeFavorite">Remove from Favorites</button>
       <!-- delete button -->
   </div>
 </template>
@@ -44,7 +42,11 @@ export default {
       //   this.movies = response.data;
       // });
   
-   this.movie = APIService.getMovieByMovieId(this.favmovie.movie_id)
+   APIService.getMovieByMovieId(this.favmovie.movie_id)
+   .then((response) => {
+            this.movie = response;
+        
+          })
     //this.movie = this.$store.favMovieList; // not completely sure what this does
   },
   methods: {
