@@ -27,7 +27,7 @@
       <router-link v-bind:to="{ name: 'favoritemovies'}">Favorite Movies</router-link>
       </header>
         <h1>Create Account</h1>
-        <img class="walle" src="https://i.imgur.com/ssZGent.png" />
+        
         <div role="alert" v-if="registrationErrors">
           {{ registrationErrorMsg }}
         </div>
