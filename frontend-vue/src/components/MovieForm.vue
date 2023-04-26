@@ -137,6 +137,7 @@ form {
   box-shadow: rgb(19, 31, 44) 30px 30px 30px -15px;
   font-size: 35px;
   padding-bottom: 75px;
+  color:white;
 }
 
 button {

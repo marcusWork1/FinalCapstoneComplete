@@ -161,5 +161,7 @@ this.$router.push('/browse');
 </script>
 
 <style>
-
+.profile-questions {
+  color:white;
+}
 </style>

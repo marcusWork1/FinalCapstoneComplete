@@ -5,9 +5,7 @@
 
     <!--uses props to get the data from the API service -->
     <div class = "table">
-          <form class="movieform" v-on:submit.prevent="addFavorite">
-      <button class="button">Add to Favorites</button>
-    </form>
+
       <!--trying to display the movie title and release date-->
       <h4 class="movie-title">{{ movie.original_title }}</h4>
       <h5 class="movie-year">{{ movie.release_date }} | ID:{{ movie.id }}</h5>
@@ -16,9 +14,12 @@
         v-bind:src="'https://image.tmdb.org/t/p/original/' + movie.poster_path"
         alt="movie.original_title"
       />
+      <form class="movieform" v-on:submit.prevent="addFavorite">
+      <button class="button">Add to Favorites</button>
+    </form>
       <!--Trying to display overview/plot of the movie-->
       <div class = "transparent">
-      <p>{{ movie.overview }}</p>
+      <br><br><p>{{ movie.overview }}</p>
       </div>
     </div>
   </div>
@@ -99,5 +100,10 @@ img {
   margin-left: auto;
   margin-right: auto;
   
+}
+button {
+  margin-top: 45px;
+  margin-left: 20px;
+  margin-bottom: -25px;
 }
 </style>
