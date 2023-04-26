@@ -21,7 +21,7 @@ export default new Vuex.Store({
     token: currentToken || "",
     user: currentUser || {},
     account: "",
-    accountDB: "",
+    //accountDB: "",
     userGenre: "",
     currentMovieList: [],
     favMovieList: [],
@@ -43,9 +43,9 @@ export default new Vuex.Store({
       // spot to store the account object
       state.account = account;
     },
-    SET_ACCOUNTDB(state, accountDB) {
-      state.accountDB = accountDB;
-    },
+    // SET_ACCOUNTDB(state, accountDB) {
+    //   state.accountDB = accountDB;
+    // },
     LOGOUT(state) {
       localStorage.removeItem("token");
       localStorage.removeItem("user");

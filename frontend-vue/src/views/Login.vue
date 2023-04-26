@@ -110,6 +110,15 @@ export default {
             this.userId = response.data.user.id;
             //this.$router.push("/");
           }
+         console.log(this.userId);
+          DatabaseService.getAccount(this.$store.state.user.id)
+                          .then((response) => {
+                                              this.$store.commit("SET_ACCOUNT", response.data);
+                                              //console.log(this.$store.state.user.id)
+                                              //if (this.$store.state.account === "undefined") {
+                                              if (this.$store.state.account === "") {
+                                                                                    this.$router.push("/profile");
+                                              }
         })
         .catch((error) => {
           const response = error.response;
@@ -117,19 +126,14 @@ export default {
           if (response.status === 401) {
             this.invalidCredentials = true;
           }
+
+}) 
+this.$router.push("/browse");
         });
 // see if have account
 // if dont, go to profile page
-console.log(this.userId);
-DatabaseService.getAccount(this.$store.state.user.id)
-.then((response) => {
-  this.$store.commit("SET_ACCOUNT", response.data);
-  //console.log(this.$store.state.user.id)
-})
-//if (this.$store.state.account === "undefined") {
-if (this.$store.state.account === "") {
-  this.$router.push("/profile");
-}
+
+
 
     },
 
