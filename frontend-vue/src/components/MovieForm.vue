@@ -178,4 +178,12 @@ h2 {
 h1 {
   text-align: cemter;
 }
+
+select {
+  width: 250px;
+  height: 40px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
 </style>

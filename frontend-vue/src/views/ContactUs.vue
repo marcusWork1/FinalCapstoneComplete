@@ -26,12 +26,12 @@
       <router-link v-bind:to="{ name: 'favoritemovies'}"
         ><img class="favoriteicon" src="https://i.imgur.com/W6WfGod.png" /></router-link>
       </header>
-    <h1>Contact Us</h1>
-    <p>
+    <img class = "bannerimage" src= "https://i.imgur.com/PLWqNpf.jpg">
+    <p id = "description">
       Have any specific questions or concerns? Contact us or email us and we
       promise to get back to you as quick as possible.
-    </p>
-    <div class="customer-service-section">
+    </p><br><br>
+    <div id = "description">
       <h2>Customer Service</h2>
       <p>
         For any general inquiries or concerns, please contact our customer
@@ -51,6 +51,12 @@ export default {
 };
 </script>
 
-<style>
-
+<style scoped>
+#description {
+  margin-left: 455px;
+  margin-right: 455px;
+}
+ul {
+  list-style-type: none;
+}
 </style>
