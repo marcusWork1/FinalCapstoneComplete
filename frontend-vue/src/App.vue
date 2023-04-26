@@ -5,11 +5,7 @@
       <router-link v-bind:to="{ name: 'description' }"></router-link
       >&nbsp;&nbsp;
       <router-link v-bind:to="{ name: 'login' }"></router-link>&nbsp;&nbsp;
-      <router-link
-        v-bind:to="{ name: 'logout' }"
-        v-if="$store.state.token != ''"
-        >Logout</router-link
-      >
+      <router-link v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''">Logout</router-link>
       <router-link v-bind:to="{ name: 'profile' }"></router-link>&nbsp;&nbsp;
       <router-link v-bind:to="{ name: 'browse' }"></router-link>&nbsp;&nbsp;
     </div>

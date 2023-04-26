@@ -3,7 +3,7 @@
     <body>
       <!--this -should- use moviedisplay with a v-for each movie json object-->
       <h1>Browse Movies</h1>
-      <img class="walle" src="https://i.imgur.com/ssZGent.png" />
+      
       <movie-display
         class="moviedisplay"
         v-for="singlemovie in this.$store.state.currentMovieList.results"
