@@ -59,11 +59,11 @@ public class AccountController {
 
         // return accountDAO.getAccount(id);
         Account account = accountDAO.getAccountByUserId(user_id);
-        if (account == null){
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Account not found."); // 404 code
-        } else {
+//        if (account == null){
+//            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Account not found."); // 404 code
+//        } else {
             return account;
-        }
+       // }
     }
 
     /**
