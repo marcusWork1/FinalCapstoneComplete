@@ -62,7 +62,7 @@ export default new Vuex.Store({
       state.currentMovieList = currentMovieList;
     },
     SET_FAVMOVIELIST(state, favMovieList){
-      state.favMovieList= favMovieList;
+      state.favMovieList = favMovieList;
     }
   },
 });

@@ -15,7 +15,7 @@
         alt="favmovie.original_title"
       />
       <!--Trying to display overview/plot of the movie-->
-      <p>{{ movie.overview }}</p>
+      <p>{{ favmovie.overview }}</p>
     </div>
     <form class="favmovieform" v-on:submit.prevent="removeFavorite">
       <button class="button">Remove from Favorites</button>
@@ -27,6 +27,7 @@
 <script>
 import DatabaseService from "../services/DatabaseService";
 import APIService from "../services/APIService";
+
 export default {
   name: "fav-movie-display",
   props: ["favmovie"], // props for the fav movie api response, allowing us to use the data in the display/sending elsewhere
