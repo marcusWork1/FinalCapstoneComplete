@@ -24,5 +24,14 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.table {
+  scale: 50%;
+  min-height: 200px;
+  display: inline;
+  color: white;
+}
+.browsebody {
+ display: table-cell;
+}
 </style>

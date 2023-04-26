@@ -1,9 +1,9 @@
 <template>
   <!--this should show ONE movie with the option of liking or disliking, have you watched it?-->
-  <div class="display">
+  <div class="browsebody">
     <!--uses props to get the data from the API service -->
     <div class = "table">
-       <button class="button" v-on:click="removeFavorite">Remove from Favorites</button>
+       
       <!--trying to display the movie title and release date-->
       <h4 class="favmovie-title">{{ movie.original_title }}</h4>
       <h5 class="favmovie-year">{{ movie.release_date }} | ID:{{ movie.id }}</h5>
@@ -13,6 +13,9 @@
           'https://image.tmdb.org/t/p/original/' + movie.poster_path"
         alt="favmovie.original_title"
       />
+      <form class="movieform" v-on:submit.prevent="removeFavorite">
+      <button class="button">Remove from Favorites</button>
+      </form>
       <!--Trying to display overview/plot of the movie-->
       <div class = "transparent" >
       <br><br><p>{{ movie.overview }}</p>
@@ -73,7 +76,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 
 h5 {
   font-size: 60px;
