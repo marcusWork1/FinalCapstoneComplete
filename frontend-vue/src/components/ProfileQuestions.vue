@@ -1,9 +1,9 @@
 <template>
   <div>
     <form class="profile-questions" v-on:submit.prevent="submitForm">
-      <h1>Create your profile!</h1>
+      <br><br><h1>Create your profile!</h1><br>
       <p>This helps personalize your Flick Finder experience</p>
-      <div class="form-group">
+      <div class="form-group"><br><br>
         <label for="email_address">Please input your email address: </label>
         <input
           id="email_address"
@@ -11,7 +11,7 @@
           v-model="newProfile.email_address"
         />
       </div>
-      <div class="form-group">
+      <div class="form-group"><br>
         <label for="genre"> Please select your favorite Genre: </label>
         <select v-model="newProfile.genre">
           <option value="">--- Select a Genre ---</option>
@@ -22,7 +22,7 @@
           <option value="10749">Romance</option>
         </select>
         <!-- <input id="genre" type="text" v-model="newProfile.genre" />-->
-      </div>
+      </div><br>
       <div class="form-group">
         Adult Movie?
         <input
@@ -32,7 +32,6 @@
           v-model="newProfile.adult_only"
         />
         <label for="Yes">Yes</label>
-
         <input
           id="No"
           type="radio"
@@ -40,7 +39,7 @@
           v-model="newProfile.adult_only"
         />
         <label for="No">No</label>
-      </div>
+      </div><br>
       <div class="form-group">
         <label for="popularity">Minimum rating preference? 1-100: </label>
         <input id="popularity" type="number" v-model="newProfile.popularity" />

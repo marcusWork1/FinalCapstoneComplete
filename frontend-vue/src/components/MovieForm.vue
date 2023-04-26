@@ -1,8 +1,8 @@
 <template>
   <div>
     <form class="movieform" v-on:submit.prevent="submitMovie">
-      <h1></h1>
       <br /><br />
+      <h1>Movie Form</h1><br>
       <div class="form-group">
         <label for="title">Title: </label>
         <input id="title" type="text" v-model="newMovie.title" />
@@ -131,5 +131,26 @@ export default {
 </script>
 
 <style>
+form {
+  text-align: center;
+  margin-left: 400px;
+  margin-right: 400px;
+  background-color:rgb(34, 56, 97);
+  border-radius: 15px;
+  box-shadow: rgb(19, 31, 44) 30px 30px 30px -15px;
+  font-size: 35px;
+  padding-right: 45px;
+  padding-left: 45x;
+  padding-bottom: 75px;
+}
 
+input {
+  width: 150px;
+  height: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+h2 {
+  text-align: center;
+}
 </style>

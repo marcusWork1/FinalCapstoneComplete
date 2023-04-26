@@ -24,9 +24,8 @@
         >&nbsp;
       <router-link v-bind:to="{ name: 'favoritemovies'}">Favorite Movies</router-link>
       </header>
-    <h1>Flick Finder Profile Page</h1>
     <br />
-    <img class="walle" src="https://i.imgur.com/ssZGent.png" />
+    <img class="bannerimage" src="https://i.imgur.com/ldKS0BO.jpg" />
     <profile-questions />
   </div>
 </template>
