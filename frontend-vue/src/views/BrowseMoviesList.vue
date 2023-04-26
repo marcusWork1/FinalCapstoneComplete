@@ -1,6 +1,6 @@
 <template>
-  <div >
-        <body class="bodyimage">
+  <div class= "bodyimage" >
+  <body >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
@@ -26,9 +26,7 @@
         >&nbsp;
       <router-link v-bind:to="{ name: 'favoritemovies'}"
         ><img class="favoriteicon" src="https://i.imgur.com/W6WfGod.png" /></router-link>
-      </header>
-    <h1></h1>
-    <br />
+      </header><br />
     <!--shows a list of movies to browse by genre-->
 
       <movie-list />

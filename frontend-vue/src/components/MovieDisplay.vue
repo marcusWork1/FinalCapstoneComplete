@@ -54,6 +54,9 @@ export default {
 </script>
 
 <style>
-
+.movie {
+  display: table-cell;
+  display: inline-block;
+}
 
 </style>
