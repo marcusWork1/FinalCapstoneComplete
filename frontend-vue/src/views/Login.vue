@@ -83,7 +83,7 @@
 
 <script>
 import authService from "../services/AuthService";
-
+import DatabaseService from "../services/DatabaseService";
 export default {
   name: "login",
   components: {},
@@ -114,7 +114,19 @@ export default {
             this.invalidCredentials = true;
           }
         });
+// see if have account
+// if dont, go to profile page
+DatabaseService.getAccount(this.$store.state.user.id)
+.then((response) => {
+  this.$store.commit("SET_ACCOUNT", response.data);
+})
+if (this.$store.state.account === "") {
+  this.$router.push("/profile");
+}
+
     },
+
+
   },
 };
 </script>

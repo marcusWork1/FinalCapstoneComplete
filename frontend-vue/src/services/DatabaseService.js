@@ -31,8 +31,8 @@ export default {
   deleteFavorite(favoriteObject) {
     return httpLocalHost.delete(`/favorite_list/${favoriteObject}`) // sending back a whole favorite object becuase need to send back a movie_id and account_id to delete a movie_id
   },
-  getAccount(profileObject2) {
-    return httpLocalHost.get(`/account/user/${profileObject2}`) 
+  getAccount(user_id) { // returns account object
+    return httpLocalHost.get(`/account/user/${user_id}`) 
   }
 
 }

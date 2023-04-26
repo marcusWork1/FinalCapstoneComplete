@@ -42,7 +42,6 @@ export default new Vuex.Store({
       // spot to store the account object
       state.account = account;
     },
-
     LOGOUT(state) {
       localStorage.removeItem("token");
       localStorage.removeItem("user");

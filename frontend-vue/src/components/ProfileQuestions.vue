@@ -69,6 +69,7 @@ export default {
     };
   },
   methods: {
+
     submitForm() {
       const newForm = {
         user_id: this.newProfile.user_id,
@@ -79,9 +80,10 @@ export default {
         popularity: this.newProfile.popularity,
       };
 
-      console.log(this.newProfile.user_id);
-      if (DatabaseService.getAccount(this.newProfile.user_id) === "") {
+      console.log(DatabaseService.getAccount(this.$store.state.user.id));
+      if (DatabaseService.getAccount(this.$store.state.user.id) === "") {
         //add
+        console.log("hit");
         DatabaseService.addProfile(newForm)
           .then((response) => {
             if (response.status === 201) {
@@ -115,6 +117,8 @@ export default {
             this.handleErrorResponse(error, "adding");
           });
       }
+this.$router.push('/browse');
+
     },
     resetForm() {
       this.newProfile = {
