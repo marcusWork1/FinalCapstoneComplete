@@ -25,13 +25,12 @@ export default {
 
 <style>
 .table {
-  display: inline;
   scale: 50%;
   min-height: 200px;
-
+  display: inline;
+  color: white;
 }
 .browsebody {
-  display: table-cell;
-
+ display: table-cell;
 }
 </style>
