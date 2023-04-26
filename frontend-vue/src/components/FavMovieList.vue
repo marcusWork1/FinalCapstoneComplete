@@ -1,8 +1,8 @@
 <template>
   <div>
     <body>
-      <h1>Browse Favorite Movies</h1>
 
+<img class = "bannerimage" src = "https://i.imgur.com/ZX8xxy2.jpg">
       <fav-movie-display
         class="favmoviedisplay"
         v-for="singlemovie in this.$store.state.favMovieList"
@@ -25,19 +25,4 @@ export default {
 </script>
 
 <style>
-body {
-  overflow-x: scroll;
-  overflow-x: visible;
-  flex-wrap: wrap;
-}
-div {
-  color: white;
-}
-.favmoviedisplay {
-  scale: 70%;
-  font-size: 30px;
-  display: table-cell;
-  word-wrap: break-word;
-  margin-top: -100px;
-}
 </style>

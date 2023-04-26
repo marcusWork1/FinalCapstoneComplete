@@ -2,17 +2,16 @@
   <div>
     <form class="profile-questions" v-on:submit.prevent="submitForm">
       <br><br><h1>Create your profile!</h1><br>
-      <p>This helps personalize your Flick Finder experience</p>
-      <div class="form-group"><br><br>
-        <label for="email_address">Please input your email address: </label>
+      <h2>This helps personalize your Flick Finder experience</h2><br>
+      <div class="form-group">
+        <label for="email_address">Please input your email address: </label><br><br>
         <input
           id="email_address"
           type="text"
-          v-model="newProfile.email_address"
-        />
-      </div>
-      <div class="form-group"><br>
-        <label for="genre"> Please select your favorite Genre: </label>
+          v-model="newProfile.email_address"/>
+      </div><br>
+      <div class="form-group">
+        <label for="genre"> Please select your favorite Genre: </label><br><br>
         <select v-model="newProfile.genre">
           <option value="">--- Select a Genre ---</option>
           <option value="29">Action</option>
@@ -39,13 +38,13 @@
           v-model="newProfile.adult_only"
         />
         <label for="No">No</label>
-      </div><br>
+      </div>
       <div class="form-group">
-        <label for="popularity">Minimum rating preference? 1-100: </label>
+        <br><label for="popularity">Minimum rating preference? 1-100: </label><br><br>
         <input id="popularity" type="number" v-model="newProfile.popularity" />
       </div>
       <button class="button">Submit</button>
-      <button class="button" v-on:click="cancelForm">Cancel</button>
+      <button class="button" v-on:click="cancelForm">Cancel</button><br>
     </form>
   </div>
 </template>

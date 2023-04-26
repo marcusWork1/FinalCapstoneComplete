@@ -1,6 +1,6 @@
 <template>
  <body class = "bodyimage">
-  <div class="home">
+  <div class="bodyimage">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
@@ -13,6 +13,9 @@
         >&nbsp;
         <router-link v-bind:to="{ name: 'addmovie' }"
           ><img class="movieicon" src="https://i.imgur.com/MixOVcC.png" /></router-link
+        >&nbsp;
+        <router-link v-bind:to="{ name: 'logout' }"
+          ><img class="logouticon" src="https://i.imgur.com/IVGcyIo.jpg" /></router-link
         >&nbsp;
         <router-link v-bind:to="{ name: 'login' }"
           ><img class="logicon" src="https://i.imgur.com/LCzEoo0.png" /></router-link
@@ -118,7 +121,7 @@ a:visited {
 }
 #description {
   color: rgb(227, 235, 242);
-  background-color: rgb(34, 56, 97);
+  background-color: rgba(34, 56, 97, .8);
   padding: 22px;
   margin: 10px;
   font-family: 'Yanone Kaffeesatz', sans-serif;
@@ -145,7 +148,7 @@ a:visited {
   color: rgb(0, 95, 139);
 }
 .imgicon {
-  width: 150px;
+  width: 160px;
   height: 120px;
   border-radius: 25px;
   box-shadow: 0px 7px 8px black;
@@ -158,7 +161,7 @@ a:visited {
   transform: translateY(4px);
 }
 .logicon {
-  width: 120px;
+  width: 130px;
   height: 120px;
   border-radius: 25px;
   box-shadow: 0px 7px 8px black;
@@ -172,7 +175,7 @@ a:visited {
   transform: translateY(4px);
 }
 .descicon {
-  width: 120px;
+  width: 130px;
   height: 120px;
   border-radius: 25px;
   box-shadow: 0px 7px 8px black;
@@ -185,7 +188,7 @@ a:visited {
   transform: translateY(4px);
 }
 .contacticon {
-  width: 120px;
+  width: 130px;
   height: 120px;
   border-radius: 25px;
   box-shadow: 0px 7px 8px black;
@@ -199,7 +202,7 @@ a:visited {
   transform: translateY(4px);
 }
 .movieicon {
-  width: 120px;
+  width: 130px;
   height: 120px;;
   border-radius: 25px;
   box-shadow: 0px 7px 8px black;
@@ -212,7 +215,7 @@ a:visited {
   transform: translateY(4px);
 }
 .profileicon {
-  width: 120px;
+  width: 130px;
   height: 120px;
   border-radius: 25px;
   box-shadow: 0px 7px 8px black;
@@ -225,7 +228,7 @@ a:visited {
   transform: translateY(4px);
 }
 .favoriteicon {
-  width: 120px;
+  width: 130px;
   height: 120px;
   border-radius: 25px;
   box-shadow: 0px 7px 8px black;
@@ -238,7 +241,7 @@ a:visited {
   transform: translateY(4px);
 }
 .browseicon {
-  width: 120px;
+  width: 130px;
   height: 120px;
   border-radius: 25px;
   box-shadow: 0px 7px 8px black;
@@ -247,6 +250,21 @@ a:visited {
   margin-top: 10px;
 }
 .browseicon:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.logouticon {
+  width: 105px;
+  height: 95px;
+  border-radius: 25px;
+  box-shadow: 0px 7px 8px black;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  margin-right: 25px;
+  margin-top: 25px;
+  float:right;
+}
+.logouticon:active {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }

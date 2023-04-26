@@ -1,5 +1,5 @@
 <template>
-  <div class="desc">
+  <div class="bodyimage">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
@@ -12,6 +12,9 @@
         >&nbsp;
         <router-link v-bind:to="{ name: 'addmovie' }"
           ><img class="movieicon" src="https://i.imgur.com/MixOVcC.png" /></router-link
+        >&nbsp;
+        <router-link v-bind:to="{ name: 'logout' }"
+          ><img class="logouticon" src="https://i.imgur.com/IVGcyIo.jpg" /></router-link
         >&nbsp;
         <router-link v-bind:to="{ name: 'login' }"
           ><img class="logicon" src="https://i.imgur.com/LCzEoo0.png" /></router-link

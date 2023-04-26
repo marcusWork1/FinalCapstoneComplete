@@ -1,6 +1,7 @@
 <template>
-  <div >
-        <body class="bodyimage">
+  <div class= "bodyimage" >
+  <body>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
@@ -14,6 +15,9 @@
         <router-link v-bind:to="{ name: 'addmovie' }"
           ><img class="movieicon" src="https://i.imgur.com/MixOVcC.png" /></router-link
         >&nbsp;
+        <router-link v-bind:to="{ name: 'logout' }"
+          ><img class="logouticon" src="https://i.imgur.com/IVGcyIo.jpg" /></router-link
+        >&nbsp;
         <router-link v-bind:to="{ name: 'login' }"
           ><img class="logicon" src="https://i.imgur.com/LCzEoo0.png" /></router-link
         >&nbsp;
@@ -26,13 +30,17 @@
         >&nbsp;
       <router-link v-bind:to="{ name: 'favoritemovies'}"
         ><img class="favoriteicon" src="https://i.imgur.com/W6WfGod.png" /></router-link>
-      </header>
-    <h1></h1>
-    <br />
+      </header><br />
     <!--shows a list of movies to browse by genre-->
+        <img class="bannerimage" src="https://i.imgur.com/f25FShL.jpg" />
 
-      <movie-list />
     </body>
+    <div class = "browsebody">
+      <div class = "table">
+          <movie-list />
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -54,6 +62,6 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 
 </style>

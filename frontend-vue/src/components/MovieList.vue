@@ -1,11 +1,9 @@
 <template>
-  <div>
-    <body>
+  <div >
+    <body class = "browsebody">
       <!--this -should- use moviedisplay with a v-for each movie json object-->
-      <h1>Browse Movies</h1>
-      
       <movie-display
-        class="moviedisplay"
+        class="table"
         v-for="singlemovie in this.$store.state.currentMovieList.results"
         v-bind:key="singlemovie.id"
         v-bind:movie="singlemovie"
@@ -26,19 +24,14 @@ export default {
 </script>
 
 <style>
-body {
-  overflow-x: scroll;
-  overflow-x: visible;
-  flex-wrap: wrap;
+.table {
+  display: inline;
+  scale: 50%;
+  min-height: 200px;
+
 }
-div {
-  color: white;
-}
-.moviedisplay {
-  scale: 60%;
-  font-size: 30px;
+.browsebody {
   display: table-cell;
-  word-wrap: break-word;
-  margin-top: -100px;
+
 }
 </style>

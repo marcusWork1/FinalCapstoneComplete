@@ -13,6 +13,9 @@
         <router-link v-bind:to="{ name: 'addmovie' }"
           ><img class="movieicon" src="https://i.imgur.com/MixOVcC.png" /></router-link
         >&nbsp;
+        <router-link v-bind:to="{ name: 'logout' }"
+          ><img class="logouticon" src="https://i.imgur.com/IVGcyIo.jpg" /></router-link
+        >&nbsp;
         <router-link v-bind:to="{ name: 'login' }"
           ><img class="logicon" src="https://i.imgur.com/LCzEoo0.png" /></router-link
         >&nbsp;
@@ -27,9 +30,7 @@
         ><img class="favoriteicon" src="https://i.imgur.com/W6WfGod.png" /></router-link>
       </header>
     <div><br>
-
-      <img class="bannerimage" src="https://i.imgur.com/3vK2Mv9.jpg" />
-
+      <img class="bannerimage" src="https://i.imgur.com/mrPUqvW.jpg" />
       <movie-form />
     </div>
   </div>
@@ -46,5 +47,4 @@ export default {
 </script>
 
 <style>
-
 </style>
