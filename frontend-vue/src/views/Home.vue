@@ -118,7 +118,7 @@ a:visited {
 }
 #description {
   color: rgb(227, 235, 242);
-  background-color: rgb(34, 56, 97);
+  background-color: rgba(34, 56, 97, .8);
   padding: 22px;
   margin: 10px;
   font-family: 'Yanone Kaffeesatz', sans-serif;

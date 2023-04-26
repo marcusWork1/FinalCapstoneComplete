@@ -28,6 +28,8 @@
       <router-link v-bind:to="{ name: 'favoritemovies'}"
         ><img class="favoriteicon" src="https://i.imgur.com/W6WfGod.png" /></router-link>
       </header>
+            <img class="bannerimage" src="https://i.imgur.com/8QDiBww.jpg" />
+
         <h1>Please Sign In</h1>
         
         <div role="alert" v-if="invalidCredentials">

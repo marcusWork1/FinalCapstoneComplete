@@ -61,7 +61,7 @@ h5 {
   font-size: 60px;
   text-shadow: 5px 5px #19181a;
   font-family: 'Yanone Kaffeesatz', sans-serif;
-  background-color: rgba(34, 56, 97, .7);
+  background-color: rgba(34, 56, 97, .8);
   text-align: center;
   box-shadow: rgb(19, 31, 44) 30px 30px 30px -15px;
   padding: 10px;
@@ -71,7 +71,7 @@ h4 {
   text-shadow: 5px 5px #19181a;
   font-family: 'Yanone Kaffeesatz', sans-serif;
   width: 1400px;
-  background-color: rgba(34, 56, 97, .7);
+  background-color: rgba(34, 56, 97, .8);
   text-align: center;
   margin-top: -850px;
   padding: 20px;
@@ -84,7 +84,7 @@ p {
   height: 800px;
   text-align: center;
   padding:40px;
-  background-color: rgba(34, 56, 97, .7);
+  background-color: rgba(34, 56, 97, .8);
   box-shadow: rgb(19, 31, 44) 30px 30px 30px -15px;
   
 }  

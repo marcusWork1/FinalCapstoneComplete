@@ -21,8 +21,7 @@
           id="genre"
           type="text"
           placeholder="make dropdown"
-          v-model="newMovie.genre"
-        />
+          v-model="newMovie.genre"/>
       </div>
       <div class="form-group">
         Adult Movie?
@@ -30,16 +29,14 @@
           id="Yes"
           type="radio"
           value="true"
-          v-model="newMovie.adult_only"
-        />
+          v-model="newMovie.adult_only"/>
         <label for="Yes">Yes</label>
 
         <input
           id="No"
           type="radio"
           value="false"
-          v-model="newMovie.adult_only"
-        />
+          v-model="newMovie.adult_only"/>
         <label for="No">No</label>
       </div>
       <div class="form-group">
@@ -133,15 +130,40 @@ export default {
 <style>
 form {
   text-align: center;
-  margin-left: 400px;
-  margin-right: 400px;
-  background-color:rgb(34, 56, 97);
+  margin-left: 550px;
+  margin-right: 550px;
+  background-color: rgba(34, 56, 97, .8);
   border-radius: 15px;
   box-shadow: rgb(19, 31, 44) 30px 30px 30px -15px;
   font-size: 35px;
-  padding-right: 45px;
-  padding-left: 45x;
   padding-bottom: 75px;
+}
+
+button {
+  display: inline-block;
+  padding: 15px 55px 5px;
+  font-size: 34px;
+  margin-right: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #a3d8fc;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  color: black;
+}
+
+.button:hover {background-color: #365d83}
+
+.button:active {
+  background-color: #48979c;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 input {
@@ -152,5 +174,8 @@ input {
 }
 h2 {
   text-align: center;
+}
+h1 {
+  text-align: cemter;
 }
 </style>

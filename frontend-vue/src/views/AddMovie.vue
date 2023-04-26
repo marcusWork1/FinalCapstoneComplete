@@ -27,7 +27,7 @@
         ><img class="favoriteicon" src="https://i.imgur.com/W6WfGod.png" /></router-link>
       </header>
     <div><br>
-      <img class="bannerimage" src="https://i.imgur.com/3vK2Mv9.jpg" />
+      <img class="bannerimage" src="https://i.imgur.com/mrPUqvW.jpg" />
       <movie-form />
     </div>
   </div>
