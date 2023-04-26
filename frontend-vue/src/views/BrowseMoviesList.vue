@@ -1,6 +1,7 @@
 <template>
   <div class= "bodyimage" >
-  <body >
+  <body>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
@@ -28,9 +29,15 @@
         ><img class="favoriteicon" src="https://i.imgur.com/W6WfGod.png" /></router-link>
       </header><br />
     <!--shows a list of movies to browse by genre-->
+        <img class="bannerimage" src="https://i.imgur.com/f25FShL.jpg" />
 
-      <movie-list />
     </body>
+    <div class = "browsebody">
+      <div class = "table">
+          <movie-list />
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -52,6 +59,6 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 
 </style>

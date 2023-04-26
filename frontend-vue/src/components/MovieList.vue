@@ -1,9 +1,9 @@
 <template>
   <div >
-    <body>
+    <body class = "browsebody">
       <!--this -should- use moviedisplay with a v-for each movie json object-->
       <movie-display
-        class="moviedisplay"
+        class="table"
         v-for="singlemovie in this.$store.state.currentMovieList.results"
         v-bind:key="singlemovie.id"
         v-bind:movie="singlemovie"
@@ -24,8 +24,14 @@ export default {
 </script>
 
 <style>
-.moviedisplay {
+.table {
+  display: inline;
+  scale: 50%;
+  min-height: 200px;
+
+}
+.browsebody {
   display: table-cell;
-  display: inline-block;
+
 }
 </style>
