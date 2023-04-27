@@ -12,9 +12,10 @@ import javax.annotation.security.PermitAll;
 import javax.validation.Valid;
 import java.util.List;
 
-@CrossOrigin
-//@PreAuthorize("isAuthenticated()") // All users must be authenticated to access (comment out for testing)
 @RestController
+@CrossOrigin
+
+//@PreAuthorize("isAuthenticated()") // All users must be authenticated to access (comment out for testing)
 public class AccountController {
 
     private AccountDAO accountDAO;
@@ -81,12 +82,14 @@ public class AccountController {
     }
 
     //@PreAuthorize("hasRole('USER')") -- Do we even need to preauthorize user, Does annotation up top already control that
+
     @ResponseStatus(HttpStatus.ACCEPTED)
     @RequestMapping(path = "/account/{id}", method = RequestMethod.PUT)
-    public void updateAccount (@Valid @RequestBody Account updateAccount,
+    public Account updateAccount (@Valid @RequestBody Account updateAccount,
                                   @PathVariable int id) {
         APILogger.logAPICall( "PUT path to updated account at User ID:" + updateAccount.getUser_id());
-         accountDAO.updateAccount(updateAccount);
+         Account updatedAccount = accountDAO.updateAccount(updateAccount);
+         return updatedAccount;
     }
 
     // get account by user id

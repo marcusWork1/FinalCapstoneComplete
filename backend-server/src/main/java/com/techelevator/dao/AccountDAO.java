@@ -14,7 +14,7 @@ public interface AccountDAO {
 
     Account createAccount(Account account);
 
-    void updateAccount(Account account);
+    Account updateAccount(Account account);
 
 
 

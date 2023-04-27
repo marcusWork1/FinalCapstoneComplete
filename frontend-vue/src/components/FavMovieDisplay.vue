@@ -6,7 +6,7 @@
        
       <!--trying to display the movie title and release date-->
       <h4 class="movie-title">{{ movie.original_title }}</h4>
-      <h5 class="movie-year">{{ movie.release_date }} | ID:{{ movie.id }}</h5>
+      <h5 class="movie-year">{{ movie.release_date }} </h5>
       <!-- tries to display the poster image. it's always the v-bind:src and whatever is in the poster_path: from the json object -->
       <img
         v-bind:src="
@@ -70,8 +70,21 @@ export default {
         account_id: this.$store.state.account.account_id,
         movie_id: this.movie.id,
       };
-      DatabaseService.deleteFavorite(deleteFav);
-    },
+      DatabaseService.deleteFavorite(deleteFav)
+      .then((response) => {
+         if (response.status === 200) {
+           DatabaseService.getAllFavorites(this.$store.state.accountaccount_id)
+           .then((response) => {
+             this.$store.commit("SET_FAVMOVIELIST", response.data)
+           });
+
+         }
+
+      })
+     
+
+      }
+  
   },
 };
 </script>

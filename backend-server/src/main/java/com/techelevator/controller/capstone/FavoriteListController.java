@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
+@RestController
 @CrossOrigin
 //@PreAuthorize("isAuthenticated()") // All users must be authenticated to access (comment out for testing)
-@RestController
 public class FavoriteListController {
 
     private FavoriteDAO favoriteDAO;

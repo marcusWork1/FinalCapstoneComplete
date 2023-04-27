@@ -11,8 +11,9 @@ import javax.validation.Valid;
 import java.util.List;
 
 //@PreAuthorize("isAuthenticated()") // All users must be authenticated to access (comment out for testing)
-@CrossOrigin
 @RestController
+@CrossOrigin
+
 public class MovieController {
 
     private MovieDAO movieDAO;

@@ -11,24 +11,15 @@
         <router-link v-bind:to="{ name: 'description' }"
           ><img class="descicon" src="https://i.imgur.com/SEaHA1C.png" /></router-link
         >&nbsp;
-        <router-link v-bind:to="{ name: 'addmovie' }"
-          ><img class="movieicon" src="https://i.imgur.com/MixOVcC.png" /></router-link
-        >&nbsp;
         <router-link v-bind:to="{ name: 'logout' }"
           ><img class="logouticon" src="https://i.imgur.com/IVGcyIo.jpg" /></router-link
         >&nbsp;
         <router-link v-bind:to="{ name: 'login' }"
           ><img class="logicon" src="https://i.imgur.com/LCzEoo0.png" /></router-link
         >&nbsp;
-        <router-link v-bind:to="{ name: 'profile' }"
-          ><img class="profileicon" src="https://i.imgur.com/lfIq5sT.png" /></router-link
-        >&nbsp;
-        <router-link v-bind:to="{ name: 'browse' }"
-        ><img class="browseicon" src="https://i.imgur.com/NFVyR0z.png" /></router-link>
         <router-link v-bind:to="{ name: 'contactus' }"><img class="contacticon" src="https://i.imgur.com/ORWfoJL.png" /></router-link
         >&nbsp;
-      <router-link v-bind:to="{ name: 'favoritemovies'}"
-        ><img class="favoriteicon" src="https://i.imgur.com/W6WfGod.png" /></router-link>
+     
       </header>
             <img class="bannerimage" src="https://i.imgur.com/8QDiBww.jpg" />
       <form class="signinform" @submit.prevent="login">
@@ -120,7 +111,7 @@ export default {
             this.invalidCredentials = true;
           }
 }) 
-this.$router.push("/browse");
+this.$router.push("/");
         });
 // see if have account
 // if dont, go to profile page

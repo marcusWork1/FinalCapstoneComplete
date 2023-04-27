@@ -48,16 +48,17 @@
 import MovieList from "../components/MovieList.vue";
 import APIService from "../services/APIService.js";
 
+
 export default {
   components: { MovieList },
   created() {
     //  APIService.getMovies().then(response => { this.$store.commit('SET_CURRENTMOVIELIST', response)} );
+
     APIService.getMoviesByGenre(this.$store.state.account.genre).then(
       (response) => {
         this.$store.commit("SET_CURRENTMOVIELIST", response);
       }
     );
-    console.log("Hi Marcus");
   },
 };
 </script>
