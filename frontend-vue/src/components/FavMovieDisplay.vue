@@ -104,10 +104,9 @@ h4 {
   font-size: 80px;
   text-shadow: 5px 5px #19181a;
   font-family: 'Yanone Kaffeesatz', sans-serif;
-  width: 1400px;
   background-color: rgba(34, 56, 97, .8);
   text-align: center;
-  margin-top: -850px;
+  margin-top: -635px;
   padding: 20px;
   
 }
@@ -138,6 +137,12 @@ button {
   margin-top: 45px;
   margin-left: 20px;
   margin-bottom: -25px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 50px;
+  padding-left: 50px;
+  font-size: 55px;
+  font-weight: bold;
 }
 
 </style>

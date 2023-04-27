@@ -32,11 +32,22 @@ export default {
   color: white;
   margin-top: -1300px;
   padding-top: 1200px;
+  
 }
 .browsebody {
  display:block;
 }
 
-
+.browsebody {
+  background-image: url("https://i.imgur.com/Bm1I1fA.png");
+  min-height: 100%;
+  min-width: 1024px;
+	background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+}
 </style>
 

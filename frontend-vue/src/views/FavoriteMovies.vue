@@ -61,6 +61,7 @@ export default {
 
 <style scoped>
 body {
-  margin-top: 500px;
+  margin-top: 600px;
+
 }
 </style>
