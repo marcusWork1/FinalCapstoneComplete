@@ -105,5 +105,11 @@ button {
   margin-top: 45px;
   margin-left: 20px;
   margin-bottom: -25px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 50px;
+  padding-left: 50px;
+  font-size: 55px;
+  font-weight: bold;
 }
 </style>
