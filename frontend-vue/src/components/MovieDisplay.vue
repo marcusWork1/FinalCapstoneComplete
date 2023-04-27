@@ -62,7 +62,6 @@ h4 {
   font-size: 80px;
   text-shadow: 5px 5px #19181a;
   font-family: 'Yanone Kaffeesatz', sans-serif;
-
   background-color: rgba(34, 56, 97, .5);
   text-align: center;
   margin-top: -850px;

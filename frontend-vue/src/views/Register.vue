@@ -1,10 +1,10 @@
 <template>
-  <div id="register" class="text-center">
+  <div id="register" class="bodyimage">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
     <div>
-      <form @submit.prevent="register">
+
       <header>
         <router-link v-bind:to="{ name: 'home' }"
           ><img class="imgicon" src="https://i.imgur.com/LajHZNM.png" /></router-link
@@ -31,7 +31,10 @@
       <router-link v-bind:to="{ name: 'favoritemovies'}"
         ><img class="favoriteicon" src="https://i.imgur.com/W6WfGod.png" /></router-link>
       </header>
-        <h1>Create Account</h1>
+
+      <img class = "bannerimage" src ="https://i.imgur.com/hbWDFT3.jpg">
+       <form @submit.prevent="register">
+
         
         <div role="alert" v-if="registrationErrors">
           {{ registrationErrorMsg }}

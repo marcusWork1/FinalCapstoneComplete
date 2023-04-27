@@ -25,7 +25,7 @@
       <form class="signinform" @submit.prevent="login">
         <div role="alert" v-if="invalidCredentials">
           Invalid username and password!
-        </div>
+        </div><br>
         <div role="alert" v-if="this.$route.query.registration">
           Thank you for registering, please sign in.
         </div>
