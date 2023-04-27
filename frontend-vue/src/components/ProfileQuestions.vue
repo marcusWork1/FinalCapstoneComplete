@@ -14,7 +14,7 @@
         <label for="genre"> Please select your favorite Genre: </label><br><br>
         <select v-model="newProfile.genre">
           <option value="">--- Select a Genre ---</option>
-          <option value="29">Action</option>
+          <option value="28">Action</option>
           <option value="35">Comedy</option>
           <option value="18">Drama</option>
           <option value="27">Horror</option>
@@ -22,7 +22,7 @@
         </select>
         <!-- <input id="genre" type="text" v-model="newProfile.genre" />-->
       </div><br>
-      <div class="form-group">
+      <!-- <div class="form-group">
         Adult Movie?
         <input
           id="Yes"
@@ -42,7 +42,7 @@
       <div class="form-group">
         <br><label for="popularity">Minimum rating preference? 1-100: </label><br><br>
         <input id="popularity" type="number" v-model="newProfile.popularity" />
-      </div>
+      </div> -->
       <button class="button">Submit</button>
       <button class="button" v-on:click="cancelForm">Cancel</button><br>
     </form>
@@ -122,7 +122,7 @@ if (this.$store.state.account == "") {
             this.handleErrorResponse(error, "adding");
           });
       }
-this.$router.push('/browse');
+this.$router.push('/');
 
     },
     resetForm() {

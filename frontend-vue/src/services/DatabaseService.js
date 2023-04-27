@@ -14,10 +14,7 @@ export default {
     return httpLocalHost.post("/account", profileObject);
   },
   updateProfile(profileObject2) {
-    return httpLocalHost.put(
-      `/account/${profileObject2.user_id}`,
-      profileObject2
-    );
+    return httpLocalHost.put(`/account/${profileObject2.user_id}`, profileObject2 );
   },
   postFavorite(favoriteObject) {
     return httpLocalHost.post(`/favorite_list`, favoriteObject);
@@ -29,7 +26,7 @@ export default {
         return httpLocalHost.get(`/favorite_list/${profileObject3}`); // sending account object.account_id in order to get all movie_id related to that account
   },
   deleteFavorite(favoriteObject) {
-    return httpLocalHost.delete(`/favorite_list/${favoriteObject}`) // sending back a whole favorite object becuase need to send back a movie_id and account_id to delete a movie_id
+    return httpLocalHost.delete(`/favorite_list/${favoriteObject.account_id}&${favoriteObject.movie_id}`, favoriteObject) // sending back a whole favorite object becuase need to send back a movie_id and account_id to delete a movie_id
   },
   getAccount(user_id) { // returns account object
     return httpLocalHost.get(`/account/user/${user_id}`) 

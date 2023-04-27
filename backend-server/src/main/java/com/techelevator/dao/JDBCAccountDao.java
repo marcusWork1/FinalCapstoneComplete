@@ -62,10 +62,12 @@ public class JDBCAccountDao implements AccountDAO {
     }
 
     @Override
-    public void updateAccount(Account account) {
-        String sql = "UPDATE account " + "SET  username = ?, email_address = ?, genre = ?, adult_only = ?, popularity = ? " +
-                "WHERE user_id = ?;";
-        jdbcTemplate.update(sql, account.getUsername(),account.getEmail_address(), account.getGenre(), account.isAdult_only(), account.getPopularity(), account.getUser_id());
+    public Account updateAccount(Account account) {
+        String sql = "UPDATE account SET  username = ?, email_address = ?, genre = ?, adult_only = ?, popularity = ? " +
+        "WHERE user_id = ? RETURNING account_id;";
+        Integer updatedAccount = jdbcTemplate.queryForObject(sql, Integer.class, account.getUsername(),account.getEmail_address(), account.getGenre(), account.isAdult_only(), account.getPopularity(), account.getUser_id());
+        Account newAccount = getAccount(updatedAccount);
+        return newAccount;
         }
 
 
