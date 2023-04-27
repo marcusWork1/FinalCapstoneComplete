@@ -51,3 +51,15 @@
 white-space: nowrap;
 height: 15px;
 margin: 30px;
+
+
+
+.table {
+  scale: 50%;
+  min-height: 200px;
+  display: inline;
+  color: white;
+}
+.browsebody {
+ display: table-cell;
+}

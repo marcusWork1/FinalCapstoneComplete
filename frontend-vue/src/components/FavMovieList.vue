@@ -28,10 +28,12 @@ export default {
 .table {
   scale: 50%;
   min-height: 200px;
-  display: inline;
+  display:inline;
   color: white;
+  margin-top: -1300px;
+  padding-top: 1200px;
 }
 .browsebody {
- display: table-cell;
+ display:block;
 }
 </style>

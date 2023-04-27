@@ -23,14 +23,23 @@ export default {
 };
 </script>
 
-<style>
-.table {
-  scale: 50%;
-  min-height: 200px;
-  display: inline;
-  color: white;
+<style scoped>
+
+body{
+  margin-top: 715px;
+  
+
 }
 .browsebody {
- display: table-cell;
+  background-image: url("https://i.imgur.com/Bm1I1fA.png");
+  min-height: 100%;
+  min-width: 1024px;
+	background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
 }
+
 </style>
