@@ -20,7 +20,7 @@
         <input
           id="genre"
           type="text"
-          placeholder="make dropdown"
+          
           v-model="newMovie.genre"/>
       </div>
       <div class="form-group">

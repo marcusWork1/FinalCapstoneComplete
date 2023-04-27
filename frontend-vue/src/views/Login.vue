@@ -100,7 +100,10 @@ export default {
                                               this.$store.commit("SET_ACCOUNT", response.data);
                                               //console.log(this.$store.state.user.id)
                                               //if (this.$store.state.account === "undefined") {
-                                              if (this.$store.state.account === "") {
+                                            
+                                               if (this.$store.state.user.username === "admin") {
+                                                this.$router.push("/addmovie");
+                                              } else if (this.$store.state.account === "") {
                                                                                     this.$router.push("/profile");
                                               }
         })
