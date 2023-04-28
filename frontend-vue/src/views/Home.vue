@@ -11,9 +11,9 @@
         <router-link v-bind:to="{ name: 'description' }"
           ><img class="descicon" src="https://i.imgur.com/SEaHA1C.png" /></router-link
         >&nbsp;
-        <router-link v-bind:to="{ name: 'addmovie' }"
+        <!-- <router-link v-bind:to="{ name: 'addmovie' }"
           ><img class="movieicon" src="https://i.imgur.com/MixOVcC.png" /></router-link
-        >&nbsp;
+        >&nbsp; -->
         <router-link v-bind:to="{ name: 'logout' }"
           ><img class="logouticon" src="https://i.imgur.com/IVGcyIo.jpg" /></router-link
         >&nbsp;
